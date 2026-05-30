@@ -4,30 +4,55 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>INTIRA — Focus on Signal. Kill the Noise.</title>
-<meta name="description" content="Add your tasks. INTIRA automatically sorts what to focus on first. Smart prioritization meets debt snowball tracking — one app, one system.">
+<meta name="description" content="Add your tasks. INTIRA automatically identifies what deserves your attention first.">
 <meta property="og:title" content="INTIRA — Focus on Signal. Kill the Noise.">
-<meta property="og:description" content="Add your tasks. INTIRA automatically sorts what to focus on first. Smart prioritization meets debt snowball tracking — one app, one system.">
+<meta property="og:description" content="Add your tasks. INTIRA automatically identifies what deserves your attention first.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Analytics Placeholders -->
+<!-- Google Analytics / Plausible -->
+<!-- <script defer data-domain="intira.io" src="https://plausible.io/js/script.js"></script> -->
+<!-- Firebase Analytics -->
+<!-- <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+  const firebaseConfig = { /* YOUR CONFIG */ };
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script> -->
+
 <style>
 :root{--bg:#07060E;--bg2:#0E0D18;--surface:#161425;--surface2:#1E1C2E;--border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.12);--text:#F0EEF8;--sub:#8E8AAE;--sub2:#5C587A;--amber:#F59E0B;--amber2:#F97316;--violet:#8B5CF6;--mint:#10B981;--rose:#FF4D6D;--blue:#4C6EF5}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
 .amber{color:var(--amber)}.violet{color:var(--violet)}.mint{color:var(--mint)}
+
+/* ── Typography & Layout ── */
+h1, h2, h3, h4, h5 { font-family:'Syne',sans-serif; }
+section { padding: 100px 24px; max-width: 1000px; margin: 0 auto; }
+.section-title { font-weight: 800; font-size: 36px; margin-bottom: 24px; text-align: center; letter-spacing: -0.5px; }
+.section-subtitle { font-size: 17px; color: var(--sub); line-height: 1.7; text-align: center; max-width: 650px; margin: 0 auto 48px; }
+
+/* ── Navigation ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(7,6,14,0.85);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
 .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--amber);letter-spacing:2px;text-decoration:none}
 .nav-links{display:flex;gap:28px;align-items:center}.nav-links a{color:var(--sub);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s}.nav-links a:hover{color:var(--text)}
 .nav-cta{background:var(--amber)!important;color:#07060E!important;padding:10px 22px;border-radius:10px;font-weight:700!important;font-size:13px!important;transition:transform .2s,box-shadow .2s}.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(245,158,11,0.3)}
+
+/* ── Hero ── */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:160px 24px 60px;position:relative}
 .hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(245,158,11,0.08) 0%,rgba(139,92,246,0.04) 40%,transparent 70%);pointer-events:none}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:100px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);font-size:12px;font-weight:700;color:var(--amber);margin-bottom:32px;letter-spacing:.5px}
-.hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:64px;line-height:1.05;letter-spacing:-2px;margin-bottom:24px;max-width:700px}
-.hero-sub-main{font-size:20px;color:var(--sub);line-height:1.6;max-width:480px;margin-bottom:40px;font-weight:500}
+.hero h1{font-weight:800;font-size:72px;line-height:1.05;letter-spacing:-2px;margin-bottom:24px;max-width:800px}
+.hero-sub-main{font-size:22px;color:var(--sub);line-height:1.5;max-width:540px;margin-bottom:40px;font-weight:500}
+.hero-actions { display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap; }
 .hero-cta{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border-radius:14px;background:linear-gradient(135deg,var(--amber),var(--amber2));color:#07060E;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 8px 32px rgba(245,158,11,0.3);transition:transform .2s,box-shadow .2s}
 .hero-cta:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(245,158,11,0.4)}.hero-cta svg{width:20px;height:20px}
-.hero-fine{font-size:13px;color:var(--sub2);margin-top:16px;font-weight:500}
-/* ── Carousel ── */
+.hero-cta-secondary { display:inline-flex;align-items:center;padding:16px 32px;border-radius:14px;background:var(--surface);border:1px solid var(--border2);color:var(--text);font-weight:700;font-size:16px;text-decoration:none;transition:all .2s; }
+.hero-cta-secondary:hover { background:var(--surface2); border-color:var(--amber); }
+
+/* ── Carousel (Preserved Exactly) ── */
 .carousel-wrap{position:relative;margin-top:60px;max-width:340px;margin-left:auto;margin-right:auto}
 .carousel{position:relative;overflow:hidden}
 .carousel-slide{display:none;animation:fadeIn .4s ease}
@@ -41,7 +66,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:fl
 .carousel-arrow.left{left:-48px}
 .carousel-arrow.right{right:-48px}
 .slide-label{text-align:center;font-size:13px;font-weight:600;color:var(--sub);margin-top:16px}
-/* ── App Screen (high-fidelity) ── */
+/* App Screen specific styles preserved */
 .app-screen{width:300px;margin:0 auto;background:var(--bg);border-radius:32px;border:2.5px solid var(--border2);overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,0.6),0 0 0 1px rgba(255,255,255,0.03);position:relative;padding-bottom:8px}
 .screen-status{display:flex;justify-content:space-between;padding:12px 24px 8px;font-size:12px;font-weight:600;color:var(--sub2)}
 .screen-header{padding:4px 20px 12px;display:flex;justify-content:space-between;align-items:center}
@@ -55,7 +80,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:fl
 .sd-amber{background:rgba(245,158,11,0.25)}
 .sd-violet{background:rgba(139,92,246,0.25)}
 .sd-text{font-size:9px;font-weight:800;letter-spacing:1.5px}
-/* Task cards */
 .screen-task{display:flex;margin:0 12px 6px;border-radius:12px;overflow:hidden}
 .task-accent{width:3px;flex-shrink:0}
 .amber-accent{background:var(--amber)}
@@ -68,11 +92,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:fl
 .amber-chip{background:rgba(245,158,11,0.12);color:var(--amber)}
 .violet-chip{background:rgba(139,92,246,0.12);color:var(--violet)}
 .task-due{font-size:9px;font-weight:600;color:var(--sub2)}
-/* Tab bar */
 .screen-tabbar{display:flex;justify-content:space-around;padding:10px 0 6px;margin-top:8px;border-top:1px solid var(--border)}
 .stab{font-size:9px;font-weight:700;color:var(--sub2)}
 .active-stab{color:var(--amber)}
-/* Snowball screen */
 .snow-eyebrow{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--amber)}
 .snow-dot{width:8px;height:8px;border-radius:50%;background:var(--amber)}
 .snow-ring-wrap{position:relative;display:flex;justify-content:center;padding:12px 0}
@@ -91,7 +113,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:fl
 .snow-target-bar{height:4px;background:rgba(255,255,255,0.06);border-radius:10px;overflow:hidden;margin-bottom:10px}
 .snow-target-fill{height:100%;background:linear-gradient(90deg,var(--amber),var(--amber2));border-radius:10px}
 .snow-target-btn{text-align:center;font-size:12px;font-weight:800;color:#07060E;background:linear-gradient(135deg,var(--amber),var(--amber2));padding:10px;border-radius:10px;box-shadow:0 4px 12px rgba(245,158,11,0.2)}
-/* Sprint screen */
 .sprint-eyebrow{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--amber)}
 .sprint-dot{width:8px;height:8px;border-radius:50%;background:var(--amber);animation:pulse-dot 2s infinite}
 @keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
@@ -112,268 +133,463 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:fl
 .st-focus{font-size:9px;font-weight:800;color:var(--amber);background:rgba(245,158,11,0.1);padding:3px 8px;border-radius:6px}
 .sprint-bottom-row{text-align:center;padding:12px 0 4px}
 .sprint-xp{font-size:11px;font-weight:700;color:var(--amber)}
-.philosophy{padding:120px 24px 80px;text-align:center;max-width:900px;margin:0 auto}
-.philosophy h2{font-family:'Syne',sans-serif;font-weight:800;font-size:36px;line-height:1.2;margin-bottom:20px;letter-spacing:-.5px}
-.philosophy>p{font-size:17px;color:var(--sub);line-height:1.7;max-width:600px;margin:0 auto 48px}
-.sn-row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-.sn-card{flex:1;min-width:280px;max-width:380px;padding:32px 28px;border-radius:20px;text-align:left}
+
+/* ── Signal vs Noise ── */
+.sn-row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top: 40px;}
+.sn-card{flex:1;min-width:280px;max-width:420px;padding:40px 32px;border-radius:20px;text-align:left}
 .sn-signal{background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.15)}
 .sn-noise{background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.15)}
-.sn-card .sn-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+.sn-card .sn-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px}
 .sn-signal .sn-icon{background:rgba(245,158,11,0.12)}.sn-noise .sn-icon{background:rgba(139,92,246,0.12)}
-.sn-card h3{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;margin-bottom:10px}
-.sn-card p{font-size:14px;color:var(--sub);line-height:1.7}
-.hero-features{padding:60px 24px 80px;max-width:960px;margin:0 auto}
-.hero-feat{display:flex;align-items:center;gap:60px;padding:48px 40px;background:var(--surface);border:1px solid var(--border2);border-radius:24px;margin-bottom:24px;position:relative;overflow:hidden}
-.hero-feat::after{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;pointer-events:none}
-.hero-feat-signal::after{background:radial-gradient(circle,rgba(245,158,11,0.08),transparent 70%)}
-.hero-feat-snow::after{background:radial-gradient(circle,rgba(16,185,129,0.08),transparent 70%)}
-.hero-feat-icon{width:80px;height:80px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0}
-.hero-feat-signal .hero-feat-icon{background:rgba(245,158,11,0.1)}.hero-feat-snow .hero-feat-icon{background:rgba(16,185,129,0.1)}
-.hero-feat-text h3{font-family:'Syne',sans-serif;font-weight:800;font-size:24px;margin-bottom:12px}
-.hero-feat-text p{font-size:15px;color:var(--sub);line-height:1.7}
-.hero-feat-tag{display:inline-block;margin-top:14px;font-size:11px;font-weight:700;padding:6px 14px;border-radius:8px;letter-spacing:.3px}
-.features-grid{padding:40px 24px 100px;max-width:960px;margin:0 auto}
-.features-grid h2{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;text-align:center;margin-bottom:48px;letter-spacing:-.5px}
-.fg-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.fg-card{padding:28px 20px;background:var(--surface);border:1px solid var(--border);border-radius:18px;text-align:center}
-.fg-card-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 14px}
-.fg-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:8px}
-.fg-card p{font-size:12px;color:var(--sub);line-height:1.6}
-.comparison{padding:80px 24px;max-width:700px;margin:0 auto}
-.comparison h2{font-family:'Syne',sans-serif;font-weight:800;font-size:32px;text-align:center;margin-bottom:12px}
-.comparison>p{text-align:center;color:var(--sub);font-size:15px;margin-bottom:40px}
-.comp-table{width:100%;border-collapse:collapse}
-.comp-table th{font-family:'Syne',sans-serif;font-weight:800;font-size:14px;padding:14px 16px;text-align:left;border-bottom:2px solid var(--border2);letter-spacing:1px}
-.comp-table th:nth-child(2){text-align:center;color:var(--sub)}.comp-table th:nth-child(3){text-align:center;color:var(--amber)}
-.comp-table td{padding:12px 16px;border-bottom:1px solid var(--border);font-size:14px;color:var(--sub)}
-.comp-table td:nth-child(2),.comp-table td:nth-child(3){text-align:center;font-size:16px}
-.comp-check{color:var(--mint)}.comp-limit{color:var(--sub2);font-size:12px}.comp-lock{color:var(--sub2)}
-.pricing{padding:80px 24px;text-align:center;max-width:960px;margin:0 auto}
-.pricing h2{font-family:'Syne',sans-serif;font-weight:800;font-size:32px;margin-bottom:12px}
-.pricing>p{color:var(--sub);font-size:15px;margin-bottom:48px}
-.plans{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.plan{width:260px;padding:32px 24px;border-radius:20px;background:var(--surface);border:1px solid var(--border);text-align:left;position:relative}
-.plan.pop{border-color:var(--amber);box-shadow:0 0 40px rgba(245,158,11,0.1)}
-.plan-badge{position:absolute;top:-10px;right:16px;background:var(--amber);color:#07060E;font-size:10px;font-weight:800;letter-spacing:1px;padding:4px 12px;border-radius:6px}
-.plan h3{font-family:'Syne',sans-serif;font-weight:700;font-size:18px;margin-bottom:8px}
-.price{font-family:'Syne',sans-serif;font-weight:800;font-size:36px;margin-bottom:4px}.price span{font-size:16px;font-weight:600;color:var(--sub)}
-.plan .detail{font-size:13px;color:var(--sub);margin-bottom:20px}
-.plan ul{list-style:none}.plan li{font-size:13px;color:var(--sub);padding:6px 0;padding-left:20px;position:relative}
-.plan li::before{content:'✓';position:absolute;left:0;color:var(--mint);font-weight:700}
-.founder{padding:60px 24px;text-align:center;max-width:600px;margin:0 auto}
-.founder-line{width:40px;height:2px;background:var(--amber);margin:0 auto 24px;border-radius:2px}
-.founder p{font-size:15px;color:var(--sub);line-height:1.8;font-style:italic}
-.founder .founder-name{font-style:normal;font-weight:700;color:var(--text);margin-top:12px;font-size:13px;letter-spacing:.5px}
-.bottom-cta{padding:100px 24px 80px;text-align:center}
-.bottom-cta h2{font-family:'Syne',sans-serif;font-weight:800;font-size:40px;margin-bottom:16px;letter-spacing:-1px}
-.bottom-cta p{color:var(--sub);margin-bottom:32px;font-size:16px}
+.sn-card h3{font-family:'Syne',sans-serif;font-weight:800;font-size:24px;margin-bottom:12px}
+.sn-card p{font-size:15px;color:var(--sub);line-height:1.7}
+
+/* ── Features Grid ── */
+.fg-row{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:20px}
+.fg-card{padding:32px 24px;background:var(--surface);border:1px solid var(--border);border-radius:18px;text-align:center;transition: transform 0.2s;}
+.fg-card:hover { transform: translateY(-4px); border-color: var(--border2); }
+.fg-card.highlight { border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.03); grid-column: 1 / -1; display: flex; text-align: left; align-items: center; gap: 24px; }
+.fg-card-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 16px; flex-shrink: 0;}
+.highlight .fg-card-icon { margin: 0; }
+.fg-card h4{font-weight:700;font-size:18px;margin-bottom:10px}
+.fg-card p{font-size:14px;color:var(--sub);line-height:1.6}
+
+/* ── Founder Section ── */
+.founder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 40px; }
+.founder-col p { font-size: 16px; color: var(--sub); line-height: 1.8; margin-bottom: 20px; }
+.founder-col h3 { font-size: 24px; margin: 40px 0 16px; }
+.founder-quote { font-size: 24px; font-weight: 600; color: var(--text); line-height: 1.4; margin: 40px 0; border-left: 4px solid var(--amber); padding-left: 24px; }
+.speaking-topics { list-style: none; margin-bottom: 32px; }
+.speaking-topics li { padding: 8px 0; border-bottom: 1px solid var(--border); color: var(--sub); font-size: 15px; }
+.speaking-topics li::before { content: '✦'; color: var(--amber); margin-right: 12px; font-size: 12px; }
+
+/* ── Forms (Contact & Newsletter) ── */
+.form-card { background: var(--surface); border: 1px solid var(--border2); border-radius: 24px; padding: 48px; max-width: 600px; margin: 0 auto; }
+.form-group { margin-bottom: 20px; text-align: left; }
+.form-label { display: block; font-size: 13px; font-weight: 700; color: var(--sub); margin-bottom: 8px; letter-spacing: 0.5px; text-transform: uppercase; }
+.form-input, .form-select, .form-textarea { width: 100%; background: var(--bg2); border: 1px solid var(--border); color: var(--text); padding: 14px 16px; border-radius: 12px; font-family: inherit; font-size: 15px; transition: border-color 0.2s; }
+.form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: var(--amber); }
+.form-textarea { resize: vertical; min-height: 120px; }
+.hidden-field { display: none; }
+.submit-btn { width: 100%; background: var(--amber); color: #07060E; border: none; padding: 16px; border-radius: 12px; font-weight: 800; font-size: 16px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; font-family: inherit; }
+.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.3); }
+
+/* Newsletter specific */
+.newsletter-wrap { background: linear-gradient(135deg, var(--surface), var(--surface2)); border: 1px solid var(--border2); padding: 60px 24px; border-radius: 24px; text-align: center; max-width: 800px; margin: 60px auto 0; }
+.newsletter-form { display: flex; gap: 12px; max-width: 400px; margin: 24px auto 0; }
+.newsletter-form .form-input { margin-bottom: 0; }
+.newsletter-form .submit-btn { width: auto; padding: 14px 24px; white-space: nowrap; }
+
+/* ── Footer ── */
 footer{padding:40px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}footer .links a{color:var(--sub2);text-decoration:none;font-size:12px;font-weight:600}footer .links a:hover{color:var(--sub)}
-@media(max-width:768px){nav{padding:16px 20px}.nav-links a:not(.nav-cta){display:none}.hero{padding:120px 20px 40px}.hero h1{font-size:40px;letter-spacing:-1px}.hero-sub-main{font-size:16px}.philosophy h2{font-size:28px}.sn-row{flex-direction:column;align-items:center}.hero-feat{flex-direction:column;gap:24px;padding:32px 24px;text-align:center}.fg-row{grid-template-columns:repeat(2,1fr)}.plans{flex-direction:column;align-items:center}.plan{width:100%;max-width:340px}.bottom-cta h2{font-size:28px}.comp-table th,.comp-table td{padding:10px 8px;font-size:12px}.carousel-arrow{display:none}.app-screen{width:280px}}
+footer p{font-size:14px;color:var(--sub2)}
+footer .links{display:flex;gap:24px}
+footer .links a{color:var(--sub2);text-decoration:none;font-size:14px;font-weight:600; transition: color 0.2s;}
+footer .links a:hover{color: var(--text);}
+
+@media(max-width:768px){
+  nav{padding:16px 20px}.nav-links a:not(.nav-cta){display:none}
+  .hero{padding:140px 20px 60px}.hero h1{font-size:48px;letter-spacing:-1px}
+  .hero-actions { flex-direction: column; width: 100%; }
+  .hero-cta, .hero-cta-secondary { width: 100%; justify-content: center; }
+  .founder-grid { grid-template-columns: 1fr; gap: 40px; }
+  .fg-card.highlight { flex-direction: column; text-align: center; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form .submit-btn { width: 100%; }
+  .carousel-arrow{display:none}.app-screen{width:280px}
+}
 </style>
 </head>
 <body>
-<nav><a href="#" class="logo">INTIRA</a><div class="nav-links"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="privacy.html">Privacy</a><a href="#download" class="nav-cta">Download</a></div></nav>
+
+<nav>
+  <a href="#top" class="logo">INTIRA</a>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#philosophy">Philosophy</a>
+    <a href="#founder">Founder</a>
+    <a href="#contact">Contact</a>
+    <a href="#download" class="nav-cta">Download</a>
+  </div>
+</nav>
+
 <section class="hero" id="top">
-<div class="hero-badge">✦ A smarter way to get things done</div>
-<h1>Focus on <span class="amber">Signal.</span><br>Kill the <span class="violet">Noise.</span></h1>
-<p class="hero-sub-main">Add your tasks. INTIRA automatically sorts what to focus on first.</p>
-<a href="#download" class="hero-cta"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>Download for iOS</a>
-<p class="hero-fine">Free with 7-day Pro trial · No account required</p>
+  <h1>Focus on <span class="amber">Signal.</span><br>Kill the <span class="violet">Noise.</span></h1>
+  <p class="hero-sub-main">Add your tasks. INTIRA automatically identifies what deserves your attention first.</p>
+  
+  <div class="hero-actions">
+    <a href="#download" class="hero-cta" data-analytics="download-cta">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+      Download for iOS
+    </a>
+    <a href="#philosophy" class="hero-cta-secondary">Learn More</a>
+  </div>
 
-<!-- App Screen Carousel -->
-<div class="carousel-wrap">
-  <div class="carousel" id="carousel">
-    <!-- Slide 1: Brain Dump -->
-    <div class="carousel-slide active">
-      <div class="app-screen">
-        <div class="screen-status"><span>9:41</span><span>⚙</span></div>
-        <div class="screen-header">
-          <div class="screen-title">Brain Dump</div>
-          <div class="screen-hud">
-            <div class="hud-item"><span class="hud-num">12</span><span class="hud-label">Signal</span></div>
-            <div class="hud-item"><span class="hud-num">8</span><span class="hud-label">Noise</span></div>
+  <!-- App Screen Carousel -->
+  <div class="carousel-wrap">
+    <div class="carousel" id="carousel">
+      <!-- Slide 1: Brain Dump -->
+      <div class="carousel-slide active">
+        <div class="app-screen">
+          <div class="screen-status"><span>9:41</span><span>⚙</span></div>
+          <div class="screen-header">
+            <div class="screen-title">Brain Dump</div>
+            <div class="screen-hud">
+              <div class="hud-item"><span class="hud-num">12</span><span class="hud-label">Signal</span></div>
+              <div class="hud-item"><span class="hud-num">8</span><span class="hud-label">Noise</span></div>
+            </div>
+          </div>
+          <div class="screen-section-divider"><span class="sd-line sd-amber"></span><span class="sd-text amber">SIGNAL</span><span class="sd-line sd-amber"></span></div>
+          <div class="screen-task signal-task">
+            <div class="task-accent amber-accent"></div>
+            <div class="task-body">
+              <div class="task-row"><span class="task-title">Call accountant about Q3 taxes</span></div>
+              <div class="task-meta-row"><span class="task-chip amber-chip">Work</span><span class="task-chip amber-chip">Deadline</span><span class="task-due">Due Friday</span></div>
+            </div>
+          </div>
+          <div class="screen-task signal-task">
+            <div class="task-accent amber-accent"></div>
+            <div class="task-body">
+              <div class="task-row"><span class="task-title">Finish investor pitch deck</span></div>
+              <div class="task-meta-row"><span class="task-chip amber-chip">Project</span><span class="task-due">Tomorrow</span></div>
+            </div>
+          </div>
+          <div class="screen-task signal-task">
+            <div class="task-accent amber-accent"></div>
+            <div class="task-body">
+              <div class="task-row"><span class="task-title">Send quarterly report to board</span></div>
+              <div class="task-meta-row"><span class="task-chip amber-chip">Work</span><span class="task-due">Today</span></div>
+            </div>
+          </div>
+          <div class="screen-section-divider"><span class="sd-line sd-violet"></span><span class="sd-text violet">NOISE</span><span class="sd-line sd-violet"></span></div>
+          <div class="screen-task noise-task">
+            <div class="task-accent violet-accent"></div>
+            <div class="task-body">
+              <div class="task-row"><span class="task-title" style="opacity:.6">Reorganize bookshelf</span></div>
+              <div class="task-meta-row"><span class="task-chip violet-chip">Personal</span></div>
+            </div>
+          </div>
+          <div class="screen-task noise-task">
+            <div class="task-accent violet-accent"></div>
+            <div class="task-body">
+              <div class="task-row"><span class="task-title" style="opacity:.6">Research new headphones</span></div>
+              <div class="task-meta-row"><span class="task-chip violet-chip">Personal</span></div>
+            </div>
+          </div>
+          <div class="screen-tabbar">
+            <div class="stab active-stab">Dump</div><div class="stab">Sprint</div><div class="stab">Blocks</div><div class="stab">Snowball</div>
           </div>
         </div>
-        <div class="screen-section-divider"><span class="sd-line sd-amber"></span><span class="sd-text amber">SIGNAL</span><span class="sd-line sd-amber"></span></div>
-        <div class="screen-task signal-task">
-          <div class="task-accent amber-accent"></div>
-          <div class="task-body">
-            <div class="task-row"><span class="task-title">Call accountant about Q3 taxes</span></div>
-            <div class="task-meta-row"><span class="task-chip amber-chip">Work</span><span class="task-chip amber-chip">Deadline</span><span class="task-due">Due Friday</span></div>
-          </div>
-        </div>
-        <div class="screen-task signal-task">
-          <div class="task-accent amber-accent"></div>
-          <div class="task-body">
-            <div class="task-row"><span class="task-title">Finish investor pitch deck</span></div>
-            <div class="task-meta-row"><span class="task-chip amber-chip">Project</span><span class="task-due">Tomorrow</span></div>
-          </div>
-        </div>
-        <div class="screen-task signal-task">
-          <div class="task-accent amber-accent"></div>
-          <div class="task-body">
-            <div class="task-row"><span class="task-title">Send quarterly report to board</span></div>
-            <div class="task-meta-row"><span class="task-chip amber-chip">Work</span><span class="task-due">Today</span></div>
-          </div>
-        </div>
-        <div class="screen-section-divider"><span class="sd-line sd-violet"></span><span class="sd-text violet">NOISE</span><span class="sd-line sd-violet"></span></div>
-        <div class="screen-task noise-task">
-          <div class="task-accent violet-accent"></div>
-          <div class="task-body">
-            <div class="task-row"><span class="task-title" style="opacity:.6">Reorganize bookshelf</span></div>
-            <div class="task-meta-row"><span class="task-chip violet-chip">Personal</span></div>
-          </div>
-        </div>
-        <div class="screen-task noise-task">
-          <div class="task-accent violet-accent"></div>
-          <div class="task-body">
-            <div class="task-row"><span class="task-title" style="opacity:.6">Research new headphones</span></div>
-            <div class="task-meta-row"><span class="task-chip violet-chip">Personal</span></div>
-          </div>
-        </div>
-        <div class="screen-tabbar">
-          <div class="stab active-stab">Dump</div><div class="stab">Sprint</div><div class="stab">Blocks</div><div class="stab">Snowball</div>
-        </div>
+        <div class="slide-label">Brain Dump — Signal rises to the top</div>
       </div>
-      <div class="slide-label">Brain Dump — Signal rises to the top</div>
+
+      <!-- Slide 2: Snowball -->
+      <div class="carousel-slide">
+        <div class="app-screen">
+          <div class="screen-status"><span>9:41</span><span>⋯</span></div>
+          <div class="screen-header">
+            <div class="snow-eyebrow"><span class="snow-dot"></span> SNOWBALL</div>
+          </div>
+          <div class="snow-ring-wrap">
+            <svg class="snow-ring-svg" viewBox="0 0 160 160">
+              <circle cx="80" cy="80" r="64" fill="none" stroke="rgba(139,92,246,0.15)" stroke-width="10"/>
+              <circle cx="80" cy="80" r="64" fill="none" stroke="url(#cRingGrad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="402.1" stroke-dashoffset="265" transform="rotate(-90 80 80)"/>
+              <defs><linearGradient id="cRingGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#F97316"/></linearGradient></defs>
+            </svg>
+            <div class="snow-ring-inner">
+              <div class="snow-ring-label">PAID OFF</div>
+              <div class="snow-ring-amount">$4,280</div>
+              <div class="snow-ring-sub">of $12,500 · 34% crushed</div>
+            </div>
+          </div>
+          <div class="snow-pill">⚡ Debt-free in ~14 months</div>
+          <div class="snow-target">
+            <div class="snow-target-eyebrow">NEXT TO CRUSH</div>
+            <div class="snow-target-name">Chase Sapphire</div>
+            <div class="snow-target-row"><span class="snow-target-bal">$1,240</span><span class="snow-target-meta">22.99% APR · $45 min</span></div>
+            <div class="snow-target-bar"><div class="snow-target-fill" style="width:62%"></div></div>
+            <div class="snow-target-btn">+ Log Payment</div>
+          </div>
+          <div class="screen-tabbar">
+            <div class="stab">Dump</div><div class="stab">Sprint</div><div class="stab">Blocks</div><div class="stab active-stab">Snowball</div>
+          </div>
+        </div>
+        <div class="slide-label">Debt Snowball — Crush your debt visually</div>
+      </div>
+
+      <!-- Slide 3: Sprint -->
+      <div class="carousel-slide">
+        <div class="app-screen">
+          <div class="screen-status"><span>9:41</span><span></span></div>
+          <div class="screen-header">
+            <div class="sprint-eyebrow"><span class="sprint-dot"></span> ACTIVE SPRINT</div>
+            <div class="sprint-timer-badge">14:22 left</div>
+          </div>
+          <div class="sprint-progress-wrap">
+            <div class="sprint-big-num">2<span class="sprint-big-of">/4</span></div>
+            <div class="sprint-big-label">tasks complete</div>
+            <div class="sprint-bar-full"><div class="sprint-bar-fill" style="width:50%"></div></div>
+          </div>
+          <div class="sprint-task-list">
+            <div class="sprint-task done-task"><span class="st-check">✓</span><span class="st-title">Call accountant</span></div>
+            <div class="sprint-task done-task"><span class="st-check">✓</span><span class="st-title">Review contract terms</span></div>
+            <div class="sprint-task"><span class="st-circle"></span><span class="st-title">Finish pitch deck</span><span class="st-focus">⚡ Focus</span></div>
+            <div class="sprint-task"><span class="st-circle"></span><span class="st-title">Email stakeholders</span></div>
+          </div>
+          <div class="sprint-bottom-row">
+            <div class="sprint-xp">+120 XP earned</div>
+          </div>
+          <div class="screen-tabbar">
+            <div class="stab">Dump</div><div class="stab active-stab">Sprint</div><div class="stab">Blocks</div><div class="stab">Snowball</div>
+          </div>
+        </div>
+        <div class="slide-label">Sprint Mode — Lock in and execute</div>
+      </div>
     </div>
 
-    <!-- Slide 2: Snowball -->
-    <div class="carousel-slide">
-      <div class="app-screen">
-        <div class="screen-status"><span>9:41</span><span>⋯</span></div>
-        <div class="screen-header">
-          <div class="snow-eyebrow"><span class="snow-dot"></span> SNOWBALL</div>
-        </div>
-        <div class="snow-ring-wrap">
-          <svg class="snow-ring-svg" viewBox="0 0 160 160">
-            <circle cx="80" cy="80" r="64" fill="none" stroke="rgba(139,92,246,0.15)" stroke-width="10"/>
-            <circle cx="80" cy="80" r="64" fill="none" stroke="url(#cRingGrad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="402.1" stroke-dashoffset="265" transform="rotate(-90 80 80)"/>
-            <defs><linearGradient id="cRingGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#F97316"/></linearGradient></defs>
-          </svg>
-          <div class="snow-ring-inner">
-            <div class="snow-ring-label">PAID OFF</div>
-            <div class="snow-ring-amount">$4,280</div>
-            <div class="snow-ring-sub">of $12,500 · 34% crushed</div>
-          </div>
-        </div>
-        <div class="snow-pill">⚡ Debt-free in ~14 months</div>
-        <div class="snow-target">
-          <div class="snow-target-eyebrow">NEXT TO CRUSH</div>
-          <div class="snow-target-name">Chase Sapphire</div>
-          <div class="snow-target-row"><span class="snow-target-bal">$1,240</span><span class="snow-target-meta">22.99% APR · $45 min</span></div>
-          <div class="snow-target-bar"><div class="snow-target-fill" style="width:62%"></div></div>
-          <div class="snow-target-btn">+ Log Payment</div>
-        </div>
-        <div class="screen-tabbar">
-          <div class="stab">Dump</div><div class="stab">Sprint</div><div class="stab">Blocks</div><div class="stab active-stab">Snowball</div>
-        </div>
+    <!-- Carousel Controls -->
+    <div class="carousel-dots">
+      <button class="cdot active" onclick="goSlide(0)"></button>
+      <button class="cdot" onclick="goSlide(1)"></button>
+      <button class="cdot" onclick="goSlide(2)"></button>
+    </div>
+    <button class="carousel-arrow left" onclick="prevSlide()">‹</button>
+    <button class="carousel-arrow right" onclick="nextSlide()">›</button>
+  </div>
+
+  <script>
+  let current = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.cdot');
+  function goSlide(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+  function nextSlide() { goSlide(current + 1); }
+  function prevSlide() { goSlide(current - 1); }
+  setInterval(nextSlide, 5000);
+  let touchStartX = 0;
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+  carousel.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { diff > 0 ? nextSlide() : prevSlide(); }
+  });
+  </script>
+</section>
+
+<section id="philosophy">
+  <h2 class="section-title">The INTIRA Philosophy</h2>
+  <p class="section-subtitle">
+    Most productivity systems help you collect tasks.<br>
+    INTIRA helps you determine what deserves your attention.
+  </p>
+  <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+    <p style="color: var(--sub); line-height: 1.8; margin-bottom: 16px;">The challenge isn’t a lack of productivity. It’s an excess of noise.</p>
+    <p style="color: var(--text); font-weight: 700; font-size: 20px; line-height: 1.8;">
+      Capture everything.<br>
+      Focus on the signal.<br>
+      Execute what matters.
+    </p>
+  </div>
+
+  <div class="sn-row">
+    <div class="sn-card sn-signal">
+      <div class="sn-icon">⚡</div>
+      <h3>Signal</h3>
+      <p>The tasks that deserve your attention right now. INTIRA automatically evaluates deadlines, effort, context, and behavior patterns to surface what matters most.</p>
+    </div>
+    <div class="sn-card sn-noise">
+      <div class="sn-icon">🌀</div>
+      <h3>Noise</h3>
+      <p>Not everything deserves attention today. Noise remains organized until the right time arrives. As priorities change, INTIRA adapts.</p>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <h2 class="section-title">Features</h2>
+  <div class="fg-row">
+    <div class="fg-card highlight">
+      <div class="fg-card-icon" style="background:rgba(245,158,11,0.1); color: var(--amber);">🎯</div>
+      <div>
+        <h4>Signal Engine</h4>
+        <p>The intelligence layer that prioritizes what matters most.</p>
       </div>
-      <div class="slide-label">Debt Snowball — Crush your debt visually</div>
+    </div>
+    <div class="fg-card">
+      <div class="fg-card-icon" style="background:rgba(245,158,11,0.1);">🎙</div>
+      <h4>Voice Capture</h4>
+      <p>Speak naturally. INTIRA extracts the title, description, due date, tags, and priority — all from your words.</p>
+    </div>
+    <div class="fg-card">
+      <div class="fg-card-icon" style="background:rgba(139,92,246,0.1);">🏃</div>
+      <h4>Sprint Mode</h4>
+      <p>Choose your sprint type — Balanced, Deep Work, Quick Wins, or Catch Up. The engine selects the right tasks.</p>
+    </div>
+    <div class="fg-card">
+      <div class="fg-card-icon" style="background:rgba(76,110,245,0.1);">🧱</div>
+      <h4>Blocks Canvas</h4>
+      <p>Spatial scratchpad for ideas. Drag, connect, and convert to tasks when ready.</p>
+    </div>
+    <div class="fg-card">
+      <div class="fg-card-icon" style="background:rgba(255,77,109,0.1);">🔥</div>
+      <h4>Focus Timer</h4>
+      <p>Pomodoro sessions with multi-round tracking. Every session teaches the engine what you prioritize.</p>
+    </div>
+  </div>
+</section>
+
+<section id="founder">
+  <h2 class="section-title">Why I Built INTIRA</h2>
+  
+  <div class="founder-grid">
+    <div class="founder-col">
+      <p>I built INTIRA because I realized that most productivity systems help us collect tasks, but very few help us determine what actually deserves our attention.</p>
+      <p>After years of leading products, navigating competing demands, and helping teams make decisions in complex environments, I saw the same pattern repeatedly: people weren’t struggling because they lacked tools—they were struggling because they lacked a clear way to identify what mattered most.</p>
+      
+      <div class="founder-quote">
+        "The real challenge isn’t productivity—it’s prioritization."
+      </div>
+      
+      <p>Knowing what deserves our attention at the right time is what ultimately drives meaningful progress. What most people lack isn’t productivity—it’s clarity.</p>
+      <p>Too many competing priorities. Too many obligations. Too much noise.</p>
+      <p>INTIRA was created to help people focus on what matters most and execute with intention.</p>
+
+      <h3>What INTIRA Means</h3>
+      <p><strong>I</strong>ntentional <strong>N</strong>avigation <strong>T</strong>hrough <strong>I</strong>ntelligence, <strong>R</strong>easoning & <strong>A</strong>ction.</p>
+      <p>More than an acronym, it serves as the strategic philosophy behind the product. INTIRA helps people navigate competing priorities, apply intelligence to decision-making, reason through what deserves attention, and take meaningful action toward their goals.</p>
     </div>
 
-    <!-- Slide 3: Sprint -->
-    <div class="carousel-slide">
-      <div class="app-screen">
-        <div class="screen-status"><span>9:41</span><span></span></div>
-        <div class="screen-header">
-          <div class="sprint-eyebrow"><span class="sprint-dot"></span> ACTIVE SPRINT</div>
-          <div class="sprint-timer-badge">14:22 left</div>
-        </div>
-        <div class="sprint-progress-wrap">
-          <div class="sprint-big-num">2<span class="sprint-big-of">/4</span></div>
-          <div class="sprint-big-label">tasks complete</div>
-          <div class="sprint-bar-full"><div class="sprint-bar-fill" style="width:50%"></div></div>
-        </div>
-        <div class="sprint-task-list">
-          <div class="sprint-task done-task"><span class="st-check">✓</span><span class="st-title">Call accountant</span></div>
-          <div class="sprint-task done-task"><span class="st-check">✓</span><span class="st-title">Review contract terms</span></div>
-          <div class="sprint-task"><span class="st-circle"></span><span class="st-title">Finish pitch deck</span><span class="st-focus">⚡ Focus</span></div>
-          <div class="sprint-task"><span class="st-circle"></span><span class="st-title">Email stakeholders</span></div>
-        </div>
-        <div class="sprint-bottom-row">
-          <div class="sprint-xp">+120 XP earned</div>
-        </div>
-        <div class="screen-tabbar">
-          <div class="stab">Dump</div><div class="stab active-stab">Sprint</div><div class="stab">Blocks</div><div class="stab">Snowball</div>
-        </div>
-      </div>
-      <div class="slide-label">Sprint Mode — Lock in and execute</div>
+    <div class="founder-col">
+      <h3>About Eve L. Hyppolite</h3>
+      <p>Eve L. Hyppolite is a product leader, storyteller, speaker, and creator focused on helping people navigate complexity through technology.</p>
+      <p>With experience spanning product strategy, customer experience, accessibility, innovation, and public speaking, Eve has spent years helping organizations translate complex ideas into meaningful human experiences.</p>
+      <p>Through that work, one challenge continued to emerge: People aren’t overwhelmed because they have too little information. They’re overwhelmed because they have too much.</p>
+      <p>INTIRA was born from the belief that technology should help people think more clearly, make better decisions, and take intentional action.</p>
+
+      <h3>Speaking & Thought Leadership</h3>
+      <ul class="speaking-topics">
+        <li>Intentional Productivity</li>
+        <li>Signal vs. Noise</li>
+        <li>Storytelling & Technology</li>
+        <li>Product Leadership</li>
+        <li>AI & Human Decision-Making</li>
+        <li>Accessibility & Inclusive Design</li>
+      </ul>
+      <a href="#contact" class="hero-cta-secondary" onclick="document.getElementById('inquiry-type').value='Speaking Engagement'; document.getElementById('inquiry-type').dispatchEvent(new Event('change'));">Book Eve to Speak</a>
     </div>
   </div>
 
-  <!-- Carousel Controls -->
-  <div class="carousel-dots">
-    <button class="cdot active" onclick="goSlide(0)"></button>
-    <button class="cdot" onclick="goSlide(1)"></button>
-    <button class="cdot" onclick="goSlide(2)"></button>
+  <div class="newsletter-wrap">
+    <h3 style="font-size: 24px; margin-bottom: 12px;">Stay Connected</h3>
+    <p style="color: var(--sub); font-size: 15px;">Get product updates, launch announcements, and future releases from INTIRA Labs.</p>
+    <!-- Replace action="#" with your email provider endpoint (e.g., Mailchimp, ConvertKit, Buttondown) -->
+    <form class="newsletter-form" action="#" method="POST" data-analytics="newsletter-signup">
+      <input type="email" name="email" class="form-input" placeholder="Email Address" required>
+      <button type="submit" class="submit-btn">Join the List</button>
+    </form>
   </div>
-  <button class="carousel-arrow left" onclick="prevSlide()">‹</button>
-  <button class="carousel-arrow right" onclick="nextSlide()">›</button>
-</div>
-
-<script>
-let current = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const dots = document.querySelectorAll('.cdot');
-function goSlide(n) {
-  slides[current].classList.remove('active');
-  dots[current].classList.remove('active');
-  current = (n + slides.length) % slides.length;
-  slides[current].classList.add('active');
-  dots[current].classList.add('active');
-}
-function nextSlide() { goSlide(current + 1); }
-function prevSlide() { goSlide(current - 1); }
-// Auto-advance every 5 seconds
-setInterval(nextSlide, 5000);
-// Touch swipe
-let touchStartX = 0;
-const carousel = document.getElementById('carousel');
-carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
-carousel.addEventListener('touchend', e => {
-  const diff = touchStartX - e.changedTouches[0].clientX;
-  if (Math.abs(diff) > 50) { diff > 0 ? nextSlide() : prevSlide(); }
-});
-</script>
-
 </section>
-<section class="philosophy"><h2>Your focus is the filter. The Signal rises.</h2><p>INTIRA's Signal Engine scores every task you add — automatically sorting your priorities so you always know where to start. You just execute.</p>
-<div class="sn-row"><div class="sn-card sn-signal"><div class="sn-icon">⚡</div><h3>Signal</h3><p>The tasks to focus on right now. The engine scores deadlines, effort, and your focus history — then brings the right ones to the top automatically.</p></div>
-<div class="sn-card sn-noise"><div class="sn-icon">🌀</div><h3>Noise</h3><p>Everything else — organized and ready for later. When the time is right, the engine promotes it to Signal automatically. As your priorities evolve, INTIRA evolves with you.</p></div></div></section>
-<section class="hero-features" id="features">
-<div class="hero-feat hero-feat-signal"><div class="hero-feat-icon">🎯</div><div class="hero-feat-text"><h3>The Signal Engine</h3><p>Every task gets scored automatically using deadlines, effort, focus history, and adaptive thresholds — plus behavioral intelligence that learns your patterns over time. The engine recognizes action verbs, detects people involved, infers effort from how you phrase things, and gets smarter the more you use it.</p><span class="hero-feat-tag" style="background:rgba(245,158,11,0.1);color:var(--amber);">Intelligent Prioritization</span></div></div>
-<div class="hero-feat hero-feat-snow"><div class="hero-feat-icon">❄️</div><div class="hero-feat-text"><h3>Debt Snowball Tracker</h3><p>Track every debt with a progress ring that shows how much you've crushed. The snowball method shows you exactly which debt to pay off next. Log payments, watch your progress grow, and see exactly when you'll be debt-free.</p><span class="hero-feat-tag" style="background:rgba(16,185,129,0.1);color:var(--mint);">Financial Freedom</span></div></div>
+
+<section id="contact">
+  <h2 class="section-title">Let’s Connect</h2>
+  <div class="form-card">
+    <!-- Replace action="#" with your static form handler (e.g., Formspree, Netlify Forms) -->
+    <form id="contact-form" action="#" method="POST" data-analytics="contact-submit">
+      <div class="form-group">
+        <label class="form-label">Name</label>
+        <input type="text" name="name" class="form-input" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Inquiry Type</label>
+        <select name="inquiry_type" id="inquiry-type" class="form-select" required>
+          <option value="General Inquiry">General Inquiry</option>
+          <option value="Product Feedback">Product Feedback</option>
+          <option value="Technical Support">Technical Support</option>
+          <option value="Partnership Opportunity">Partnership Opportunity</option>
+          <option value="Speaking Engagement">Speaking Engagement</option>
+          <option value="Podcast Appearance">Podcast Appearance</option>
+          <option value="Media Request">Media Request</option>
+        </select>
+      </div>
+
+      <!-- Conditional Speaking Fields -->
+      <div id="conditional-speaking" class="hidden-field">
+        <div class="form-group">
+          <label class="form-label">Organization</label>
+          <input type="text" name="organization" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Event Name</label>
+          <input type="text" name="event_name" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Event Date</label>
+          <input type="date" name="event_date" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Audience Size</label>
+          <input type="text" name="audience_size" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Topic of Interest</label>
+          <input type="text" name="topic" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Budget Range (Optional)</label>
+          <input type="text" name="budget" class="form-input">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea name="message" class="form-textarea" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Inquiry</button>
+    </form>
+  </div>
+
+  <script>
+    // Conditional logic for Speaking Engagement fields
+    const inquirySelect = document.getElementById('inquiry-type');
+    const conditionalSpeaking = document.getElementById('conditional-speaking');
+    const speakingInputs = conditionalSpeaking.querySelectorAll('input');
+
+    inquirySelect.addEventListener('change', function(e) {
+      if (e.target.value === 'Speaking Engagement') {
+        conditionalSpeaking.classList.remove('hidden-field');
+        // Make non-optional conditional fields required
+        speakingInputs.forEach(input => {
+          if(input.name !== 'budget') input.setAttribute('required', 'true');
+        });
+      } else {
+        conditionalSpeaking.classList.add('hidden-field');
+        speakingInputs.forEach(input => input.removeAttribute('required'));
+      }
+    });
+  </script>
 </section>
-<section class="features-grid"><h2>Four powerful tools. One complete system.</h2><div class="fg-row">
-<div class="fg-card"><div class="fg-card-icon" style="background:rgba(245,158,11,0.1);">🎙</div><h4>Voice Capture</h4><p>Speak naturally. INTIRA extracts the title, description, due date, tags, and priority — all from your words.</p></div>
-<div class="fg-card"><div class="fg-card-icon" style="background:rgba(139,92,246,0.1);">🏃</div><h4>Sprint Mode</h4><p>Choose your sprint type — Balanced, Deep Work, Quick Wins, or Catch Up. The engine selects the right tasks for each.</p></div>
-<div class="fg-card"><div class="fg-card-icon" style="background:rgba(76,110,245,0.1);">🧱</div><h4>Blocks Canvas</h4><p>Spatial scratchpad for ideas. Drag, connect, and convert to tasks when ready.</p></div>
-<div class="fg-card"><div class="fg-card-icon" style="background:rgba(255,77,109,0.1);">🔥</div><h4>Focus Timer</h4><p>Pomodoro sessions with multi-round tracking. Every session teaches the engine what you prioritize.</p></div>
-</div></section>
-<section class="comparison" id="compare"><h2>Free vs. Pro</h2><p>INTIRA is powerful for free. Pro unlocks the full system.</p>
-<table class="comp-table"><thead><tr><th>Feature</th><th>FREE</th><th>PRO</th></tr></thead><tbody>
-<tr><td>Unlimited tasks + Signal Engine</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
-<tr><td>Voice Capture</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
-<tr><td>Blocks Canvas</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
-<tr><td>Focus Timer</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
-<tr><td>Debt Snowball (unlimited debts)</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
-<tr><td>Sprints</td><td class="comp-limit">3/week</td><td class="comp-check">Unlimited</td></tr>
-<tr><td>Sprint History</td><td class="comp-limit">Last 5</td><td class="comp-check">Full</td></tr>
-<tr><td>Recurring Tasks</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
-<tr><td>Snowball Planning Tools</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
-<tr><td>Achievements & Reports</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
-<tr><td>Widgets & Live Activity</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
-</tbody></table></section>
-<section class="pricing" id="pricing"><h2>Start free. Upgrade when ready.</h2><p>7-day free trial of all Pro features. No account required. Cancel anytime.</p>
-<div class="plans">
-<div class="plan"><h3>Monthly</h3><div class="price">$5.99<span>/mo</span></div><div class="detail">Billed monthly</div><ul><li>Unlimited sprints</li><li>Full sprint history</li><li>Recurring tasks</li><li>Snowball planning tools</li><li>Widgets & Live Activity</li></ul></div>
-<div class="plan pop"><div class="plan-badge">BEST VALUE</div><h3>Annual</h3><div class="price">$49.99<span>/yr</span></div><div class="detail">Save 30% — $4.17/mo</div><ul><li>Everything in Monthly</li><li>Achievements & reports</li><li>Priority support</li></ul></div>
-</div></section>
-<section class="founder"><div class="founder-line"></div><p>"I wanted a system that could look at everything on my plate and show me where to start. So I built one."</p><p class="founder-name">— Solo Developer, INTIRA Labs</p></section>
-<section class="bottom-cta" id="download"><h2>Ready to find your <span class="amber">Signal</span>?</h2><p>Download INTIRA free on the App Store.</p>
-<a href="#" class="hero-cta"><svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>Download for iOS</a></section>
-<footer><a href="#top" class="logo">INTIRA</a><p>© 2026 INTIRA Labs LLC. All rights reserved.</p><div class="links"><a href="privacy.html">Privacy Policy</a><a href="mailto:support@intira.app">Contact</a></div></footer>
-</body></html>
+
+<footer>
+  <a href="#top" class="logo">INTIRA</a>
+  <p>© 2026 INTIRA Labs LLC. All rights reserved.</p>
+  <div class="links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
