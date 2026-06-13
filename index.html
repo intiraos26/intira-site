@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>INTIRA — Focus on Signal. Kill the Noise.</title>
-<meta name="description" content="Add your tasks. INTIRA automatically sorts what to focus on first. Smart prioritization meets debt snowball tracking — one app, one system.">
-<meta property="og:title" content="INTIRA — Focus on Signal. Kill the Noise.">
-<meta property="og:description" content="Add your tasks. INTIRA automatically sorts what to focus on first. Smart prioritization meets debt snowball tracking — one app, one system.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>INTIRA — Smart Task Prioritization &amp; Debt Payoff App</title>
+<meta name="description" content="INTIRA scores every task you add and surfaces what matters most — so you spend less time organizing and more time executing.">
+<meta property="og:title" content="INTIRA — Focus on Signal. Cut the Noise.">
+<meta property="og:description" content="INTIRA scores every task you add and surfaces what matters most.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,22 +14,21 @@
 :root{--bg:#07060E;--bg2:#0E0D18;--surface:#161425;--surface2:#1E1C2E;--border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.12);--text:#F0EEF8;--sub:#8E8AAE;--sub2:#5C587A;--amber:#F59E0B;--amber2:#F97316;--violet:#8B5CF6;--mint:#10B981;--rose:#FF4D6D;--blue:#4C6EF5}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
-.amber{color:var(--amber)}.violet{color:var(--violet)}.mint{color:var(--mint)}
+.amber{color:var(--amber)}.violet{color:var(--violet)}.mint{color:var(--mint)}.blue{color:var(--blue)}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(7,6,14,0.85);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
 .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--amber);letter-spacing:2px;text-decoration:none}
 .nav-links{display:flex;gap:28px;align-items:center}.nav-links a{color:var(--sub);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s}.nav-links a:hover{color:var(--text)}
 .nav-cta{background:var(--amber)!important;color:#07060E!important;padding:10px 22px;border-radius:10px;font-weight:700!important;font-size:13px!important;transition:transform .2s,box-shadow .2s}.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(245,158,11,0.3)}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:160px 24px 60px;position:relative}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:150px 24px 60px;position:relative}
 .hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(245,158,11,0.08) 0%,rgba(139,92,246,0.04) 40%,transparent 70%);pointer-events:none}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:100px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);font-size:12px;font-weight:700;color:var(--amber);margin-bottom:32px;letter-spacing:.5px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:100px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);font-size:12px;font-weight:700;color:var(--amber);margin-bottom:28px;letter-spacing:.3px;max-width:90vw}
 .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:64px;line-height:1.05;letter-spacing:-2px;margin-bottom:24px;max-width:700px}
-.hero-sub-main{font-size:20px;color:var(--sub);line-height:1.6;max-width:480px;margin-bottom:40px;font-weight:500}
+.hero-sub-main{font-size:19px;color:var(--sub);line-height:1.6;max-width:540px;margin-bottom:36px;font-weight:500}
 .hero-cta{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border-radius:14px;background:linear-gradient(135deg,var(--amber),var(--amber2));color:#07060E;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 8px 32px rgba(245,158,11,0.3);transition:transform .2s,box-shadow .2s}
 .hero-cta:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(245,158,11,0.4)}.hero-cta svg{width:20px;height:20px}
 .hero-fine{font-size:13px;color:var(--sub2);margin-top:16px;font-weight:500}
-/* ── Carousel ── */
-.carousel-wrap{position:relative;margin-top:60px;max-width:340px;margin-left:auto;margin-right:auto}
-.carousel{position:relative;overflow:hidden}
+.carousel-wrap{position:relative;margin-top:56px;max-width:340px;margin-left:auto;margin-right:auto}
+.carousel-inner{position:relative;overflow:hidden}
 .carousel-slide{display:none;animation:fadeIn .4s ease}
 .carousel-slide.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -38,98 +37,125 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:fl
 .cdot.active{background:var(--amber);width:24px;border-radius:4px}
 .carousel-arrow{position:absolute;top:50%;transform:translateY(-60%);background:rgba(22,20,37,0.8);border:1px solid var(--border2);color:var(--sub);font-size:24px;width:36px;height:36px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;z-index:5}
 .carousel-arrow:hover{color:var(--text);border-color:var(--amber)}
-.carousel-arrow.left{left:-48px}
-.carousel-arrow.right{right:-48px}
+.carousel-arrow.left{left:-48px}.carousel-arrow.right{right:-48px}
 .slide-label{text-align:center;font-size:13px;font-weight:600;color:var(--sub);margin-top:16px}
-/* ── App Screen (high-fidelity) ── */
-.app-screen{width:300px;margin:0 auto;background:var(--bg);border-radius:32px;border:2.5px solid var(--border2);overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,0.6),0 0 0 1px rgba(255,255,255,0.03);position:relative;padding-bottom:8px}
-.screen-status{display:flex;justify-content:space-between;padding:12px 24px 8px;font-size:12px;font-weight:600;color:var(--sub2)}
-.screen-header{padding:4px 20px 12px;display:flex;justify-content:space-between;align-items:center}
-.screen-title{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:var(--text)}
-.screen-hud{display:flex;gap:16px}
-.hud-item{display:flex;flex-direction:column;align-items:center}
-.hud-num{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:var(--text)}
-.hud-label{font-size:8px;font-weight:700;color:var(--sub2);letter-spacing:.5px}
-.screen-section-divider{display:flex;align-items:center;gap:8px;padding:6px 20px;margin:2px 0}
-.sd-line{flex:1;height:1px}
-.sd-amber{background:rgba(245,158,11,0.25)}
-.sd-violet{background:rgba(139,92,246,0.25)}
-.sd-text{font-size:9px;font-weight:800;letter-spacing:1.5px}
-/* Task cards */
-.screen-task{display:flex;margin:0 12px 6px;border-radius:12px;overflow:hidden}
-.task-accent{width:3px;flex-shrink:0}
-.amber-accent{background:var(--amber)}
-.violet-accent{background:var(--violet)}
-.signal-task .task-body{background:rgba(245,158,11,0.04);padding:10px 12px;flex:1}
-.noise-task .task-body{background:rgba(139,92,246,0.03);padding:10px 12px;flex:1}
-.task-title{font-size:13px;font-weight:700;color:var(--text)}
-.task-meta-row{display:flex;gap:6px;align-items:center;margin-top:5px}
-.task-chip{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px}
-.amber-chip{background:rgba(245,158,11,0.12);color:var(--amber)}
-.violet-chip{background:rgba(139,92,246,0.12);color:var(--violet)}
-.task-due{font-size:9px;font-weight:600;color:var(--sub2)}
-/* Tab bar */
-.screen-tabbar{display:flex;justify-content:space-around;padding:10px 0 6px;margin-top:8px;border-top:1px solid var(--border)}
-.stab{font-size:9px;font-weight:700;color:var(--sub2)}
-.active-stab{color:var(--amber)}
-/* Snowball screen */
-.snow-eyebrow{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--amber)}
-.snow-dot{width:8px;height:8px;border-radius:50%;background:var(--amber)}
-.snow-ring-wrap{position:relative;display:flex;justify-content:center;padding:12px 0}
-.snow-ring-svg{width:140px;height:140px}
+.app-screen{width:300px;aspect-ratio:9/19.5;margin:0 auto;background:#07070F;border-radius:44px;border:5px solid #1a1828;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,0.6),0 0 0 1px rgba(255,255,255,0.03);position:relative;display:flex;flex-direction:column}
+.screen-statusbar{display:flex;justify-content:space-between;align-items:center;padding:13px 24px 4px;font-size:13px;font-weight:700;color:var(--text);flex-shrink:0}
+.sb-right{display:flex;align-items:center;gap:5px}.sb-right svg{width:15px;height:13px;fill:var(--text)}
+.screen-body{padding:2px 14px 0;flex:1;display:flex;flex-direction:column;overflow:hidden}
+.screen-body .tabbar{margin-top:auto}
+.app-header{display:flex;align-items:center;gap:10px;padding:8px 6px 12px;flex-shrink:0}
+.app-logo-badge{width:34px;height:34px;border-radius:50%;background:rgba(245,158,11,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.app-logo-badge svg{width:21px;height:21px;stroke:var(--amber);fill:none;stroke-width:1.5}
+.app-wordmark{font-family:'Syne',sans-serif;font-weight:800;font-size:19px;letter-spacing:1px;color:var(--sub);flex:1}
+.app-gear{width:30px;height:30px;border-radius:50%;background:var(--surface2);display:flex;align-items:center;justify-content:center}
+.app-gear svg{width:15px;height:15px;stroke:var(--sub);fill:none;stroke-width:1.6}
+.stat-row{display:flex;gap:8px;padding:0 4px 12px;flex-shrink:0}
+.stat-card{flex:1;border-radius:14px;padding:11px 6px;text-align:center}
+.stat-card.pending{background:rgba(76,110,245,0.08)}.stat-card.sprint{background:rgba(245,158,11,0.08)}.stat-card.done{background:rgba(16,185,129,0.08)}
+.stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:21px;line-height:1}
+.stat-card.pending .stat-num{color:var(--blue)}.stat-card.sprint .stat-num{color:var(--amber)}.stat-card.done .stat-num{color:var(--mint)}
+.stat-label{font-size:8px;font-weight:700;letter-spacing:1px;color:var(--sub2);margin-top:5px}
+.dump-title-row{display:flex;align-items:center;justify-content:space-between;padding:0 6px 8px;flex-shrink:0}
+.dump-title{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--text)}
+.dump-actions{display:flex;gap:6px}
+.dump-actions span{width:28px;height:28px;border-radius:8px;background:var(--surface2);display:flex;align-items:center;justify-content:center}
+.dump-actions svg{width:13px;height:13px;stroke:var(--sub);fill:none;stroke-width:1.8}
+.sec-div{display:flex;align-items:center;gap:8px;padding:4px 8px;flex-shrink:0}
+.sec-line{flex:1;height:1px}.sec-line.amber{background:rgba(245,158,11,0.25)}.sec-line.violet{background:rgba(139,92,246,0.25)}
+.sec-text{font-size:9px;font-weight:800;letter-spacing:2px}
+.task{display:flex;gap:10px;align-items:flex-start;margin:0 4px 6px;padding:10px 12px;border-radius:14px;background:var(--surface);border:1px solid var(--border);flex-shrink:0}
+.task.signal{border-left:3px solid var(--amber)}.task.noise{border-left:3px solid var(--violet)}
+.task-check{width:18px;height:18px;border-radius:50%;border:2px solid var(--amber);flex-shrink:0;margin-top:1px}
+.task.noise .task-check{border-color:var(--violet)}
+.task-main{flex:1}.task-title{font-size:13px;font-weight:700;color:var(--text);line-height:1.3}
+.task-chips{display:flex;gap:5px;align-items:center;margin-top:6px;flex-wrap:wrap}
+.chip{font-size:8px;font-weight:800;letter-spacing:.5px;padding:3px 7px;border-radius:5px}
+.chip.signal{background:rgba(245,158,11,0.15);color:var(--amber)}.chip.noise{background:rgba(139,92,246,0.15);color:var(--violet)}
+.chip.critical{background:rgba(255,77,109,0.15);color:var(--rose)}.chip.high{background:rgba(245,158,11,0.15);color:var(--amber)}
+.chip.medium{background:rgba(76,110,245,0.18);color:#7d96f7}.chip.low{background:rgba(16,185,129,0.15);color:var(--mint)}
+.task-due{font-size:9px;font-weight:600;color:var(--sub2);display:inline-flex;align-items:center;gap:3px}.task-due.urgent{color:var(--amber2)}
+.tabbar{display:flex;justify-content:space-around;align-items:center;margin:8px 8px 4px;padding:8px 6px;background:rgba(255,255,255,0.03);border-radius:20px;flex-shrink:0}
+.tab{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1}
+.tab .tab-icn svg{width:18px;height:18px;stroke:var(--sub2);fill:none;stroke-width:1.8}
+.tab span{font-size:8px;font-weight:700;color:var(--sub2)}.tab.active span{color:var(--amber)}
+.tab-icn{width:34px;height:24px;border-radius:11px;display:flex;align-items:center;justify-content:center}
+.tab.active .tab-pill{background:rgba(245,158,11,0.14)}
+.sprint-focus-pill{display:flex;width:fit-content;margin:18px auto 0;align-items:center;gap:6px;font-size:10px;font-weight:800;letter-spacing:1.5px;color:var(--amber);background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);padding:6px 14px;border-radius:100px;flex-shrink:0}
+.sprint-focus-pill svg{width:10px;height:10px;stroke:var(--amber);fill:none;stroke-width:2}
+.sprint-timer{text-align:center;font-family:'Syne',sans-serif;font-weight:800;font-size:46px;color:var(--text);letter-spacing:-1px;margin:16px 0 14px;flex-shrink:0}
+.sprint-progress{height:5px;margin:0 14px 18px;border-radius:10px;background:linear-gradient(90deg,var(--amber),var(--mint));box-shadow:0 0 16px rgba(16,185,129,0.4);flex-shrink:0}
+.sprint-cta{margin:14px 8px 0;padding:13px;border-radius:14px;text-align:center;font-weight:800;font-size:14px;color:#07060E;background:linear-gradient(135deg,var(--amber),var(--amber2));box-shadow:0 6px 20px rgba(245,158,11,0.25);flex-shrink:0}
+.sprint-cancel{text-align:center;font-size:12px;font-weight:700;color:var(--rose);padding:12px 0 4px;flex-shrink:0}
+.snow-head{display:flex;align-items:center;justify-content:space-between;padding:10px 6px 6px;flex-shrink:0}
+.snow-brand{display:flex;align-items:center;gap:8px;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;letter-spacing:1.5px;color:var(--amber)}
+.snow-flake{width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,0.1);display:flex;align-items:center;justify-content:center}
+.snow-flake svg{width:16px;height:16px;stroke:var(--mint);fill:none;stroke-width:1.6}
+.snow-more{width:30px;height:30px;border-radius:50%;background:var(--surface2);display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:14px}
+.snow-ring-wrap{position:relative;display:flex;justify-content:center;padding:8px 0 4px;flex-shrink:0}
+.snow-ring-svg{width:148px;height:148px}
 .snow-ring-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.snow-ring-label{font-size:8px;font-weight:800;letter-spacing:1.5px;color:var(--amber)}
-.snow-ring-amount{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:var(--text)}
-.snow-ring-sub{font-size:9px;font-weight:600;color:var(--sub2);margin-top:2px}
-.snow-pill{text-align:center;font-size:10px;font-weight:700;color:var(--amber);padding:6px 14px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:100px;display:inline-flex;align-items:center;gap:4px;margin:8px auto;display:block;width:fit-content}
-.snow-target{margin:12px 16px 0;padding:12px;background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.2);border-radius:14px}
-.snow-target-eyebrow{font-size:8px;font-weight:800;letter-spacing:1.5px;color:var(--amber);margin-bottom:4px}
-.snow-target-name{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:var(--text);margin-bottom:6px}
-.snow-target-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
-.snow-target-bal{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:var(--text)}
-.snow-target-meta{font-size:9px;font-weight:600;color:var(--sub2)}
-.snow-target-bar{height:4px;background:rgba(255,255,255,0.06);border-radius:10px;overflow:hidden;margin-bottom:10px}
-.snow-target-fill{height:100%;background:linear-gradient(90deg,var(--amber),var(--amber2));border-radius:10px}
-.snow-target-btn{text-align:center;font-size:12px;font-weight:800;color:#07060E;background:linear-gradient(135deg,var(--amber),var(--amber2));padding:10px;border-radius:10px;box-shadow:0 4px 12px rgba(245,158,11,0.2)}
-/* Sprint screen */
-.sprint-eyebrow{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--amber)}
-.sprint-dot{width:8px;height:8px;border-radius:50%;background:var(--amber);animation:pulse-dot 2s infinite}
-@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
-.sprint-timer-badge{font-size:11px;font-weight:700;color:var(--amber);padding:4px 10px;background:rgba(245,158,11,0.1);border-radius:8px}
-.sprint-progress-wrap{text-align:center;padding:16px 0 12px}
-.sprint-big-num{font-family:'Syne',sans-serif;font-weight:800;font-size:48px;color:var(--text);line-height:1}
-.sprint-big-of{font-size:24px;color:var(--sub2)}
-.sprint-big-label{font-size:10px;font-weight:600;color:var(--sub2);margin-top:4px;letter-spacing:.5px}
-.sprint-bar-full{height:4px;background:rgba(255,255,255,0.06);border-radius:10px;margin:12px 20px 0;overflow:hidden}
-.sprint-bar-fill{height:100%;background:linear-gradient(90deg,var(--amber),var(--amber2));border-radius:10px}
-.sprint-task-list{padding:12px 16px 0}
-.sprint-task{display:flex;align-items:center;gap:10px;padding:10px 12px;margin-bottom:6px;background:var(--surface);border-radius:10px;border:1px solid var(--border)}
-.done-task{opacity:.5}
-.st-check{color:var(--mint);font-weight:800;font-size:14px;width:20px;text-align:center}
-.st-circle{width:18px;height:18px;border-radius:50%;border:2px solid var(--sub2);flex-shrink:0}
-.st-title{font-size:13px;font-weight:600;color:var(--text);flex:1}
-.done-task .st-title{text-decoration:line-through;color:var(--sub2)}
-.st-focus{font-size:9px;font-weight:800;color:var(--amber);background:rgba(245,158,11,0.1);padding:3px 8px;border-radius:6px}
-.sprint-bottom-row{text-align:center;padding:12px 0 4px}
-.sprint-xp{font-size:11px;font-weight:700;color:var(--amber)}
+.snow-ring-label{font-size:8px;font-weight:800;letter-spacing:2px;color:var(--amber)}
+.snow-ring-amt{font-family:'Syne',sans-serif;font-weight:800;font-size:30px;color:var(--text);line-height:1.1}
+.snow-ring-sub{font-size:9px;font-weight:600;color:var(--sub2);margin-top:3px}
+.snow-pill{display:block;width:fit-content;margin:6px auto 0;font-size:10px;font-weight:700;color:var(--amber);background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);padding:6px 14px;border-radius:100px;flex-shrink:0}
+.snow-target{margin:12px 6px 0;padding:14px;background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.18);border-radius:16px;flex-shrink:0}
+.snow-target-eyebrow{font-size:8px;font-weight:800;letter-spacing:1.5px;color:var(--amber);margin-bottom:5px}
+.snow-target-name{font-family:'Syne',sans-serif;font-weight:800;font-size:17px;color:var(--text);margin-bottom:8px}
+.snow-target-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.snow-target-bal{font-family:'Syne',sans-serif;font-weight:800;font-size:24px;color:var(--text)}
+.snow-target-meta{font-size:9px;font-weight:600;color:var(--sub2);text-align:right;line-height:1.4}
+.snow-target-bar{height:5px;background:rgba(255,255,255,0.06);border-radius:10px;overflow:hidden;margin-bottom:12px}
+.snow-target-fill{height:100%;width:62%;background:linear-gradient(90deg,var(--amber),var(--amber2));border-radius:10px}
+.snow-target-btn{text-align:center;font-size:13px;font-weight:800;color:#07060E;background:linear-gradient(135deg,var(--amber),var(--amber2));padding:12px;border-radius:12px;box-shadow:0 6px 16px rgba(245,158,11,0.25)}
+.blocks-canvas{position:relative;flex:1;margin:8px 4px;min-height:0}
+.block{position:absolute;border-radius:14px;padding:11px 13px;font-size:11px;font-weight:600;line-height:1.35;color:#1a1320;box-shadow:0 8px 20px rgba(0,0,0,0.35)}
+.block.b1{background:#F59E0B;top:2%;left:0;width:150px}
+.block.b2{background:#8B5CF6;color:#fff;top:34%;left:0;width:158px}
+.block.b3{background:#8B5CF6;color:#fff;top:28%;right:0;width:108px}
+.block.b4{background:#FF4D6D;color:#fff;top:46%;right:0;width:150px}
+.block.b5{background:#10B981;color:#06281d;top:68%;left:0;width:155px}
+.blocks-fab{position:absolute;bottom:2%;right:0;width:46px;height:46px;border-radius:50%;background:var(--violet);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(139,92,246,0.4)}
+.blocks-fab svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2}
+.voice-sheet{padding:18px 6px 4px;flex:1;display:flex;flex-direction:column}
+.voice-top{display:flex;align-items:center;justify-content:space-between;padding:0 6px 18px}
+.voice-cancel{font-size:13px;font-weight:600;color:var(--sub);background:var(--surface2);padding:7px 16px;border-radius:100px}
+.voice-title{display:flex;align-items:center;gap:7px;font-weight:800;font-size:16px;color:var(--text)}
+.voice-title svg{width:15px;height:15px;stroke:var(--amber);fill:none;stroke-width:2}
+.voice-mic{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--amber2));display:flex;align-items:center;justify-content:center;margin:32px auto 16px;box-shadow:0 0 0 8px rgba(245,158,11,0.12),0 0 30px rgba(245,158,11,0.35)}
+.voice-stop{width:26px;height:26px;border-radius:7px;background:#07060E}
+.voice-hint{text-align:center;font-size:14px;font-weight:700;color:var(--text)}
+.voice-transcript{margin:22px 6px 0;padding:14px 16px;background:var(--surface2);border-radius:14px;font-size:13px;font-weight:600;color:var(--text);line-height:1.4}
 .philosophy{padding:120px 24px 80px;text-align:center;max-width:900px;margin:0 auto}
 .philosophy h2{font-family:'Syne',sans-serif;font-weight:800;font-size:36px;line-height:1.2;margin-bottom:20px;letter-spacing:-.5px}
-.philosophy>p{font-size:17px;color:var(--sub);line-height:1.7;max-width:600px;margin:0 auto 48px}
+.philosophy>p{font-size:17px;color:var(--sub);line-height:1.7;max-width:620px;margin:0 auto 48px}
 .sn-row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
 .sn-card{flex:1;min-width:280px;max-width:380px;padding:32px 28px;border-radius:20px;text-align:left}
 .sn-signal{background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.15)}
 .sn-noise{background:rgba(139,92,246,0.04);border:1px solid rgba(139,92,246,0.15)}
-.sn-card .sn-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
-.sn-signal .sn-icon{background:rgba(245,158,11,0.12)}.sn-noise .sn-icon{background:rgba(139,92,246,0.12)}
+.sn-card .sn-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.sn-card .sn-icon svg{width:24px;height:24px;fill:none;stroke-width:2}
+.sn-signal .sn-icon{background:rgba(245,158,11,0.12)}.sn-signal .sn-icon svg{stroke:var(--amber)}
+.sn-noise .sn-icon{background:rgba(139,92,246,0.12)}.sn-noise .sn-icon svg{stroke:var(--violet)}
 .sn-card h3{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;margin-bottom:10px}
+.sn-signal h3{color:var(--amber)}.sn-noise h3{color:var(--violet)}
 .sn-card p{font-size:14px;color:var(--sub);line-height:1.7}
-.hero-features{padding:60px 24px 80px;max-width:960px;margin:0 auto}
+.namewhy{max-width:720px;margin:0 auto;padding:80px 24px}
+.namewhy .eyebrow{font-size:12px;font-weight:800;letter-spacing:2px;color:var(--amber);margin-bottom:18px}
+.namewhy h2{font-family:'Syne',sans-serif;font-weight:800;font-size:32px;line-height:1.25;letter-spacing:-.5px;margin-bottom:28px}
+.namewhy p{font-size:16px;color:var(--sub);line-height:1.8;margin-bottom:20px}
+.namewhy .sig{margin-top:32px}
+.namewhy .sig-name{font-weight:700;color:var(--text);font-size:15px}
+.namewhy .sig-role{font-size:13px;color:var(--amber);margin-top:2px}
+.hero-features{padding:60px 24px 60px;max-width:960px;margin:0 auto}
 .hero-feat{display:flex;align-items:center;gap:60px;padding:48px 40px;background:var(--surface);border:1px solid var(--border2);border-radius:24px;margin-bottom:24px;position:relative;overflow:hidden}
 .hero-feat::after{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;pointer-events:none}
 .hero-feat-signal::after{background:radial-gradient(circle,rgba(245,158,11,0.08),transparent 70%)}
 .hero-feat-snow::after{background:radial-gradient(circle,rgba(16,185,129,0.08),transparent 70%)}
-.hero-feat-icon{width:80px;height:80px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0}
-.hero-feat-signal .hero-feat-icon{background:rgba(245,158,11,0.1)}.hero-feat-snow .hero-feat-icon{background:rgba(16,185,129,0.1)}
+.hero-feat-icon{width:80px;height:80px;border-radius:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hero-feat-icon svg{width:38px;height:38px;fill:none;stroke-width:1.8}
+.hero-feat-signal .hero-feat-icon{background:rgba(245,158,11,0.1)}.hero-feat-signal .hero-feat-icon svg{stroke:var(--amber)}
+.hero-feat-snow .hero-feat-icon{background:rgba(16,185,129,0.1)}.hero-feat-snow .hero-feat-icon svg{stroke:var(--mint)}
 .hero-feat-text h3{font-family:'Syne',sans-serif;font-weight:800;font-size:24px;margin-bottom:12px}
 .hero-feat-text p{font-size:15px;color:var(--sub);line-height:1.7}
 .hero-feat-tag{display:inline-block;margin-top:14px;font-size:11px;font-weight:700;padding:6px 14px;border-radius:8px;letter-spacing:.3px}
@@ -137,7 +163,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:fl
 .features-grid h2{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;text-align:center;margin-bottom:48px;letter-spacing:-.5px}
 .fg-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .fg-card{padding:28px 20px;background:var(--surface);border:1px solid var(--border);border-radius:18px;text-align:center}
-.fg-card-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 14px}
+.fg-card-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.fg-card-icon svg{width:24px;height:24px;fill:none;stroke-width:1.9}
 .fg-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:8px}
 .fg-card p{font-size:12px;color:var(--sub);line-height:1.6}
 .comparison{padding:80px 24px;max-width:700px;margin:0 auto}
@@ -147,240 +174,335 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:fl
 .comp-table th{font-family:'Syne',sans-serif;font-weight:800;font-size:14px;padding:14px 16px;text-align:left;border-bottom:2px solid var(--border2);letter-spacing:1px}
 .comp-table th:nth-child(2){text-align:center;color:var(--sub)}.comp-table th:nth-child(3){text-align:center;color:var(--amber)}
 .comp-table td{padding:12px 16px;border-bottom:1px solid var(--border);font-size:14px;color:var(--sub)}
-.comp-table td:nth-child(2),.comp-table td:nth-child(3){text-align:center;font-size:16px}
+.comp-table td:nth-child(2),.comp-table td:nth-child(3){text-align:center;font-size:15px}
 .comp-check{color:var(--mint)}.comp-limit{color:var(--sub2);font-size:12px}.comp-lock{color:var(--sub2)}
 .pricing{padding:80px 24px;text-align:center;max-width:960px;margin:0 auto}
 .pricing h2{font-family:'Syne',sans-serif;font-weight:800;font-size:32px;margin-bottom:12px}
 .pricing>p{color:var(--sub);font-size:15px;margin-bottom:48px}
-.plans{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.plan{width:260px;padding:32px 24px;border-radius:20px;background:var(--surface);border:1px solid var(--border);text-align:left;position:relative}
+.plans{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;align-items:stretch}
+.plan{width:280px;padding:32px 24px;border-radius:20px;background:var(--surface);border:1px solid var(--border);text-align:left;position:relative}
 .plan.pop{border-color:var(--amber);box-shadow:0 0 40px rgba(245,158,11,0.1)}
 .plan-badge{position:absolute;top:-10px;right:16px;background:var(--amber);color:#07060E;font-size:10px;font-weight:800;letter-spacing:1px;padding:4px 12px;border-radius:6px}
 .plan h3{font-family:'Syne',sans-serif;font-weight:700;font-size:18px;margin-bottom:8px}
 .price{font-family:'Syne',sans-serif;font-weight:800;font-size:36px;margin-bottom:4px}.price span{font-size:16px;font-weight:600;color:var(--sub)}
 .plan .detail{font-size:13px;color:var(--sub);margin-bottom:20px}
 .plan ul{list-style:none}.plan li{font-size:13px;color:var(--sub);padding:6px 0;padding-left:20px;position:relative}
-.plan li::before{content:'✓';position:absolute;left:0;color:var(--mint);font-weight:700}
-.founder{padding:60px 24px;text-align:center;max-width:600px;margin:0 auto}
-.founder-line{width:40px;height:2px;background:var(--amber);margin:0 auto 24px;border-radius:2px}
-.founder p{font-size:15px;color:var(--sub);line-height:1.8;font-style:italic}
-.founder .founder-name{font-style:normal;font-weight:700;color:var(--text);margin-top:12px;font-size:13px;letter-spacing:.5px}
-.bottom-cta{padding:100px 24px 80px;text-align:center}
+.plan li::before{content:'\2713';position:absolute;left:0;color:var(--mint);font-weight:700}
+.contact{padding:80px 24px;max-width:600px;margin:0 auto;text-align:center}
+.contact .eyebrow{font-size:12px;font-weight:800;letter-spacing:2px;color:var(--amber);margin-bottom:14px}
+.contact h2{font-family:'Syne',sans-serif;font-weight:800;font-size:32px;margin-bottom:14px}
+.contact>p{color:var(--sub);font-size:15px;line-height:1.7;margin-bottom:40px;max-width:480px;margin-left:auto;margin-right:auto}
+.contact-form{background:var(--surface);border:1px solid var(--border2);border-radius:20px;padding:40px 36px;text-align:left}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:13px;font-weight:700;color:var(--sub);margin-bottom:8px;letter-spacing:.3px}
+.form-group label .req{color:var(--amber)}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--border2);border-radius:10px;padding:12px 16px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .2s}
+.form-group select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238E8AAE' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--amber)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-submit{width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--amber),var(--amber2));color:#07060E;font-family:'DM Sans',sans-serif;font-weight:800;font-size:15px;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.form-submit:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(245,158,11,0.3)}
+.form-secure{font-size:12px;color:var(--sub2);text-align:center;margin-top:14px}
+.form-secure a{color:var(--sub);text-decoration:underline}
+.form-msg{display:none;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;margin-top:16px;text-align:center}
+.form-msg.success{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);color:var(--mint)}
+.form-msg.error{background:rgba(255,77,109,0.1);border:1px solid rgba(255,77,109,0.2);color:var(--rose)}
+.contact-email{text-align:center;font-size:14px;color:var(--sub);margin-top:28px}
+.contact-email a{color:var(--amber);font-weight:700;text-decoration:none}
+.bottom-cta{padding:100px 24px 60px;text-align:center}
 .bottom-cta h2{font-family:'Syne',sans-serif;font-weight:800;font-size:40px;margin-bottom:16px;letter-spacing:-1px}
 .bottom-cta p{color:var(--sub);margin-bottom:32px;font-size:16px}
 footer{padding:40px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
 footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}footer .links a{color:var(--sub2);text-decoration:none;font-size:12px;font-weight:600}footer .links a:hover{color:var(--sub)}
-@media(max-width:768px){nav{padding:16px 20px}.nav-links a:not(.nav-cta){display:none}.hero{padding:120px 20px 40px}.hero h1{font-size:40px;letter-spacing:-1px}.hero-sub-main{font-size:16px}.philosophy h2{font-size:28px}.sn-row{flex-direction:column;align-items:center}.hero-feat{flex-direction:column;gap:24px;padding:32px 24px;text-align:center}.fg-row{grid-template-columns:repeat(2,1fr)}.plans{flex-direction:column;align-items:center}.plan{width:100%;max-width:340px}.bottom-cta h2{font-size:28px}.comp-table th,.comp-table td{padding:10px 8px;font-size:12px}.carousel-arrow{display:none}.app-screen{width:280px}}
+.nav-toggle{display:none;background:none;border:none;color:var(--text);cursor:pointer;padding:6px;width:40px;height:40px;align-items:center;justify-content:center}
+.nav-toggle svg{width:24px;height:24px}
+.mobile-menu{display:none;position:fixed;top:61px;left:0;right:0;z-index:99;background:rgba(7,6,14,0.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);flex-direction:column;padding:8px 20px 20px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--sub);text-decoration:none;font-size:16px;font-weight:600;padding:14px 4px;border-bottom:1px solid var(--border)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a.mm-cta{margin-top:12px;background:var(--amber);color:#07060E;text-align:center;border-radius:10px;padding:14px;font-weight:800;border:none}
+@media(max-width:768px){nav{padding:16px 20px}.nav-links{display:none}.nav-toggle{display:flex}.hero{padding:120px 20px 40px}.hero h1{font-size:40px;letter-spacing:-1px}.hero-sub-main{font-size:16px}.philosophy h2{font-size:28px}.namewhy h2{font-size:24px}.sn-row{flex-direction:column;align-items:center}.hero-feat{flex-direction:column;gap:24px;padding:32px 24px;text-align:center}.fg-row{grid-template-columns:repeat(2,1fr)}.plans{flex-direction:column;align-items:center}.plan{width:100%;max-width:340px}.bottom-cta h2{font-size:28px}.comp-table th,.comp-table td{padding:10px 8px;font-size:12px}.carousel-arrow{display:none}.app-screen{width:290px}.contact-form{padding:28px 20px}}
 </style>
 </head>
 <body>
-<nav><a href="#" class="logo">INTIRA</a><div class="nav-links"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="privacy.html">Privacy</a><a href="#download" class="nav-cta">Download</a></div></nav>
+<nav><a href="#" class="logo">INTIRA</a><div class="nav-links"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="privacy.html">Privacy</a><a href="#download" class="nav-cta">Download</a></div><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="privacy.html">Privacy</a><a href="#download" class="mm-cta">Download</a></div>
+
 <section class="hero" id="top">
-<div class="hero-badge">✦ A smarter way to get things done</div>
-<h1>Focus on <span class="amber">Signal.</span><br>Kill the <span class="violet">Noise.</span></h1>
-<p class="hero-sub-main">Add your tasks. INTIRA automatically sorts what to focus on first.</p>
+<div class="hero-badge">✦ Intentional Navigation Through Intelligence, Reasoning &amp; Action</div>
+<h1>Focus on <span class="amber">Signal.</span><br>Cut the <span class="violet">Noise.</span></h1>
+<p class="hero-sub-main">INTIRA scores every task you add and surfaces what matters most — so you spend less time organizing and more time executing.</p>
 <a href="#download" class="hero-cta"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>Download for iOS</a>
-<p class="hero-fine">Free with 7-day Pro trial · No account required</p>
- 
-<!-- App Screen Carousel -->
-<div class="carousel-wrap">
-  <div class="carousel" id="carousel">
-    <!-- Slide 1: Brain Dump -->
+<p class="hero-fine">Free to use · 7-day Pro trial · No account required</p>
+
+<div class="carousel-wrap" id="carouselWrap">
+  <div class="carousel-inner" id="carouselInner">
+
     <div class="carousel-slide active">
       <div class="app-screen">
-        <div class="screen-status"><span>9:41</span><span>⚙</span></div>
-        <div class="screen-header">
-          <div class="screen-title">Brain Dump</div>
-          <div class="screen-hud">
-            <div class="hud-item"><span class="hud-num">12</span><span class="hud-label">Signal</span></div>
-            <div class="hud-item"><span class="hud-num">8</span><span class="hud-label">Noise</span></div>
+        <div class="screen-statusbar"><span>9:41</span><span class="sb-right"><svg viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="4.5" y="4.5" width="3" height="7.5" rx="1"/><rect x="9" y="2" width="3" height="10" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 2.5c2.3 0 4.4.9 6 2.4l-1.4 1.4C11.3 5.1 9.7 4.5 8 4.5s-3.3.6-4.6 1.8L2 4.9C3.6 3.4 5.7 2.5 8 2.5zm0 3.5c1.3 0 2.5.5 3.4 1.4L8 10.8 4.6 7.4C5.5 6.5 6.7 6 8 6z"/></svg><svg viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/><rect x="21" y="4" width="2" height="4" rx="1"/></svg></span></div>
+        <div class="screen-body">
+          <div class="app-header">
+            <div class="app-logo-badge"><svg viewBox="0 0 24 24"><path d="M16 5a5.5 5.5 0 0 0-5.4 4.4A3.2 3.2 0 0 0 8 12.4c0 .8.3 1.5.8 2 .1.4 0 .8-.2 1.1a2 2 0 0 0-.3 1.1V18a1.8 1.8 0 0 0 1.8 1.8h.6v1.3a.7.7 0 0 0 1.4 0v-2.4a.9.9 0 0 0-.9-.9h-1.5v-1.2"/><path d="M13 8.5q1.5-1 2.8 0M12.6 11q1.6-1.1 3.2 0M13.2 13.4q1.3-.9 2.6 0" stroke-linecap="round"/></svg></div>
+            <div class="app-wordmark">INTIRA</div>
+            <div class="app-gear"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.6-2-3.4-2.3 1a7 7 0 0 0-1.7-1l-.3-2.5H10l-.3 2.5a7 7 0 0 0-1.7 1l-2.3-1-2 3.4 2 1.6a7 7 0 0 0 0 2l-2 1.6 2 3.4 2.3-1a7 7 0 0 0 1.7 1l.3 2.5h4l.3-2.5a7 7 0 0 0 1.7-1l2.3 1 2-3.4-2-1.6a7 7 0 0 0 .1-1z"/></svg></div>
           </div>
-        </div>
-        <div class="screen-section-divider"><span class="sd-line sd-amber"></span><span class="sd-text amber">SIGNAL</span><span class="sd-line sd-amber"></span></div>
-        <div class="screen-task signal-task">
-          <div class="task-accent amber-accent"></div>
-          <div class="task-body">
-            <div class="task-row"><span class="task-title">Call accountant about Q3 taxes</span></div>
-            <div class="task-meta-row"><span class="task-chip amber-chip">Work</span><span class="task-chip amber-chip">Deadline</span><span class="task-due">Due Friday</span></div>
+          <div class="stat-row">
+            <div class="stat-card pending"><div class="stat-num">22</div><div class="stat-label">PENDING</div></div>
+            <div class="stat-card sprint"><div class="stat-num">3</div><div class="stat-label">SPRINT</div></div>
+            <div class="stat-card done"><div class="stat-num">6</div><div class="stat-label">DONE</div></div>
           </div>
-        </div>
-        <div class="screen-task signal-task">
-          <div class="task-accent amber-accent"></div>
-          <div class="task-body">
-            <div class="task-row"><span class="task-title">Finish investor pitch deck</span></div>
-            <div class="task-meta-row"><span class="task-chip amber-chip">Project</span><span class="task-due">Tomorrow</span></div>
+          <div class="dump-title-row">
+            <div class="dump-title">Brain Dump</div>
+            <div class="dump-actions"><span><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg></span><span><svg viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></svg></span></div>
           </div>
-        </div>
-        <div class="screen-task signal-task">
-          <div class="task-accent amber-accent"></div>
-          <div class="task-body">
-            <div class="task-row"><span class="task-title">Send quarterly report to board</span></div>
-            <div class="task-meta-row"><span class="task-chip amber-chip">Work</span><span class="task-due">Today</span></div>
+          <div class="sec-div"><span class="sec-line amber"></span><span class="sec-text amber">SIGNAL</span><span class="sec-line amber"></span></div>
+          <div class="task signal"><div class="task-check"></div><div class="task-main"><div class="task-title">Finish tax documents for accountant</div><div class="task-chips"><span class="chip signal">SIGNAL</span><span class="chip critical">CRITICAL</span><span class="task-due">◷ Due Jun 17, 5:00 PM</span></div></div></div>
+          <div class="task signal"><div class="task-check"></div><div class="task-main"><div class="task-title">Pick up prescription</div><div class="task-chips"><span class="chip signal">SIGNAL</span><span class="chip high">HIGH</span><span class="task-due urgent">◷ Due Jun 12, 6:00 PM</span></div></div></div>
+          <div class="task signal"><div class="task-check"></div><div class="task-main"><div class="task-title">Call Mom for her birthday</div><div class="task-chips"><span class="chip signal">SIGNAL</span><span class="chip medium">MEDIUM</span><span class="task-due urgent">◷ Due Jun 12, 7:00 PM</span></div></div></div>
+          <div class="sec-div"><span class="sec-line violet"></span><span class="sec-text violet">NOISE</span><span class="sec-line violet"></span></div>
+          <div class="task noise"><div class="task-check"></div><div class="task-main"><div class="task-title" style="opacity:.7">Plan summer garden</div><div class="task-chips"><span class="chip noise">NOISE</span><span class="chip low">LOW</span></div></div></div>
+          <div class="tabbar">
+            <div class="tab active"><div class="tab-icn tab-pill"><svg viewBox="0 0 24 24" fill="var(--amber)" stroke="none"><path d="M4 13h3l2 3h6l2-3h3v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M4 13 6 5h12l2 8" fill="none" stroke="var(--amber)" stroke-width="1.8"/></svg></div><span>Dump</span></div>
+            <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div><span>Sprint</span></div>
+            <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><span>Blocks</span></div>
+            <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.4 1.1-2 2.5-2s2.5.6 2.5 2-1.1 2-2.5 2-2.5.6-2.5 2 1.1 2 2.5 2 2.5-.6 2.5-2"/></svg></div><span>Snowball</span></div>
           </div>
-        </div>
-        <div class="screen-section-divider"><span class="sd-line sd-violet"></span><span class="sd-text violet">NOISE</span><span class="sd-line sd-violet"></span></div>
-        <div class="screen-task noise-task">
-          <div class="task-accent violet-accent"></div>
-          <div class="task-body">
-            <div class="task-row"><span class="task-title" style="opacity:.6">Reorganize bookshelf</span></div>
-            <div class="task-meta-row"><span class="task-chip violet-chip">Personal</span></div>
-          </div>
-        </div>
-        <div class="screen-task noise-task">
-          <div class="task-accent violet-accent"></div>
-          <div class="task-body">
-            <div class="task-row"><span class="task-title" style="opacity:.6">Research new headphones</span></div>
-            <div class="task-meta-row"><span class="task-chip violet-chip">Personal</span></div>
-          </div>
-        </div>
-        <div class="screen-tabbar">
-          <div class="stab active-stab">Dump</div><div class="stab">Sprint</div><div class="stab">Blocks</div><div class="stab">Snowball</div>
         </div>
       </div>
       <div class="slide-label">Brain Dump — Signal rises to the top</div>
     </div>
- 
-    <!-- Slide 2: Snowball -->
     <div class="carousel-slide">
       <div class="app-screen">
-        <div class="screen-status"><span>9:41</span><span>⋯</span></div>
-        <div class="screen-header">
-          <div class="snow-eyebrow"><span class="snow-dot"></span> SNOWBALL</div>
-        </div>
-        <div class="snow-ring-wrap">
-          <svg class="snow-ring-svg" viewBox="0 0 160 160">
-            <circle cx="80" cy="80" r="64" fill="none" stroke="rgba(139,92,246,0.15)" stroke-width="10"/>
-            <circle cx="80" cy="80" r="64" fill="none" stroke="url(#cRingGrad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="402.1" stroke-dashoffset="265" transform="rotate(-90 80 80)"/>
-            <defs><linearGradient id="cRingGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#F97316"/></linearGradient></defs>
-          </svg>
-          <div class="snow-ring-inner">
-            <div class="snow-ring-label">PAID OFF</div>
-            <div class="snow-ring-amount">$4,280</div>
-            <div class="snow-ring-sub">of $12,500 · 34% crushed</div>
+        <div class="screen-statusbar"><span>9:41</span><span class="sb-right"><svg viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="4.5" y="4.5" width="3" height="7.5" rx="1"/><rect x="9" y="2" width="3" height="10" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 2.5c2.3 0 4.4.9 6 2.4l-1.4 1.4C11.3 5.1 9.7 4.5 8 4.5s-3.3.6-4.6 1.8L2 4.9C3.6 3.4 5.7 2.5 8 2.5zm0 3.5c1.3 0 2.5.5 3.4 1.4L8 10.8 4.6 7.4C5.5 6.5 6.7 6 8 6z"/></svg><svg viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/><rect x="21" y="4" width="2" height="4" rx="1"/></svg></span></div>
+        <div class="screen-body">
+          <div class="sprint-focus-pill"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>FOCUS LOCKED</div>
+          <div class="sprint-timer">3:59:57</div>
+          <div class="sprint-progress"></div>
+          <div class="task signal"><div class="task-check"></div><div class="task-main"><div class="task-title">Finish tax documents for accountant</div><div class="task-chips"><span class="chip signal">SIGNAL</span><span class="chip critical">CRITICAL</span><span class="task-due">◷ Due Jun 17, 5:00 PM</span></div></div></div>
+          <div class="task signal"><div class="task-check"></div><div class="task-main"><div class="task-title">Pick up prescription</div><div class="task-chips"><span class="chip signal">SIGNAL</span><span class="chip high">HIGH</span><span class="task-due urgent">◷ Due Jun 12, 6:00 PM</span></div></div></div>
+          <div class="task signal"><div class="task-check"></div><div class="task-main"><div class="task-title">Renew car registration</div><div class="task-chips"><span class="chip signal">SIGNAL</span><span class="chip high">HIGH</span><span class="task-due urgent">◷ Due Jun 14, 5:00 PM</span></div></div></div>
+          <div class="sprint-cta">Complete Sprint</div>
+          <div class="sprint-cancel">Cancel Sprint</div>
+          <div class="tabbar">
+            <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><span>Locked</span></div>
+            <div class="tab active"><div class="tab-icn tab-pill"><svg viewBox="0 0 24 24" fill="var(--amber)" stroke="none"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div><span>Sprint</span></div>
+            <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><span>Blocks</span></div>
+            <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.4 1.1-2 2.5-2s2.5.6 2.5 2-1.1 2-2.5 2-2.5.6-2.5 2 1.1 2 2.5 2 2.5-.6 2.5-2"/></svg></div><span>Snowball</span></div>
           </div>
         </div>
-        <div class="snow-pill">⚡ Debt-free in ~14 months</div>
-        <div class="snow-target">
-          <div class="snow-target-eyebrow">NEXT TO CRUSH</div>
-          <div class="snow-target-name">Chase Sapphire</div>
-          <div class="snow-target-row"><span class="snow-target-bal">$1,240</span><span class="snow-target-meta">22.99% APR · $45 min</span></div>
-          <div class="snow-target-bar"><div class="snow-target-fill" style="width:62%"></div></div>
-          <div class="snow-target-btn">+ Log Payment</div>
-        </div>
-        <div class="screen-tabbar">
-          <div class="stab">Dump</div><div class="stab">Sprint</div><div class="stab">Blocks</div><div class="stab active-stab">Snowball</div>
+      </div>
+      <div class="slide-label">Sprint Mode — Focus locked, time running</div>
+    </div>
+    <div class="carousel-slide">
+      <div class="app-screen">
+        <div class="screen-statusbar"><span>9:41</span><span class="sb-right"><svg viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="4.5" y="4.5" width="3" height="7.5" rx="1"/><rect x="9" y="2" width="3" height="10" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 2.5c2.3 0 4.4.9 6 2.4l-1.4 1.4C11.3 5.1 9.7 4.5 8 4.5s-3.3.6-4.6 1.8L2 4.9C3.6 3.4 5.7 2.5 8 2.5zm0 3.5c1.3 0 2.5.5 3.4 1.4L8 10.8 4.6 7.4C5.5 6.5 6.7 6 8 6z"/></svg><svg viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/><rect x="21" y="4" width="2" height="4" rx="1"/></svg></span></div>
+        <div class="screen-body">
+          <div class="snow-head">
+            <div class="snow-brand"><span class="snow-flake"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M12 2v20M3.34 7l17.32 10M3.34 17l17.32-10"/><path d="M12 2.2 9.9 4.3M12 2.2l2.1 2.1M12 21.8l-2.1-2.1M12 21.8l2.1-2.1M3.5 7.2l.1 2.9M3.5 7.2l2.8.3M20.5 16.8l-.1-2.9M20.5 16.8l-2.8-.3M3.5 16.8l2.8-.3M3.5 16.8l.1-2.9M20.5 7.2l-2.8.3M20.5 7.2l-.1 2.9"/></svg></span>SNOWBALL</div>
+            <div class="snow-more">⋯</div>
+          </div>
+          <div class="snow-ring-wrap">
+            <svg class="snow-ring-svg" viewBox="0 0 160 160">
+              <circle cx="80" cy="80" r="66" fill="none" stroke="rgba(139,92,246,0.18)" stroke-width="11"/>
+              <circle cx="80" cy="80" r="66" fill="none" stroke="url(#cRingGrad)" stroke-width="11" stroke-linecap="round" stroke-dasharray="414.7" stroke-dashoffset="270" transform="rotate(-90 80 80)"/>
+              <defs><linearGradient id="cRingGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#F97316"/></linearGradient></defs>
+            </svg>
+            <div class="snow-ring-inner">
+              <div class="snow-ring-label">PAID OFF</div>
+              <div class="snow-ring-amt">$17,590</div>
+              <div class="snow-ring-sub">of $49,500 · 35% crushed</div>
+            </div>
+          </div>
+          <div class="snow-pill">⚡ Debt-free in ~16 months</div>
+          <div class="snow-target">
+            <div class="snow-target-eyebrow">NEXT TO CRUSH</div>
+            <div class="snow-target-name">Store Card</div>
+            <div class="snow-target-row"><span class="snow-target-bal">$420</span><span class="snow-target-meta">24.99% APR<br>$45 min</span></div>
+            <div class="snow-target-bar"><div class="snow-target-fill"></div></div>
+            <div class="snow-target-btn">+ Log Payment</div>
+          </div>
+          <div class="tabbar"><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M4 13h3l2 3h6l2-3h3v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M4 13 6 5h12l2 8" fill="none" stroke="var(--sub2)" stroke-width="1.8"/></svg></div><span>Dump</span></div><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div><span>Sprint</span></div><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><span>Blocks</span></div><div class="tab active"><div class="tab-icn tab-pill"><svg viewBox="0 0 24 24" fill="var(--amber)" stroke="none"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.4 1.1-2 2.5-2s2.5.6 2.5 2-1.1 2-2.5 2-2.5.6-2.5 2 1.1 2 2.5 2 2.5-.6 2.5-2" fill="none" stroke="#07060E" stroke-width="1.6"/></svg></div><span>Snowball</span></div></div>
         </div>
       </div>
       <div class="slide-label">Debt Snowball — Crush your debt visually</div>
     </div>
- 
-    <!-- Slide 3: Sprint -->
     <div class="carousel-slide">
       <div class="app-screen">
-        <div class="screen-status"><span>9:41</span><span></span></div>
-        <div class="screen-header">
-          <div class="sprint-eyebrow"><span class="sprint-dot"></span> ACTIVE SPRINT</div>
-          <div class="sprint-timer-badge">14:22 left</div>
-        </div>
-        <div class="sprint-progress-wrap">
-          <div class="sprint-big-num">2<span class="sprint-big-of">/4</span></div>
-          <div class="sprint-big-label">tasks complete</div>
-          <div class="sprint-bar-full"><div class="sprint-bar-fill" style="width:50%"></div></div>
-        </div>
-        <div class="sprint-task-list">
-          <div class="sprint-task done-task"><span class="st-check">✓</span><span class="st-title">Call accountant</span></div>
-          <div class="sprint-task done-task"><span class="st-check">✓</span><span class="st-title">Review contract terms</span></div>
-          <div class="sprint-task"><span class="st-circle"></span><span class="st-title">Finish pitch deck</span><span class="st-focus">⚡ Focus</span></div>
-          <div class="sprint-task"><span class="st-circle"></span><span class="st-title">Email stakeholders</span></div>
-        </div>
-        <div class="sprint-bottom-row">
-          <div class="sprint-xp">+120 XP earned</div>
-        </div>
-        <div class="screen-tabbar">
-          <div class="stab">Dump</div><div class="stab active-stab">Sprint</div><div class="stab">Blocks</div><div class="stab">Snowball</div>
+        <div class="screen-statusbar"><span>9:41</span><span class="sb-right"><svg viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="4.5" y="4.5" width="3" height="7.5" rx="1"/><rect x="9" y="2" width="3" height="10" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 2.5c2.3 0 4.4.9 6 2.4l-1.4 1.4C11.3 5.1 9.7 4.5 8 4.5s-3.3.6-4.6 1.8L2 4.9C3.6 3.4 5.7 2.5 8 2.5zm0 3.5c1.3 0 2.5.5 3.4 1.4L8 10.8 4.6 7.4C5.5 6.5 6.7 6 8 6z"/></svg><svg viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/><rect x="21" y="4" width="2" height="4" rx="1"/></svg></span></div>
+        <div class="screen-body">
+          <div class="blocks-canvas">
+            <div class="block b1">song idea — that melody from the shower 🎵 record before I forget</div>
+            <div class="block b2">ask Sarah about the cabin weekend — is June still open??</div>
+            <div class="block b3">New Idea</div>
+            <div class="block b4">random: look into noise-cancelling headphones for the studio</div>
+            <div class="block b5">gift ideas for Dad · vinyl? · that grill thing he mentioned</div>
+            <div class="blocks-fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
+          </div>
+          <div class="tabbar"><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M4 13h3l2 3h6l2-3h3v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M4 13 6 5h12l2 8" fill="none" stroke="var(--sub2)" stroke-width="1.8"/></svg></div><span>Dump</span></div><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div><span>Sprint</span></div><div class="tab active"><div class="tab-icn tab-pill"><svg viewBox="0 0 24 24" fill="var(--amber)" stroke="none"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><span>Blocks</span></div><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.4 1.1-2 2.5-2s2.5.6 2.5 2-1.1 2-2.5 2-2.5.6-2.5 2 1.1 2 2.5 2 2.5-.6 2.5-2"/></svg></div><span>Snowball</span></div></div>
         </div>
       </div>
-      <div class="slide-label">Sprint Mode — Lock in and execute</div>
+      <div class="slide-label">Blocks — Get ideas out of your head</div>
     </div>
+
+    <div class="carousel-slide">
+      <div class="app-screen">
+        <div class="screen-statusbar"><span>9:41</span><span class="sb-right"><svg viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="4.5" y="4.5" width="3" height="7.5" rx="1"/><rect x="9" y="2" width="3" height="10" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 2.5c2.3 0 4.4.9 6 2.4l-1.4 1.4C11.3 5.1 9.7 4.5 8 4.5s-3.3.6-4.6 1.8L2 4.9C3.6 3.4 5.7 2.5 8 2.5zm0 3.5c1.3 0 2.5.5 3.4 1.4L8 10.8 4.6 7.4C5.5 6.5 6.7 6 8 6z"/></svg><svg viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/><rect x="21" y="4" width="2" height="4" rx="1"/></svg></span></div>
+        <div class="voice-sheet">
+          <div class="voice-top">
+            <span class="voice-cancel">Cancel</span>
+            <span class="voice-title"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>Voice Capture</span>
+            <span style="width:60px"></span>
+          </div>
+          <div class="voice-mic"><div class="voice-stop"></div></div>
+          <div class="voice-hint">Listening — tap to stop</div>
+          <div class="voice-transcript">Pick up the kids from daycare tomorrow at 5 PM</div>
+        </div>
+      </div>
+      <div class="slide-label">Voice Capture — Speak it, INTIRA structures it</div>
+    </div>
+
   </div>
- 
-  <!-- Carousel Controls -->
-  <div class="carousel-dots">
-    <button class="cdot active" onclick="goSlide(0)"></button>
-    <button class="cdot" onclick="goSlide(1)"></button>
-    <button class="cdot" onclick="goSlide(2)"></button>
+
+  <div class="carousel-dots" id="carouselDots">
+    <button class="cdot active" data-slide="0"></button>
+    <button class="cdot" data-slide="1"></button>
+    <button class="cdot" data-slide="2"></button>
+    <button class="cdot" data-slide="3"></button>
+    <button class="cdot" data-slide="4"></button>
   </div>
-  <button class="carousel-arrow left" onclick="prevSlide()">‹</button>
-  <button class="carousel-arrow right" onclick="nextSlide()">›</button>
+  <button class="carousel-arrow left" id="prevBtn">&#8249;</button>
+  <button class="carousel-arrow right" id="nextBtn">&#8250;</button>
 </div>
- 
-<script>
-let current = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const dots = document.querySelectorAll('.cdot');
-function goSlide(n) {
-  slides[current].classList.remove('active');
-  dots[current].classList.remove('active');
-  current = (n + slides.length) % slides.length;
-  slides[current].classList.add('active');
-  dots[current].classList.add('active');
-}
-function nextSlide() { goSlide(current + 1); }
-function prevSlide() { goSlide(current - 1); }
-// Auto-advance every 5 seconds
-setInterval(nextSlide, 5000);
-// Touch swipe
-let touchStartX = 0;
-const carousel = document.getElementById('carousel');
-carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
-carousel.addEventListener('touchend', e => {
-  const diff = touchStartX - e.changedTouches[0].clientX;
-  if (Math.abs(diff) > 50) { diff > 0 ? nextSlide() : prevSlide(); }
-});
-</script>
- 
 </section>
-<section class="philosophy"><h2>Your focus is the filter. The Signal rises.</h2><p>INTIRA's Signal Engine scores every task you add — automatically sorting your priorities so you always know where to start. You just execute.</p>
-<div class="sn-row"><div class="sn-card sn-signal"><div class="sn-icon">⚡</div><h3>Signal</h3><p>The tasks to focus on right now. The engine scores deadlines, effort, and your focus history — then brings the right ones to the top automatically.</p></div>
-<div class="sn-card sn-noise"><div class="sn-icon">🌀</div><h3>Noise</h3><p>Everything else — organized and ready for later. When the time is right, the engine promotes it to Signal automatically. As your priorities evolve, INTIRA evolves with you.</p></div></div></section>
-<section class="hero-features" id="features">
-<div class="hero-feat hero-feat-signal"><div class="hero-feat-icon">🎯</div><div class="hero-feat-text"><h3>The Signal Engine</h3><p>Every task gets scored automatically using deadlines, effort, focus history, and adaptive thresholds — plus behavioral intelligence that learns your patterns over time. The engine recognizes action verbs, detects people involved, infers effort from how you phrase things, and gets smarter the more you use it.</p><span class="hero-feat-tag" style="background:rgba(245,158,11,0.1);color:var(--amber);">Intelligent Prioritization</span></div></div>
-<div class="hero-feat hero-feat-snow"><div class="hero-feat-icon">❄️</div><div class="hero-feat-text"><h3>Debt Snowball Tracker</h3><p>Track every debt with a progress ring that shows how much you've crushed. The snowball method shows you exactly which debt to pay off next. Log payments, watch your progress grow, and see exactly when you'll be debt-free.</p><span class="hero-feat-tag" style="background:rgba(16,185,129,0.1);color:var(--mint);">Financial Freedom</span></div></div>
-</section>
-<section class="features-grid"><h2>Four powerful tools. One complete system.</h2><div class="fg-row">
-<div class="fg-card"><div class="fg-card-icon" style="background:rgba(245,158,11,0.1);">🎙</div><h4>Voice Capture</h4><p>Speak naturally. INTIRA extracts the title, description, due date, tags, and priority — all from your words.</p></div>
-<div class="fg-card"><div class="fg-card-icon" style="background:rgba(139,92,246,0.1);">🏃</div><h4>Sprint Mode</h4><p>Choose your sprint type — Balanced, Deep Work, Quick Wins, or Catch Up. The engine selects the right tasks for each.</p></div>
-<div class="fg-card"><div class="fg-card-icon" style="background:rgba(76,110,245,0.1);">🧱</div><h4>Blocks Canvas</h4><p>Spatial scratchpad for ideas. Drag, connect, and convert to tasks when ready.</p></div>
-<div class="fg-card"><div class="fg-card-icon" style="background:rgba(255,77,109,0.1);">🔥</div><h4>Focus Timer</h4><p>Pomodoro sessions with multi-round tracking. Every session teaches the engine what you prioritize.</p></div>
+<section class="philosophy"><h2>Your focus is the filter. The Signal rises.</h2><p>Every task you add gets scored automatically. Deadlines, priority, keywords, and context decide what rises to the top as Signal — and what settles into Noise. You just execute.</p>
+<div class="sn-row">
+<div class="sn-card sn-signal"><div class="sn-icon"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M4.9 4.9a10 10 0 0 0 0 14.2M19.1 4.9a10 10 0 0 1 0 14.2M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4"/><circle cx="12" cy="12" r="2" fill="var(--amber)" stroke="none"/></svg></div><h3>Signal</h3><p>The tasks worth your attention right now. The engine weighs deadlines, priority, and context, then brings the right work to the top — so the next move is always obvious.</p></div>
+<div class="sn-card sn-noise"><div class="sn-icon"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-3.5-7.1"/></svg></div><h3>Noise</h3><p>Everything else — captured, organized, and ready for later. As deadlines approach and your priorities shift, today's Noise can rise into tomorrow's Signal. Nothing gets lost.</p></div>
 </div></section>
+
+<section class="namewhy">
+<div class="eyebrow">THE NAME, AND THE WHY</div>
+<h2><span class="amber">I</span>ntentional <span class="amber">N</span>avigation <span class="amber">T</span>hrough <span class="amber">I</span>ntelligence, <span class="amber">R</span>easoning &amp; <span class="amber">A</span>ction.</h2>
+<p>Most days don't fall apart because we're lazy. They fall apart because everything arrives at once — work, errands, bills, the people who need us — and it all feels equally urgent. The hardest part isn't doing the work. It's deciding what to do first.</p>
+<p>I built INTIRA because I wanted a system that could look at everything on my plate and quietly show me where to start. Not another list that grows until it's overwhelming, but something that reasons about what matters and lets me act with intention. Add the task, let the Signal Engine sort it, and trust that the top of the list is the right place to begin.</p>
+<p>That's the whole philosophy, in one word: move through your days with intention, guided by a little intelligence — and spend your energy on action, not organization.</p>
+<div class="sig"><div class="sig-name">Eve Hyppolite</div><div class="sig-role">Founder, INTIRA Labs</div></div>
+</section>
+
+<section class="hero-features" id="features">
+<div class="hero-feat hero-feat-signal"><div class="hero-feat-icon"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M4.9 4.9a10 10 0 0 0 0 14.2M19.1 4.9a10 10 0 0 1 0 14.2M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4"/><circle cx="12" cy="12" r="2" fill="var(--amber)" stroke="none"/></svg></div><div class="hero-feat-text"><h3>The Signal Engine</h3><p>Every task you capture is scored automatically — using deadlines, priority, the words you write, and the context around each task. Tasks due soon are surfaced before they slip, and an adaptive threshold keeps the split meaningful so everything doesn't become "urgent." The more you complete, the better it understands the kinds of work you actually follow through on.</p><span class="hero-feat-tag" style="background:rgba(245,158,11,0.1);color:var(--amber);">Intelligent Prioritization</span></div></div>
+<div class="hero-feat hero-feat-snow"><div class="hero-feat-icon"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M12 2v20M3.34 7l17.32 10M3.34 17l17.32-10"/><path d="M12 2.2 9.9 4.3M12 2.2l2.1 2.1M12 21.8l-2.1-2.1M12 21.8l2.1-2.1M3.5 7.2l.1 2.9M3.5 7.2l2.8.3M20.5 16.8l-.1-2.9M20.5 16.8l-2.8-.3M3.5 16.8l2.8-.3M3.5 16.8l.1-2.9M20.5 7.2l-2.8.3M20.5 7.2l-.1 2.9"/></svg></div><div class="hero-feat-text"><h3>Debt Snowball Tracker</h3><p>Track every debt in a progress ring you can tap to flip between "paid off" and "remaining." The snowball method shows you exactly which debt to crush next — attack the smallest first, and each one you clear frees up cash for the next. Log payments, watch the ring fill, and see your projected debt-free date move closer.</p><span class="hero-feat-tag" style="background:rgba(16,185,129,0.1);color:var(--mint);">Financial Momentum</span></div></div>
+</section>
+
+<section class="features-grid"><h2>One focused system. Four ways to work.</h2><div class="fg-row">
+<div class="fg-card"><div class="fg-card-icon" style="background:rgba(245,158,11,0.1);"><svg viewBox="0 0 24 24" stroke="var(--amber)" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><h4>Voice Capture</h4><p>Speak a task naturally and INTIRA detects the title, due date, tags, and priority — ready to save in seconds.</p></div>
+<div class="fg-card"><div class="fg-card-icon" style="background:rgba(245,158,11,0.1);"><svg viewBox="0 0 24 24" fill="var(--amber)" stroke="none"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div><h4>Sprint Mode</h4><p>Pick your top Signal tasks, set a focus window, and lock in. Distractions out, momentum in — until the job is done.</p></div>
+<div class="fg-card"><div class="fg-card-icon" style="background:rgba(139,92,246,0.1);"><svg viewBox="0 0 24 24" stroke="var(--violet)"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><h4>Blocks Canvas</h4><p>A free-form space for thoughts that aren't tasks yet. Drop them on the board, then convert any block to a task in one tap.</p></div>
+<div class="fg-card"><div class="fg-card-icon" style="background:rgba(255,77,109,0.1);"><svg viewBox="0 0 24 24" stroke="var(--rose)" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 13V9M9 2h6"/></svg></div><h4>Focus Mode</h4><p>A per-task Pomodoro timer — 15, 25, or 60 minutes, multi-round, with pause and resume. One task, full attention.</p></div>
+</div></section>
+
 <section style="max-width:900px;margin:0 auto;padding:8px 24px 8px;">
 <div style="display:flex;align-items:flex-start;gap:20px;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:28px;">
-<div style="font-size:30px;line-height:1;flex-shrink:0;">☁️</div>
+<div style="flex-shrink:0;width:40px;height:40px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round"><path d="M18 10a4 4 0 0 0-7.6-1.3A3.5 3.5 0 1 0 7 15h10.5a3.5 3.5 0 0 0 .5-7z"/></svg></div>
 <div><h4 style="margin:0 0 8px;font-size:18px;color:var(--text);">iCloud Sync &amp; Backup</h4>
-<p style="margin:0;color:var(--sub);font-size:15px;line-height:1.7;">Your tasks, debts, blocks, and progress stay in sync across your iPhone and iPad — and they're safe in your private iCloud, so nothing is lost when you reinstall or set up a new device. Sync is automatic when you're signed into iCloud, stored privately in <strong style="color:var(--text);font-weight:600;">your own</strong> account — never on our servers.</p></div></div></section>
-<section class="comparison" id="compare"><h2>Free vs. Pro</h2><p>INTIRA is powerful for free. Pro unlocks the full system.</p>
+<p style="margin:0;color:var(--sub);font-size:15px;line-height:1.7;">Your tasks, debts, blocks, and progress stay in sync across your iPhone and iPad, and they're safe in your private iCloud — so nothing is lost when you reinstall or set up a new device. Sync is automatic when you're signed into iCloud, stored privately in <strong style="color:var(--text);font-weight:600;">your own</strong> account, never on our servers. Not signed into iCloud? INTIRA works fully offline on your device.</p></div></div></section>
+<section class="comparison" id="compare"><h2>Free vs. Pro</h2><p>INTIRA is genuinely useful for free. Pro unlocks the full system.</p>
 <table class="comp-table"><thead><tr><th>Feature</th><th>FREE</th><th>PRO</th></tr></thead><tbody>
 <tr><td>Unlimited tasks + Signal Engine</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
-<tr><td>Voice Capture</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
+<tr><td>Voice Capture</td><td class="comp-limit">Free trial</td><td class="comp-check">✓</td></tr>
 <tr><td>Blocks Canvas</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
-<tr><td>Focus Timer</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
-<tr><td>Debt Snowball (unlimited debts)</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
+<tr><td>Focus Mode timer</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
 <tr><td>iCloud Sync &amp; Backup</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
+<tr><td>Debt Snowball</td><td class="comp-limit">Up to 3 debts</td><td class="comp-check">Unlimited</td></tr>
 <tr><td>Sprints</td><td class="comp-limit">3/week</td><td class="comp-check">Unlimited</td></tr>
-<tr><td>Sprint History</td><td class="comp-limit">Last 5</td><td class="comp-check">Full</td></tr>
-<tr><td>Recurring Tasks</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
-<tr><td>Snowball Planning Tools</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
-<tr><td>Achievements & Reports</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
-<tr><td>Widgets & Live Activity</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
+<tr><td>Sprint history</td><td class="comp-limit">Last 5</td><td class="comp-check">Full</td></tr>
+<tr><td>Recurring tasks</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
+<tr><td>Snowball planning tools</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
+<tr><td>Achievements &amp; weekly reports</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
+<tr><td>Widgets &amp; Live Activities</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
 </tbody></table></section>
-<section class="pricing" id="pricing"><h2>Start free. Upgrade when ready.</h2><p>7-day free trial of all Pro features. No account required. Cancel anytime.</p>
+
+<section class="pricing" id="pricing"><h2>Start free. Upgrade when you're ready.</h2><p>7-day free trial of all Pro features. No account required. Cancel anytime.</p>
 <div class="plans">
-<div class="plan"><h3>Monthly</h3><div class="price">$5.99<span>/mo</span></div><div class="detail">Billed monthly</div><ul><li>Unlimited sprints</li><li>Full sprint history</li><li>Recurring tasks</li><li>Snowball planning tools</li><li>Widgets & Live Activity</li></ul></div>
-<div class="plan pop"><div class="plan-badge">BEST VALUE</div><h3>Annual</h3><div class="price">$49.99<span>/yr</span></div><div class="detail">Save 30% — $4.17/mo</div><ul><li>Everything in Monthly</li><li>Achievements & reports</li><li>Priority support</li></ul></div>
+<div class="plan"><h3>Monthly</h3><div class="price">$5.99<span>/mo</span></div><div class="detail">Billed monthly</div><ul><li>Voice Capture</li><li>Unlimited sprints &amp; debts</li><li>Full sprint history</li><li>Recurring tasks</li><li>Snowball planning tools</li><li>Widgets &amp; Live Activities</li></ul></div>
+<div class="plan pop"><div class="plan-badge">BEST VALUE</div><h3>Annual</h3><div class="price">$49.99<span>/yr</span></div><div class="detail">Save 30% — about $4.17/mo</div><ul><li>Everything in Monthly</li><li>Achievements &amp; weekly reports</li><li>Best value for the full system</li></ul></div>
 </div></section>
-<section class="founder"><div class="founder-line"></div><p>"I wanted a system that could look at everything on my plate and show me where to start. So I built one."</p><p class="founder-name">— Solo Developer, INTIRA Labs</p></section>
+
 <section class="bottom-cta" id="download"><h2>Ready to find your <span class="amber">Signal</span>?</h2><p>Download INTIRA free on the App Store.</p>
 <a href="#" class="hero-cta"><svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>Download for iOS</a></section>
-<footer><a href="#top" class="logo">INTIRA</a><p>© 2026 INTIRA Labs LLC. All rights reserved.</p><div class="links"><a href="privacy.html">Privacy Policy</a><a href="mailto:support@intira.app">Contact</a></div></footer>
-</body></html>
- 
+
+<section class="contact" id="contact">
+  <div class="eyebrow">LET'S CONNECT</div>
+  <h2>Contact INTIRA Labs</h2>
+  <p>Have a question, a product issue, a partnership idea, a media request, or feedback about INTIRA? Send it our way — a real person reads every message.</p>
+  <div class="contact-form">
+    <div class="form-group"><label for="cf-name">Name <span class="req">*</span></label><input type="text" id="cf-name" name="name" placeholder="Your name" autocomplete="name"></div>
+    <div class="form-group"><label for="cf-email">Email <span class="req">*</span></label><input type="email" id="cf-email" name="email" placeholder="you@example.com" autocomplete="email"></div>
+    <div class="form-group"><label for="cf-type">Inquiry Type <span class="req">*</span></label><select id="cf-type" name="inquiryType"><option value="" selected disabled>Select a topic…</option><option>General question</option><option>Product issue / bug</option><option>Partnership</option><option>Media request</option><option>Feedback</option></select></div>
+    <div class="form-group"><label for="cf-message">Message <span class="req">*</span></label><textarea id="cf-message" name="message" placeholder="How can we help?"></textarea></div>
+    <button class="form-submit" id="formSubmit">Send Message</button>
+    <p class="form-secure">Your message is sent securely through Formspree. See our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="form-msg" id="formMsg"></div>
+  </div>
+  <p class="contact-email">Prefer email? Reach us at <a href="mailto:support@intira.io">support@intira.io</a></p>
+</section>
+
+<footer><a href="#top" class="logo">INTIRA</a><p>© 2026 INTIRA Labs LLC. All rights reserved.</p><div class="links"><a href="#top">Home</a><a href="privacy.html">Privacy</a><a href="#contact">Contact</a></div></footer>
+<script>
+(function() {
+  var wrap = document.getElementById('carouselWrap');
+  if (!wrap) return;
+  var slides = wrap.querySelectorAll('.carousel-slide');
+  var dots = wrap.querySelectorAll('.cdot');
+  var current = 0, timer;
+  function goSlide(n){slides[current].classList.remove('active');dots[current].classList.remove('active');current=(n+slides.length)%slides.length;slides[current].classList.add('active');dots[current].classList.add('active');}
+  function next(){goSlide(current+1);}
+  function prev(){goSlide(current-1);}
+  function resetTimer(){clearInterval(timer);timer=setInterval(next,5000);}
+  document.getElementById('nextBtn').addEventListener('click',function(){next();resetTimer();});
+  document.getElementById('prevBtn').addEventListener('click',function(){prev();resetTimer();});
+  dots.forEach(function(dot){dot.addEventListener('click',function(){goSlide(parseInt(this.dataset.slide));resetTimer();});});
+  var touchStartX=0, inner=document.getElementById('carouselInner');
+  inner.addEventListener('touchstart',function(e){touchStartX=e.touches[0].clientX;},{passive:true});
+  inner.addEventListener('touchend',function(e){var diff=touchStartX-e.changedTouches[0].clientX;if(Math.abs(diff)>50){diff>0?next():prev();resetTimer();}},{passive:true});
+  resetTimer();
+})();
+</script>
+<script>
+(function() {
+  var btn=document.getElementById('formSubmit'), msg=document.getElementById('formMsg');
+  if(!btn) return;
+  btn.addEventListener('click',function(){
+    var name=document.getElementById('cf-name').value.trim();
+    var email=document.getElementById('cf-email').value.trim();
+    var type=document.getElementById('cf-type').value;
+    var message=document.getElementById('cf-message').value.trim();
+    if(!name||!email||!type||!message){msg.textContent='Please fill in all fields.';msg.className='form-msg error';msg.style.display='block';return;}
+    btn.textContent='Sending…';btn.disabled=true;
+    fetch('https://formspree.io/f/xzdqkvyg',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:name,email:email,inquiryType:type,message:message})})
+    .then(function(r){return r.json();})
+    .then(function(data){
+      if(data.ok){msg.textContent='Message sent! We\'ll get back to you soon.';msg.className='form-msg success';document.getElementById('cf-name').value='';document.getElementById('cf-email').value='';document.getElementById('cf-type').selectedIndex=0;document.getElementById('cf-message').value='';}
+      else{throw new Error('failed');}
+    })
+    .catch(function(){msg.textContent='Something went wrong. Try emailing support@intira.io directly.';msg.className='form-msg error';})
+    .finally(function(){msg.style.display='block';btn.textContent='Send Message';btn.disabled=false;});
+  });
+})();
+</script>
+<script>
+(function(){
+  var t=document.getElementById('navToggle'), m=document.getElementById('mobileMenu');
+  if(!t||!m) return;
+  t.addEventListener('click',function(){
+    var open=m.classList.toggle('open');
+    t.setAttribute('aria-expanded',open?'true':'false');
+  });
+  m.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){m.classList.remove('open');t.setAttribute('aria-expanded','false');});
+  });
+})();
+</script>
+</body>
+</html>
