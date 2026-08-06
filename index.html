@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>INTIRA — Task Prioritization &amp; Debt Payoff App for iOS</title>
-<meta name="description" content="INTIRA scores every task so you always know what to do first. Brain-dump, prioritize with the Signal Engine, run focus sprints, and crush debt. Free on iOS.">
+<meta name="description" content="INTIRA scores every task so you always know what to do first. Brain-dump, prioritize with the Signal Engine, run focus sprints, and crush debt. Now on the App Store.">
 <meta name="keywords" content="task prioritization app, ADHD task app, ADD, brain dump app, to-do app iOS, focus app, Pomodoro, debt snowball app, executive function, productivity app">
 <link rel="canonical" href="https://intira.io/">
 <meta property="og:title" content="INTIRA — Focus on Signal. Cut the Noise.">
-<meta property="og:description" content="Brain-dump every task and let the Signal Engine surface what matters. Focus sprints + debt payoff. Free on iOS.">
+<meta property="og:description" content="Brain-dump every task and let the Signal Engine surface what matters. Focus sprints + debt payoff. Now on the App Store.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://intira.io/">
 <meta property="og:image" content="https://intira.io/og-image.png">
@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="INTIRA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="INTIRA — Focus on Signal. Cut the Noise.">
-<meta name="twitter:description" content="Brain-dump every task and let the Signal Engine surface what matters. Free on iOS.">
+<meta name="twitter:description" content="Brain-dump every task and let the Signal Engine surface what matters. Now on the App Store.">
 <meta name="twitter:image" content="https://intira.io/og-image.png">
 <script type="application/ld+json">
 {
@@ -162,6 +162,26 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:fl
 .voice-stop{width:26px;height:26px;border-radius:7px;background:#07060E}
 .voice-hint{text-align:center;font-size:14px;font-weight:700;color:var(--text)}
 .voice-transcript{margin:22px 6px 0;padding:14px 16px;background:var(--surface2);border-radius:14px;font-size:13px;font-weight:600;color:var(--text);line-height:1.4}
+.dump-fabs{display:flex;justify-content:flex-end;align-items:center;gap:8px;padding:2px 6px 4px;flex-shrink:0}
+.dump-fab{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(0,0,0,.35)}
+.dump-fab.mic{background:rgba(245,158,11,0.14);border:1px solid rgba(245,158,11,0.35)}
+.dump-fab.mic svg{width:14px;height:14px;fill:var(--amber);stroke:none}
+.dump-fab.add{background:linear-gradient(135deg,var(--amber),var(--amber2))}
+.dump-fab.add svg{width:16px;height:16px;stroke:#07060E;fill:none;stroke-width:2.4}
+.focus-sheet{flex:1;display:flex;flex-direction:column;align-items:center;padding:26px 16px 20px;text-align:center}
+.focus-head{display:flex;align-items:center;gap:7px;font-weight:800;font-size:17px;color:var(--text)}
+.focus-head svg{width:15px;height:15px;stroke:var(--rose);fill:none;stroke-width:2}
+.focus-sub{font-size:11px;color:var(--sub);margin-top:8px;line-height:1.45;max-width:215px}
+.focus-task{font-family:'Syne',sans-serif;font-weight:800;font-size:19px;color:var(--amber);line-height:1.18;margin:20px 0 24px}
+.focus-cards{display:flex;gap:8px;width:100%}
+.pcard{flex:1;padding:12px 4px;border-radius:14px;background:var(--surface);border:1px solid var(--border)}
+.pcard .pname{font-size:9px;font-weight:800;letter-spacing:.6px}
+.pcard .ptime{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:var(--text);margin-top:4px}
+.pcard.blitz .pname{color:var(--rose)}.pcard.pom .pname{color:var(--amber)}.pcard.deep .pname{color:var(--violet)}
+.pcard.sel{border-color:var(--amber);background:rgba(245,158,11,0.08);box-shadow:0 0 18px rgba(245,158,11,0.12)}
+.focus-preview{font-family:'Syne',sans-serif;font-weight:800;font-size:46px;letter-spacing:-2px;color:var(--text);margin:34px 0 10px;line-height:1}
+.focus-note{font-size:10px;color:var(--sub2);line-height:1.5;max-width:200px;margin-bottom:auto}
+.focus-start{width:100%;margin-top:auto;padding:14px;border-radius:14px;text-align:center;font-weight:800;font-size:14px;color:#07060E;background:linear-gradient(135deg,var(--amber),var(--amber2));box-shadow:0 6px 20px rgba(245,158,11,.3)}
 /* Welcome slide */
 .welcome-sheet{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 22px 28px;text-align:center}
 .welcome-rings{position:relative;width:150px;height:150px;display:flex;align-items:center;justify-content:center;margin-bottom:34px}
@@ -294,17 +314,16 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 </head>
 <body>
 <header>
-<nav><a href="#" class="logo">INTIRA</a><div class="nav-links"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="https://intira.io/privacy.html">Privacy</a><a href="#download" class="nav-cta">Download</a></div><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></nav>
-<div class="mobile-menu" id="mobileMenu"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="https://intira.io/privacy.html">Privacy</a><a href="#download" class="mm-cta">Download</a></div>
+<nav><a href="#" class="logo">INTIRA</a><div class="nav-links"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="https://intira.io/privacy.html">Privacy</a><a href="https://intira.io/terms.html">Terms</a><a href="#download" class="nav-cta">Download</a></div><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="https://intira.io/privacy.html">Privacy</a><a href="https://intira.io/terms.html">Terms of Use</a><a href="#download" class="mm-cta">Download</a></div>
 </header>
 <main>
 
 <section class="hero" id="top">
-<div class="hero-badge">✦ Intentional Navigation Through Intelligence, Reasoning &amp; Action</div>
 <h1>Focus on <span class="amber">Signal.</span><br>Cut the <span class="violet">Noise.</span></h1>
 <p class="hero-sub-main">INTIRA scores every task you add and surfaces what matters most — so you spend less time organizing and more time executing.</p>
-<a href="#download" class="hero-cta"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>Download for iOS</a>
-<p class="hero-fine">Free to use · 7-day Pro trial · No account required</p>
+<a href="#download" class="hero-cta"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>Now on the App Store</a>
+<p class="hero-fine">7-day Pro trial · No account required · Cancel anytime</p>
 
 <div class="carousel-wrap" id="carouselWrap">
   <div class="carousel-inner" id="carouselInner">
@@ -352,11 +371,12 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
           <div class="task signal"><div class="task-check"></div><div class="task-main"><div class="task-title">Call Mom for her birthday</div><div class="task-chips"><span class="chip signal">SIGNAL</span><span class="chip medium">MEDIUM</span><span class="task-due urgent">◷ Due Jun 12, 7:00 PM</span></div></div></div>
           <div class="sec-div"><span class="sec-line violet"></span><span class="sec-text violet">NOISE</span><span class="sec-line violet"></span></div>
           <div class="task noise"><div class="task-check"></div><div class="task-main"><div class="task-title" style="opacity:.7">Plan summer garden</div><div class="task-chips"><span class="chip noise">NOISE</span><span class="chip low">LOW</span></div></div></div>
+          <div class="dump-fabs"><div class="dump-fab mic"><svg viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="10" rx="3"/><path d="M5.5 10.5a6.5 6.5 0 0 0 13 0M12 17.2v3.3" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round"/></svg></div><div class="dump-fab add"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div></div>
           <div class="tabbar">
-            <div class="tab active"><div class="tab-icn tab-pill"><svg viewBox="0 0 24 24" fill="var(--amber)" stroke="none"><path d="M4 13h3l2 3h6l2-3h3v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M4 13 6 5h12l2 8" fill="none" stroke="var(--amber)" stroke-width="1.8"/></svg></div><span>Dump</span></div>
+            <div class="tab active"><div class="tab-icn tab-pill"><svg viewBox="0 0 24 24" fill="var(--amber)" stroke="none"><path d="M4 14h4l1.6 2.4h4.8L16 14h4v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M4 14 6 9.5h12L20 14" fill="none" stroke="var(--amber)" stroke-width="1.8"/><path d="M7.2 6.6h9.6M8.8 3.6h6.4" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round"/></svg></div><span>Dump</span></div>
             <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div><span>Sprint</span></div>
             <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><span>Blocks</span></div>
-            <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.4 1.1-2 2.5-2s2.5.6 2.5 2-1.1 2-2.5 2-2.5.6-2.5 2 1.1 2 2.5 2 2.5-.6 2.5-2"/></svg></div><span>Snowball</span></div>
+            <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 6.4v11.2"/><path d="M14.6 9.3c-.5-.9-1.4-1.4-2.6-1.4-1.6 0-2.7.8-2.7 2s1 1.8 2.7 2.1c1.7.3 2.7 1 2.7 2.1s-1.1 2-2.7 2c-1.2 0-2.1-.5-2.6-1.4"/></svg></div><span>Snowball</span></div>
           </div>
         </div>
       </div>
@@ -378,7 +398,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
             <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><span>Locked</span></div>
             <div class="tab active"><div class="tab-icn tab-pill"><svg viewBox="0 0 24 24" fill="var(--amber)" stroke="none"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div><span>Sprint</span></div>
             <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><span>Blocks</span></div>
-            <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.4 1.1-2 2.5-2s2.5.6 2.5 2-1.1 2-2.5 2-2.5.6-2.5 2 1.1 2 2.5 2 2.5-.6 2.5-2"/></svg></div><span>Snowball</span></div>
+            <div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 6.4v11.2"/><path d="M14.6 9.3c-.5-.9-1.4-1.4-2.6-1.4-1.6 0-2.7.8-2.7 2s1 1.8 2.7 2.1c1.7.3 2.7 1 2.7 2.1s-1.1 2-2.7 2c-1.2 0-2.1-.5-2.6-1.4"/></svg></div><span>Snowball</span></div>
           </div>
         </div>
       </div>
@@ -412,7 +432,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
             <div class="snow-target-bar"><div class="snow-target-fill"></div></div>
             <div class="snow-target-btn">+ Log Payment</div>
           </div>
-          <div class="tabbar"><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M4 13h3l2 3h6l2-3h3v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M4 13 6 5h12l2 8" fill="none" stroke="var(--sub2)" stroke-width="1.8"/></svg></div><span>Dump</span></div><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div><span>Sprint</span></div><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><span>Blocks</span></div><div class="tab active"><div class="tab-icn tab-pill"><svg viewBox="0 0 24 24" fill="var(--amber)" stroke="none"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.4 1.1-2 2.5-2s2.5.6 2.5 2-1.1 2-2.5 2-2.5.6-2.5 2 1.1 2 2.5 2 2.5-.6 2.5-2" fill="none" stroke="#07060E" stroke-width="1.6"/></svg></div><span>Snowball</span></div></div>
+          <div class="tabbar"><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M4 14h4l1.6 2.4h4.8L16 14h4v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M4 14 6 9.5h12L20 14" fill="none" stroke="var(--sub2)" stroke-width="1.8"/><path d="M7.2 6.6h9.6M8.8 3.6h6.4" fill="none" stroke="var(--sub2)" stroke-width="1.8" stroke-linecap="round"/></svg></div><span>Dump</span></div><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div><span>Sprint</span></div><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><span>Blocks</span></div><div class="tab active"><div class="tab-icn tab-pill"><svg viewBox="0 0 24 24" fill="var(--amber)" stroke="none"><circle cx="12" cy="12" r="9"/><path d="M12 6.4v11.2M14.6 9.3c-.5-.9-1.4-1.4-2.6-1.4-1.6 0-2.7.8-2.7 2s1 1.8 2.7 2.1c1.7.3 2.7 1 2.7 2.1s-1.1 2-2.7 2c-1.2 0-2.1-.5-2.6-1.4" fill="none" stroke="#07060E" stroke-width="1.6" stroke-linecap="round"/></svg></div><span>Snowball</span></div></div>
         </div>
       </div>
       <div class="slide-label">Debt Snowball — Crush your debt visually</div>
@@ -431,7 +451,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
             <div class="block b7">draft the Q3 update — bullet points first</div>
             <div class="blocks-fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>
           </div>
-          <div class="tabbar"><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M4 13h3l2 3h6l2-3h3v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M4 13 6 5h12l2 8" fill="none" stroke="var(--sub2)" stroke-width="1.8"/></svg></div><span>Dump</span></div><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div><span>Sprint</span></div><div class="tab active"><div class="tab-icn tab-pill"><svg viewBox="0 0 24 24" fill="var(--amber)" stroke="none"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><span>Blocks</span></div><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1.4 1.1-2 2.5-2s2.5.6 2.5 2-1.1 2-2.5 2-2.5.6-2.5 2 1.1 2 2.5 2 2.5-.6 2.5-2"/></svg></div><span>Snowball</span></div></div>
+          <div class="tabbar"><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M4 14h4l1.6 2.4h4.8L16 14h4v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M4 14 6 9.5h12L20 14" fill="none" stroke="var(--sub2)" stroke-width="1.8"/><path d="M7.2 6.6h9.6M8.8 3.6h6.4" fill="none" stroke="var(--sub2)" stroke-width="1.8" stroke-linecap="round"/></svg></div><span>Dump</span></div><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div><span>Sprint</span></div><div class="tab active"><div class="tab-icn tab-pill"><svg viewBox="0 0 24 24" fill="var(--amber)" stroke="none"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><span>Blocks</span></div><div class="tab"><div class="tab-icn"><svg viewBox="0 0 24 24" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 6.4v11.2"/><path d="M14.6 9.3c-.5-.9-1.4-1.4-2.6-1.4-1.6 0-2.7.8-2.7 2s1 1.8 2.7 2.1c1.7.3 2.7 1 2.7 2.1s-1.1 2-2.7 2c-1.2 0-2.1-.5-2.6-1.4"/></svg></div><span>Snowball</span></div></div>
         </div>
       </div>
       <div class="slide-label">Blocks — Get ideas out of your head</div>
@@ -458,6 +478,26 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
       <div class="slide-label">Voice Capture — Speak it, INTIRA structures it</div>
     </div>
 
+    <div class="carousel-slide">
+      <div class="app-screen">
+        <div class="screen-statusbar"><span>9:41</span><span class="sb-right"><svg viewBox="0 0 18 12"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="4.5" y="4.5" width="3" height="7.5" rx="1"/><rect x="9" y="2" width="3" height="10" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg viewBox="0 0 16 12"><path d="M8 2.5c2.3 0 4.4.9 6 2.4l-1.4 1.4C11.3 5.1 9.7 4.5 8 4.5s-3.3.6-4.6 1.8L2 4.9C3.6 3.4 5.7 2.5 8 2.5zm0 3.5c1.3 0 2.5.5 3.4 1.4L8 10.8 4.6 7.4C5.5 6.5 6.7 6 8 6z"/></svg><svg viewBox="0 0 24 12"><rect x="0.5" y="0.5" width="20" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1"/><rect x="2" y="2" width="16" height="8" rx="1.5"/><rect x="21" y="4" width="2" height="4" rx="1"/></svg></span></div>
+        <div class="focus-sheet">
+          <div class="focus-head"><svg viewBox="0 0 24 24" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 13V9M9 2h6"/></svg>Focus Mode</div>
+          <div class="focus-sub">Pick your focus window and lock into one task until it ships.</div>
+          <div class="focus-task">Finish tax documents for accountant</div>
+          <div class="focus-cards">
+            <div class="pcard blitz"><div class="pname">BLITZ</div><div class="ptime">15m</div></div>
+            <div class="pcard pom sel"><div class="pname">POMODORO</div><div class="ptime">25m</div></div>
+            <div class="pcard deep"><div class="pname">DEEP</div><div class="ptime">60m</div></div>
+          </div>
+          <div class="focus-preview">25:00</div>
+          <div class="focus-note">One task. Nothing else on screen until the window closes.</div>
+          <div class="focus-start">Begin Focus</div>
+        </div>
+      </div>
+      <div class="slide-label">Focus Mode — One task, one window</div>
+    </div>
+
   </div>
 
   <div class="carousel-dots" id="carouselDots">
@@ -467,29 +507,30 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
     <button class="cdot" data-slide="3"></button>
     <button class="cdot" data-slide="4"></button>
     <button class="cdot" data-slide="5"></button>
+    <button class="cdot" data-slide="6"></button>
   </div>
   <button class="carousel-arrow left" id="prevBtn">&#8249;</button>
   <button class="carousel-arrow right" id="nextBtn">&#8250;</button>
 </div>
 </section>
-<section class="prose-block"><h2>Get it all out of your head. Let the Signal rise.</h2><p>Dump every task, worry, and half-formed idea into INTIRA — no need to sort or organize as you go. The Signal Engine scores each one and surfaces what matters now, so you stop staring at a list wondering where to start. Capture everything; execute the right thing.</p></section>
+<section class="prose-block"><h2>Get it all out of your head. Let the Signal rise.</h2><p>Dump every task, worry, and half-formed idea into INTIRA — no need to sort or organize as you go. The Signal Engine scores each one and pulls the important stuff to the top, so you stop staring at a list and start moving. Capture everything; execute the right thing.</p></section>
 
-<section class="philosophy"><h2>Your focus is the filter. The Signal rises.</h2><p>Every task you add gets scored automatically. Deadlines, priority, keywords, and context decide what rises to the top as Signal — and what settles into Noise. You just execute.</p>
+<section class="philosophy"><h2>Your focus is the filter. The Signal rises.</h2><p>There's no queue to sort through. The moment a task lands, what you've told it — and when it's due — decides where it goes: Signal if it's worth doing now, Noise if it can wait. You just execute.</p>
 <div class="sn-row">
-<div class="sn-card sn-signal"><div class="sn-icon"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M4.9 4.9a10 10 0 0 0 0 14.2M19.1 4.9a10 10 0 0 1 0 14.2M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4"/><circle cx="12" cy="12" r="2" fill="var(--amber)" stroke="none"/></svg></div><h3>Signal</h3><p>The tasks worth your attention right now. The engine weighs deadlines, priority, and context, then brings the right work to the top — so the next move is always obvious.</p></div>
-<div class="sn-card sn-noise"><div class="sn-icon"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M12 3a9 9 0 1 0 9 9" opacity="0.9"/><path d="M12 3a9 9 0 0 1 9 9" opacity="0.3"/></svg></div><h3>Noise</h3><p>Everything else — captured, organized, and ready for later. As deadlines approach and your priorities shift, today's Noise can rise into tomorrow's Signal. Nothing gets lost.</p></div>
+<div class="sn-card sn-signal"><div class="sn-icon"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M4.9 4.9a10 10 0 0 0 0 14.2M19.1 4.9a10 10 0 0 1 0 14.2M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4"/><circle cx="12" cy="12" r="2" fill="var(--amber)" stroke="none"/></svg></div><h3>Signal</h3><p>The handful of tasks that actually deserve your attention right now — the ones the engine has already decided are worth acting on first.</p></div>
+<div class="sn-card sn-noise"><div class="sn-icon"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M12 3a9 9 0 1 0 9 9" opacity="0.9"/><path d="M12 3a9 9 0 0 1 9 9" opacity="0.3"/></svg></div><h3>Noise</h3><p>Everything else — safely out of the way, not out of the picture. As deadlines close in or priorities shift, today's Noise can rise into tomorrow's Signal. Nothing gets lost.</p></div>
 </div></section>
 
 <section class="namewhy">
 <div class="eyebrow">THE NAME, AND THE WHY</div>
 <h2><span class="amber">I</span>ntentional <span class="amber">N</span>avigation <span class="amber">T</span>hrough <span class="amber">I</span>ntelligence, <span class="amber">R</span>easoning &amp; <span class="amber">A</span>ction.</h2>
-<p>Most days don't fall apart because we're lazy. They fall apart because everything arrives at once — work, errands, bills, the people who need us — and it all feels equally urgent. The hardest part isn't doing the work. It's deciding what to do first.</p>
+<p>Most days don't fall apart for lack of effort. They fall apart because everything arrives at once — work, errands, bills, the people who need us — and it all feels equally urgent. The hardest part isn't doing the work. It's deciding what to do first.</p>
 <p>I built INTIRA because I wanted a system that could look at everything on my plate and quietly show me where to start. Not another list that grows until it's overwhelming, but something that reasons about what matters and lets me act with intention. Add the task, let the Signal Engine sort it, and trust that the top of the list is the right place to begin.</p>
 <p>That's the whole philosophy, in one word: move through your days with intention, guided by a little intelligence — and spend your energy on action, not organization.</p>
 <div class="sig"><div class="sig-name">Eve Hyppolite</div><div class="sig-role">Founder, INTIRA Labs</div></div>
 </section>
 
-<section class="prose-block"><h2>Built for brains that carry a lot at once.</h2><p>If you live with ADHD, executive-function overwhelm, or just a mind that never stops generating tasks, INTIRA is designed to take the weight off. Get everything out of your head in one place, and let the system decide what's Signal and what's Noise — so the exhausting part, deciding what to do first, is handled for you. No shame, no endless list. Just the next right thing.</p></section>
+<section class="prose-block"><h2>Built for a mind that never stops generating tasks.</h2><p>Every list starts the same way — the half-formed ideas, the thing you keep meaning to do, the deadline you've been circling. Writing it down is the easy part. Deciding what it means is what costs you. INTIRA takes the deciding.</p><p style="margin-top:18px;">Not everything can be urgent. When too much of your list starts scoring as Signal, the engine raises the bar; when almost none of it does, it lowers the bar. The point is to keep the top of your list short enough that starting feels possible — not to label everything important and leave you where you began.</p><p style="margin-top:18px;">Then the timeframes carry the momentum. A Sprint puts edges around the work — 4, 8, or 18 hours — so the day has a shape instead of running open-ended. Inside a single task, Focus Mode narrows it further: 15 minutes to break inertia, 25 to find a rhythm, 60 to go deep. Finish one, feel it, start the next.</p></section>
 
 <section class="hero-features" id="features">
 <div class="hero-feat hero-feat-signal"><div class="hero-feat-icon"><svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M4.9 4.9a10 10 0 0 0 0 14.2M19.1 4.9a10 10 0 0 1 0 14.2M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4"/><circle cx="12" cy="12" r="2" fill="var(--amber)" stroke="none"/></svg></div><div class="hero-feat-text"><h3>The Signal Engine</h3><p>Every task you capture is scored automatically — using deadlines, priority, the words you write, and the context around each task. That score is what sorts each task into Signal (worth your attention now) or Noise (captured for later), and an adaptive threshold keeps the split meaningful so everything doesn't become "urgent." It even factors in your completion patterns — the kinds of work you tend to follow through on.</p><span class="hero-feat-tag" style="background:rgba(245,158,11,0.1);color:var(--amber);">Intelligent Prioritization</span></div></div>
@@ -499,10 +540,10 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <section class="prose-block"><h2>The more you tell it, the sharper the sort.</h2><p>A bare title still gets scored — but add a due date, a priority, and a few describing words, and the Signal Engine has more to work with. The result is a Signal/Noise split that actually reflects your day. Think of the fields as tuning the engine, not filling out a form.</p></section>
 
 <section class="features-grid"><h2>One focused system. Four ways to work.</h2><div class="fg-row">
-<div class="fg-card"><div class="fg-card-icon" style="background:rgba(245,158,11,0.1);"><svg viewBox="0 0 24 24" stroke="var(--amber)" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><h4>Voice Capture</h4><p>Speak a task naturally and INTIRA detects the title, due date, tags, and priority — ready to save in seconds.</p></div>
 <div class="fg-card"><div class="fg-card-icon" style="background:rgba(245,158,11,0.1);"><svg class="filled" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></div><h4>Sprint Mode</h4><p>Pick your top Signal tasks, set a focus window, and lock in. Distractions out, momentum in — until the job is done.</p></div>
 <div class="fg-card"><div class="fg-card-icon" style="background:rgba(139,92,246,0.1);"><svg viewBox="0 0 24 24" stroke="var(--violet)"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><h4>Blocks Canvas</h4><p>A free-form space for thoughts that aren't tasks yet. Drop them on the board, then convert any block to a task in one tap.</p></div>
 <div class="fg-card"><div class="fg-card-icon" style="background:rgba(255,77,109,0.1);"><svg viewBox="0 0 24 24" stroke="var(--rose)" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 13V9M9 2h6"/></svg></div><h4>Focus Mode</h4><p>A per-task Pomodoro timer — 15, 25, or 60 minutes, multi-round, with pause and resume. One task, full attention.</p></div>
+<div class="fg-card"><div class="fg-card-icon" style="background:rgba(245,158,11,0.1);"><svg viewBox="0 0 24 24" stroke="var(--amber)" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><h4>Voice Capture</h4><p>Speak a task naturally and INTIRA detects the title, due date, tags, and priority — ready to save in seconds.</p></div>
 </div></section>
 
 <section style="max-width:900px;margin:0 auto;padding:8px 24px 8px;">
@@ -510,7 +551,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <div style="flex-shrink:0;width:40px;height:40px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round"><path d="M18 10a4 4 0 0 0-7.6-1.3A3.5 3.5 0 1 0 7 15h10.5a3.5 3.5 0 0 0 .5-7z"/></svg></div>
 <div><h4 style="margin:0 0 8px;font-size:18px;color:var(--text);">iCloud Sync &amp; Backup</h4>
 <p style="margin:0;color:var(--sub);font-size:15px;line-height:1.7;">Your tasks, debts, blocks, and progress stay in sync across your iPhone and iPad, and they're safe in your private iCloud — so nothing is lost when you reinstall or set up a new device. Sync is automatic when you're signed into iCloud, stored privately in <strong style="color:var(--text);font-weight:600;">your own</strong> account, never on our servers. Not signed into iCloud? INTIRA works fully offline on your device.</p></div></div></section>
-<section class="comparison" id="compare"><h2>Free vs. Pro</h2><p>INTIRA is genuinely useful for free. Pro unlocks the full system.</p>
+<section class="comparison" id="compare"><h2>Free vs. Pro</h2><p>The core system is yours from day one. Pro unlocks everything else.</p>
 <table class="comp-table"><thead><tr><th>Feature</th><th>FREE</th><th>PRO</th></tr></thead><tbody>
 <tr><td>Unlimited tasks + Signal Engine</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
 <tr><td>Sprints</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
@@ -526,14 +567,14 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <tr><td>Widgets &amp; Live Activities</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
 </tbody></table></section>
 
-<section class="pricing" id="pricing"><h2>Start free. Upgrade when you're ready.</h2><p>7-day free trial of all Pro features. No account required. Cancel anytime.</p>
+<section class="pricing" id="pricing"><h2>Start with the essentials. Upgrade when you're ready.</h2><p>Every plan starts with a 7-day trial of full Pro access — no account needed, cancel whenever.</p>
 <div class="plans">
 <div class="plan"><h3>Monthly</h3><div class="price">$5.99<span>/mo</span></div><div class="detail">Billed monthly</div><ul><li>Voice Capture</li><li>Focus Timer</li><li>Debt Snowball</li><li>Full sprint history</li><li>Recurring tasks</li><li>Widgets &amp; Live Activities</li></ul></div>
 <div class="plan pop"><div class="plan-badge">BEST VALUE</div><h3>Annual</h3><div class="price">$49.99<span>/yr</span></div><div class="detail">Save 30% — about $4.17/mo</div><ul><li>Everything in Monthly</li><li>Achievements &amp; weekly reports</li><li>Best value for the full system</li></ul></div>
 </div></section>
 
-<section class="bottom-cta" id="download"><h2>Ready to find your <span class="amber">Signal</span>?</h2><p>Download INTIRA free on the App Store.</p>
-<a href="#" class="hero-cta"><svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>Download for iOS</a></section>
+<section class="bottom-cta" id="download"><h2>Ready to find your <span class="amber">Signal</span>?</h2><p>Find your Signal. INTIRA is on the App Store.</p>
+<a href="#" class="hero-cta"><svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>Now on the App Store</a></section>
 
 <section class="contact" id="contact">
   <div class="eyebrow">LET'S CONNECT</div>
@@ -545,14 +586,14 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
     <div class="form-group"><label for="cf-type">Inquiry Type <span class="req">*</span></label><select id="cf-type" name="inquiryType"><option value="" selected disabled>Select a topic…</option><option>General question</option><option>Product issue / bug</option><option>Partnership</option><option>Media request</option><option>Feedback</option></select></div>
     <div class="form-group"><label for="cf-message">Message <span class="req">*</span></label><textarea id="cf-message" name="message" placeholder="How can we help?"></textarea></div>
     <button class="form-submit" id="formSubmit">Send Message</button>
-    <p class="form-secure">Your message is sent securely to our team. See our <a href="https://intira.io/privacy.html">Privacy Policy</a>.</p>
+    <p class="form-secure">Your message is sent securely to our team. See our <a href="https://intira.io/privacy.html">Privacy Policy</a> and <a href="https://intira.io/terms.html">Terms of Use</a>.</p>
     <div class="form-msg" id="formMsg"></div>
   </div>
   <p class="contact-email">Prefer email? Reach us at <a href="mailto:support@intira.io">support@intira.io</a></p>
 </section>
 
 </main>
-<footer><a href="#top" class="logo">INTIRA</a><p>© 2026 INTIRA Labs LLC. All rights reserved.</p><div class="links"><a href="#top">Home</a><a href="https://intira.io/privacy.html">Privacy</a><a href="#contact">Contact</a></div></footer>
+<footer><a href="#top" class="logo">INTIRA</a><p>© 2026 INTIRA Labs LLC. All rights reserved.</p><div class="links"><a href="#top">Home</a><a href="https://intira.io/privacy.html">Privacy</a><a href="https://intira.io/terms.html">Terms of Use</a><a href="#contact">Contact</a></div></footer>
 <script>
 (function() {
   var wrap = document.getElementById('carouselWrap');
