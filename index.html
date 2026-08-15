@@ -374,12 +374,21 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 .mini-wave{height:32px;gap:3px}
 .mini-wave i{width:3.5px}
 @media(max-width:768px){.fg-vis{height:120px}}
+.inq-panel{display:none;margin:0 0 20px;padding:20px 22px;border-radius:14px;background:rgba(245,158,11,.05);border:1px solid rgba(245,158,11,.2)}
+.inq-panel.show{display:block}
+#panelPartnership{background:rgba(139,92,246,.05);border-color:rgba(139,92,246,.22)}
+.inq-panel-title{font-family:'Syne',sans-serif;font-weight:800;font-size:14px;letter-spacing:.4px;color:var(--amber);margin-bottom:10px}
+#panelPartnership .inq-panel-title{color:var(--violet)}
+.inq-panel p{font-size:13.5px;color:var(--sub);line-height:1.65;margin-bottom:9px}
+.inq-panel p:last-child{margin-bottom:0}
+.inq-panel p strong{color:var(--text);font-weight:700}
+.inq-panel-hint{color:var(--sub2)!important;font-size:12.5px!important}
 </style>
 </head>
 <body>
 <header>
-<nav><a href="#" class="logo">INTIRA</a><div class="nav-links"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="https://intira.io/privacy.html">Privacy</a><a href="https://intira.io/terms.html">Terms</a><a href="#download" class="nav-cta">Download</a></div><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></nav>
-<div class="mobile-menu" id="mobileMenu"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="https://intira.io/privacy.html">Privacy</a><a href="https://intira.io/terms.html">Terms of Use</a><a href="#download" class="mm-cta">Download</a></div>
+<nav><a href="#" class="logo">INTIRA</a><div class="nav-links"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="https://intira.io/about.html">About</a><a href="#contact">Contact</a><a href="https://intira.io/privacy.html">Privacy</a><a href="https://intira.io/terms.html">Terms</a><a href="#download" class="nav-cta">Download</a></div><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="https://intira.io/about.html">About</a><a href="#contact">Contact</a><a href="https://intira.io/privacy.html">Privacy</a><a href="https://intira.io/terms.html">Terms of Use</a><a href="#download" class="mm-cta">Download</a></div>
 </header>
 <main>
 
@@ -387,7 +396,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <h1>Focus on <span class="amber">Signal.</span><br>Cut the <span class="violet">Noise.</span></h1>
 <p class="hero-sub-main">INTIRA scores every task you add and surfaces what matters most — so you spend less time organizing and more time executing.</p>
 <a href="#download" class="hero-cta"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>Now on the App Store</a>
-<p class="hero-fine">Free to download · 7-day free trial · Cancel anytime</p>
+<p class="hero-fine">Free to download · 14 days free · Cancel anytime</p>
 
 <div class="carousel-wrap" id="carouselWrap">
   <div class="carousel-inner" id="carouselInner">
@@ -615,7 +624,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <div class="split-eyebrow mint">DEBT SNOWBALL</div>
 <h3>Watch the balance fall.</h3>
 <p>Track every debt in a progress ring you can tap to flip between paid off and remaining. The snowball method tells you exactly which one to crush next — smallest first, so each cleared debt frees cash for the one behind it.</p>
-<p>Log a payment, watch the ring fill, and see your projected debt-free date move closer.</p>
+<p>Log a payment, watch the ring fill, and see your projected debt-free date move closer. Start free with 1 debt and 3 monthly expenses — go unlimited with Pro.</p>
 </div>
 <div class="split-visual">
 <div class="ring-col">
@@ -645,7 +654,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <div class="mini-timer">3:59:57</div>
 <div class="mini-bar"></div>
 </div>
-<div class="fg-body"><h4>Sprint Mode</h4><p>Pick your top Signal tasks, set a window — 4, 8, or 18 hours — and lock in until the job is done.</p></div>
+<div class="fg-body"><h4>Sprint Mode</h4><p>Pick your top Signal tasks, set a window — 4, 8, or 18 hours — and lock in. 3 sprints a week free, unlimited with Pro.</p></div>
 </div>
 <div class="fg-card">
 <div class="fg-vis">
@@ -684,18 +693,19 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <div style="flex-shrink:0;width:40px;height:40px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round"><path d="M18 10a4 4 0 0 0-7.6-1.3A3.5 3.5 0 1 0 7 15h10.5a3.5 3.5 0 0 0 .5-7z"/></svg></div>
 <div><h4 style="margin:0 0 8px;font-size:18px;color:var(--text);">iCloud Backup &amp; Restore</h4>
 <p style="margin:0;color:var(--sub);font-size:15px;line-height:1.7;">Your tasks, debts, blocks, and progress are backed up to your private iCloud — so nothing is lost when you reinstall or set up a new device. Backup and restore are free, stored privately in <strong style="color:var(--text);font-weight:600;">your own</strong> account, never on our servers. Pro adds sync across multiple devices. Not signed into iCloud? INTIRA works fully offline on your device.</p></div></div></section>
-<section class="comparison" id="compare"><h2>Free vs. Pro</h2><p>The core system is yours from day one. Pro unlocks everything else.</p>
+<section class="comparison" id="compare"><h2>Free vs. Pro</h2><p>Unlimited tasks, free — no cap, ever. Pro unlocks everything else.</p>
 <table class="comp-table"><thead><tr><th>Feature</th><th>FREE</th><th>PRO</th></tr></thead><tbody>
 <tr><td>Unlimited tasks + Signal Engine</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
-<tr><td>Brain Dump — search, filters, sorting</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
-<tr><td>Sprints</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
-<tr><td>Blocks — rich text, checklists, colors, tags</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
+<tr><td>Brain Dump — search &amp; filters</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
+<tr><td>Unlimited Blocks — rich text, checklists, tags</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
 <tr><td>Reminders &amp; notifications</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
 <tr><td>iCloud backup &amp; restore</td><td class="comp-check">✓</td><td class="comp-check">✓</td></tr>
-<tr><td>Sprint history</td><td class="comp-limit">Last 3</td><td class="comp-check">Full</td></tr>
+<tr><td>Sprints</td><td class="comp-limit">3/week</td><td class="comp-check">Unlimited</td></tr>
+<tr><td>Debt Snowball</td><td class="comp-limit">1 debt, 3 expenses</td><td class="comp-check">Unlimited</td></tr>
 <tr><td>Voice Capture</td><td class="comp-limit">10 uses</td><td class="comp-check">Unlimited</td></tr>
 <tr><td>Focus Mode</td><td class="comp-limit">25-min Pomodoro</td><td class="comp-check">Full</td></tr>
-<tr class="pro-divider"><td>Debt Snowball</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
+<tr><td>Sprint history</td><td class="comp-limit">Last 3</td><td class="comp-check">Full</td></tr>
+<tr class="pro-divider"><td>Debt &amp; bill due-date reminders</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
 <tr><td>Blitz, Deep &amp; multi-round focus</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
 <tr><td>Photo &amp; document attachments</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
 <tr><td>Recurring tasks</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
@@ -704,10 +714,10 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <tr><td>iCloud sync across devices</td><td class="comp-lock">—</td><td class="comp-check">✓</td></tr>
 </tbody></table></section>
 
-<section class="pricing" id="pricing"><h2>Start with the essentials. Upgrade when you're ready.</h2><p>Both plans start with a 7-day free trial. Payment method required; cancel anytime before it ends.</p>
+<section class="pricing" id="pricing"><h2>Start with the essentials. Upgrade when you're ready.</h2><p>Both plans start with 14 days free. Payment method required; cancel anytime before it ends.</p>
 <div class="plans">
-<div class="plan"><h3>Monthly</h3><div class="price">$5.99<span>/mo</span></div><div class="detail">Billed monthly · 7-day free trial</div><ul><li>Debt Snowball</li><li>Unlimited Voice Capture</li><li>Full Focus Mode</li><li>Attachments</li><li>Recurring tasks</li><li>Full sprint history</li><li>Widgets &amp; Live Activities</li></ul></div>
-<div class="plan pop"><div class="plan-badge">BEST VALUE</div><h3>Annual</h3><div class="price">$49.99<span>/yr</span></div><div class="detail">Save 30% — about $4.17/mo · 7-day free trial</div><ul><li>Everything in Monthly</li><li>Achievements &amp; weekly reports</li><li>iCloud sync across devices</li></ul></div>
+<div class="plan"><h3>Monthly</h3><div class="price">$5.99<span>/mo</span></div><div class="detail">Billed monthly · 14 days free</div><ul><li>Unlimited Sprints</li><li>Unlimited debts &amp; expenses</li><li>Debt &amp; bill reminders</li><li>Unlimited Voice Capture</li><li>Full Focus Mode</li><li>Attachments</li><li>Recurring tasks</li><li>Full sprint history</li><li>Widgets &amp; Live Activities</li></ul></div>
+<div class="plan pop"><div class="plan-badge">BEST VALUE</div><h3>Annual</h3><div class="price">$49.99<span>/yr</span></div><div class="detail">Save 30% — about $4.17/mo · 14 days free</div><ul><li>Everything in Monthly</li><li>Achievements &amp; weekly reports</li><li>iCloud sync across devices</li></ul></div>
 </div></section>
 
 <section class="bottom-cta" id="download"><h2>Ready to find your <span class="amber">Signal</span>?</h2><p>Find your Signal. INTIRA is on the App Store.</p>
@@ -716,11 +726,21 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <section class="contact" id="contact">
   <div class="eyebrow">LET'S CONNECT</div>
   <h2>Contact INTIRA Labs</h2>
-  <p>Have a question, a product issue, a partnership idea, a media request, or feedback about INTIRA? Send it our way — a real person reads every message.</p>
+  <p>Product questions, speaking engagements, partnership ideas, or media requests — this is the place. A real person reads every message.</p>
   <div class="contact-form">
     <div class="form-group"><label for="cf-name">Name <span class="req">*</span></label><input type="text" id="cf-name" name="name" placeholder="Your name" autocomplete="name"></div>
     <div class="form-group"><label for="cf-email">Email <span class="req">*</span></label><input type="email" id="cf-email" name="email" placeholder="you@example.com" autocomplete="email"></div>
-    <div class="form-group"><label for="cf-type">Inquiry Type <span class="req">*</span></label><select id="cf-type" name="inquiryType"><option value="" selected disabled>Select a topic…</option><option>General question</option><option>Product issue / bug</option><option>Partnership</option><option>Media request</option><option>Feedback</option></select></div>
+    <div class="form-group"><label for="cf-type">Inquiry Type <span class="req">*</span></label><select id="cf-type" name="inquiryType"><option value="" selected disabled>Select a topic…</option><option>General question</option><option>Speaking Engagement</option><option>Partnership Opportunity</option><option>Product issue / bug</option><option>Media request</option><option>Feedback</option></select></div>
+    <div class="inq-panel" id="panelSpeaking">
+      <div class="inq-panel-title">Speaking engagements</div>
+      <p>Speaking engagements start at <strong>$5,000</strong>.</p>
+      <p>For in-person engagements requiring travel, the host organization is responsible for approved travel and related expenses in addition to the speaking fee — airfare or rail, lodging, ground transportation, and other reasonable requirements as applicable.</p>
+      <p class="inq-panel-hint">Share your event, audience, format, and preferred dates below.</p>
+    </div>
+    <div class="inq-panel" id="panelPartnership">
+      <div class="inq-panel-title">Partnership opportunities</div>
+      <p class="inq-panel-hint">Tell us briefly about your organization, the opportunity, why you see alignment with INTIRA Labs, and what you'd like to explore together.</p>
+    </div>
     <div class="form-group"><label for="cf-message">Message <span class="req">*</span></label><textarea id="cf-message" name="message" placeholder="How can we help?"></textarea></div>
     <button class="form-submit" id="formSubmit">Send Message</button>
     <p class="form-secure">Your message is sent securely to our team. See our <a href="https://intira.io/privacy.html">Privacy Policy</a> and <a href="https://intira.io/terms.html">Terms of Use</a>.</p>
@@ -730,7 +750,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 </section>
 
 </main>
-<footer><a href="#top" class="logo">INTIRA</a><p>© 2026 INTIRA Labs LLC. All rights reserved.</p><div class="links"><a href="#top">Home</a><a href="https://intira.io/privacy.html">Privacy</a><a href="https://intira.io/terms.html">Terms of Use</a><a href="#contact">Contact</a></div></footer>
+<footer><a href="#top" class="logo">INTIRA</a><p>© 2026 INTIRA Labs LLC. All rights reserved.</p><div class="links"><a href="#top">Home</a><a href="https://intira.io/about.html">About</a><a href="https://intira.io/privacy.html">Privacy</a><a href="https://intira.io/terms.html">Terms of Use</a><a href="#contact">Contact</a></div></footer>
 <script>
 (function() {
   var wrap = document.getElementById('carouselWrap');
@@ -749,6 +769,36 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
   inner.addEventListener('touchstart',function(e){touchStartX=e.touches[0].clientX;},{passive:true});
   inner.addEventListener('touchend',function(e){var diff=touchStartX-e.changedTouches[0].clientX;if(Math.abs(diff)>50){diff>0?next():prev();resetTimer();}},{passive:true});
   resetTimer();
+})();
+</script>
+<script>
+(function(){
+  var sel=document.getElementById('cf-type'), msg=document.getElementById('cf-message');
+  var pS=document.getElementById('panelSpeaking'), pP=document.getElementById('panelPartnership');
+  if(!sel) return;
+  function sync(){
+    var v=sel.value;
+    if(pS) pS.classList.toggle('show', v==='Speaking Engagement');
+    if(pP) pP.classList.toggle('show', v==='Partnership Opportunity');
+  }
+  sel.addEventListener('change', sync);
+  // Deep links from the About page: #contact?type=speaking | ?type=partnership
+  function applyDeepLink(){
+    var h=window.location.hash||'';
+    var m=h.match(/type=([a-z]+)/i);
+    if(!m) return;
+    var t=m[1].toLowerCase(), val=null, pre=null;
+    if(t==='speaking'){ val='Speaking Engagement'; pre="I'm interested in discussing a speaking engagement with Eve Hyppolite."; }
+    else if(t==='partnership'){ val='Partnership Opportunity'; pre="I'm interested in exploring a potential partnership with INTIRA Labs."; }
+    if(!val) return;
+    sel.value=val; sync();
+    if(msg && !msg.value.trim()) msg.value=pre;
+    var c=document.getElementById('contact');
+    if(c) setTimeout(function(){ c.scrollIntoView({behavior:'smooth',block:'start'}); }, 60);
+  }
+  applyDeepLink();
+  window.addEventListener('hashchange', applyDeepLink);
+  sync();
 })();
 </script>
 <script>
