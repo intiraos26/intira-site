@@ -429,11 +429,9 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px;fl
 .flow-tail b{color:var(--amber);font-weight:800}
 
 /* mission + vision */
-.mv{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.mv-col{padding:76px 56px}
-.mv-col:first-child{border-right:1px solid var(--border)}
+.mv{display:block;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.mv-col{padding:76px 56px;max-width:900px;margin:0 auto}
 .mv-label{font-size:11px;font-weight:800;letter-spacing:2.6px;color:var(--amber);margin-bottom:26px}
-.mv-col:last-child .mv-label{color:var(--violet)}
 .mv-col p{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(20px,2.1vw,27px);line-height:1.34;letter-spacing:-.5px;color:var(--text);margin:0}
 .mv-note{margin-top:28px!important;padding-top:24px;border-top:1px solid var(--border);font-family:'DM Sans',sans-serif!important;font-weight:400!important;font-size:15px!important;line-height:1.75!important;color:var(--sub)!important;letter-spacing:0!important}
 
@@ -520,9 +518,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
  .flow-step p{font-size:14px}
  .flow-num{margin-bottom:11px}
  .flow-step:last-child{border-bottom:none}
- .mv{grid-template-columns:1fr}
  .mv-col{padding:48px 24px}
- .mv-col:first-child{border-right:none;border-bottom:1px solid var(--border)}
  .sn2{grid-template-columns:1fr;gap:36px;margin-top:38px}
  .prod{grid-template-columns:1fr;gap:44px;padding:76px 0}
  .prod-mark{width:44px;height:44px}
@@ -587,26 +583,20 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 <section class="lb-sec">
 <div class="lb-wrap">
 <h2>More intelligence doesn't automatically create more clarity.</h2>
-<p>Access to information has never been greater. Neither has the number of systems promising to organize it, automate it, or route it somewhere useful. Most of them work exactly as designed.</p>
-<p>And yet the hard part hasn't moved. More information hasn't produced better priorities. More tools haven't produced better decisions. More activity hasn't produced better outcomes — it has mostly produced more activity.</p>
-<p>The gap isn't capability. It's the moment where a person has to look at everything in front of them and decide what actually deserves the next hour.</p>
-<p class="lb-close">We believe technology should help people <em>think more clearly</em> — not simply do more.</p>
+<p>We have more information, more tools, and more automation than ever. But the hardest part remains the same: deciding what actually deserves our attention.</p>
+<p>INTIRA Labs exists for that moment — where information becomes judgment, priorities become decisions, and decisions become action.</p>
+<p class="lb-close">Technology should help people <em>think more clearly</em> — not simply do more.</p>
 </div>
 </section>
 
-<!-- 4. MISSION + VISION -->
+<!-- 4. MISSION -->
 <section aria-labelledby="mv-heading">
-<h2 id="mv-heading" class="visually-hidden-heading" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Mission and vision</h2>
+<h2 id="mv-heading" class="visually-hidden-heading" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Mission</h2>
 <div class="mv">
 <div class="mv-col">
 <div class="mv-label">OUR MISSION</div>
 <p>To build intelligent, human-centered products and experiences that help people navigate complexity, focus on what matters, and turn intention into action.</p>
-<p class="mv-note">We're interested in the space between information and action — the moment someone has to decide what deserves attention and what should happen next.</p>
-</div>
-<div class="mv-col">
-<div class="mv-label">OUR VISION</div>
-<p>A future where technology doesn't compete for more of our attention — it helps us use our attention more intentionally.</p>
-<p class="mv-note">The long-term opportunity isn't helping people manage more tasks. It's helping people navigate complexity better.</p>
+<p class="mv-note">We build for the space between knowing and doing.</p>
 </div>
 </div>
 </section>
@@ -652,9 +642,9 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 </div>
 <div class="lb-kicker">OUR FIRST PRODUCT</div>
 <h2 id="prod-heading" style="font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,4vw,46px);line-height:1.1;letter-spacing:-.03em;margin-bottom:26px">The philosophy, made practical.</h2>
-<p style="font-size:17px;color:var(--sub);line-height:1.85;max-width:560px;margin-bottom:20px"><strong style="color:var(--text);font-weight:600">INTIRA is the first product from INTIRA Labs.</strong> It's a productivity and focus system built to reduce the cognitive burden of deciding what deserves attention.</p>
-<p style="font-size:17px;color:var(--sub);line-height:1.85;max-width:560px;margin-bottom:20px">Instead of simply storing tasks, INTIRA helps you capture everything competing for your attention, separate signal from noise, and execute through focused work — Brain Dump, the Signal Engine, Sprints, Focus Mode, Blocks, Voice Capture, and Snowball.</p>
-<p style="font-size:17px;color:var(--sub);line-height:1.85;max-width:560px;margin-bottom:28px">The Signal Engine scores every task and sorts it — deterministic, inspectable, the same rules every time.</p>
+<p style="font-size:17px;color:var(--sub);line-height:1.85;max-width:560px;margin-bottom:20px"><strong style="color:var(--text);font-weight:600">INTIRA is the first product from INTIRA Labs.</strong> It's a productivity and focus system designed to reduce the cognitive burden of deciding what deserves attention.</p>
+<p style="font-size:17px;color:var(--sub);line-height:1.85;max-width:560px;margin-bottom:20px">Capture what is competing for your attention, separate signal from noise, then move through focused execution with Brain Dump, the Signal Engine, Sprints, Focus Mode, Blocks, Voice Capture, and Snowball.</p>
+<p style="font-size:17px;color:var(--sub);line-height:1.85;max-width:560px;margin-bottom:28px">The Signal Engine scores and sorts tasks using deterministic, inspectable rules.</p>
 <a class="lb-link" href="https://intira.io/">Explore INTIRA →</a>
 </div>
 <div class="prod-vis">
@@ -685,9 +675,8 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 <p>Eve Hyppolite is a product leader, storyteller, speaker, and multidisciplinary creator whose work sits at the intersection of technology, human behavior, communication, and experience.</p>
 <p>INTIRA Labs grew from a question that extended beyond productivity:</p>
 <p class="fs-q">What if technology helped us think more clearly instead of simply giving us more to manage?</p>
-<p>Working in technology and product development meant close contact with increasingly capable systems — and it reinforced something easy to overlook: intelligence alone does not produce good decisions. People still need context. They need judgment. They need priorities. And ultimately, they need to act.</p>
-<p>That thinking became the foundation for INTIRA: <strong>Intentional Navigation Through Intelligence, Reasoning &amp; Action.</strong></p>
-<p>INTIRA Labs was created to explore that philosophy through products, frameworks, storytelling, and experiences designed to help people navigate complexity with greater intention. The first expression of that idea is INTIRA, the productivity and focus app — but the company is deliberately broader than a single product.</p>
+<p>That question became the foundation for INTIRA: <strong>Intentional Navigation Through Intelligence, Reasoning &amp; Action.</strong></p>
+<p>INTIRA Labs explores that philosophy through products, frameworks, storytelling, and experiences designed to help people navigate complexity with greater intention. INTIRA is the first expression of that idea — not the boundary of it.</p>
 </div>
 </div>
 </div>
@@ -720,17 +709,8 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 </div>
 </section>
 
-<!-- 8. BUILDING TOWARD -->
-<section class="lb-sec" style="border-top:1px solid var(--border)">
-<div class="lb-wrap">
-<h2>INTIRA starts with productivity. The idea is bigger than productivity.</h2>
-<p>The first product addresses one version of a much larger problem: people are surrounded by more information, more options, and more demands than judgment alone can sort through.</p>
-<p>What INTIRA Labs is actually interested in is the relationship between people, intelligence, decisions, attention, and action — and how that relationship might work better than it does today.</p>
-<p>More is coming — products, frameworks, and experiences built on the same principle as the first: <strong>help people navigate complexity with greater intention.</strong></p>
-</div>
-</section>
 
-<!-- 9. FINAL CTA -->
+<!-- 8. FINAL CTA -->
 <section class="lb-final">
 <div class="lb-wrap">
 <h2>Move with <span class="amber">intention.</span></h2>
