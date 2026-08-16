@@ -1,0 +1,17 @@
+{
+  "name": "INTIRA",
+  "short_name": "INTIRA",
+  "description": "Task prioritization, focus, and debt payoff for iOS.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07060E",
+  "theme_color": "#07060E",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
