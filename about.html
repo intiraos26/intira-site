@@ -439,6 +439,8 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px;fl
 .lb-hero-vis::before{content:'';position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.20),rgba(139,92,246,.07) 55%,transparent 72%);filter:blur(34px)}
 .lb-hero-vis::after{content:'';position:absolute;width:300px;height:300px;border-radius:50%;border:1px solid rgba(245,158,11,.16)}
 .lb-hero-mark{position:relative;z-index:1;width:190px;height:190px;display:block;filter:drop-shadow(0 18px 44px rgba(245,158,11,.28))}
+.lb-hero-title-row{display:block}
+.lb-hero-mobile-mark{display:none}
 .lb-kicker{font-size:11px;font-weight:800;letter-spacing:3px;color:var(--amber);margin-bottom:28px}
 .lb-hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(36px,5.6vw,76px);line-height:1.04;letter-spacing:-0.034em;max-width:14ch;margin-bottom:30px}
 .lb-hero .lead{font-size:clamp(17px,1.5vw,21px);color:var(--sub);line-height:1.65;max-width:620px}
@@ -547,14 +549,17 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 
 @media(max-width:900px){
  .lb-wrap,.lb-narrow{padding:0 24px}
- .lb-hero{padding:112px 0 52px}
- .lb-hero-grid{grid-template-columns:1fr;gap:34px}
- .lb-hero-vis{order:-1;min-height:0;justify-content:flex-start}
- .lb-hero-vis::before{width:200px;height:200px;filter:blur(26px)}
- .lb-hero-vis::after{width:176px;height:176px}
- .lb-hero-mark{width:104px;height:104px}
- .lb-hero h1{font-size:clamp(29px,8.4vw,44px)}
+ .lb-hero{padding:96px 0 40px}
+ .lb-hero-grid{grid-template-columns:1fr;gap:0}
+ .lb-hero-vis{display:none}
+ .lb-hero-title-row{display:grid;grid-template-columns:minmax(0,1fr) 92px;gap:14px;align-items:start}
+ .lb-hero-mobile-mark{display:flex;width:92px;height:92px;align-items:center;justify-content:center;position:relative;margin-top:4px}
+ .lb-hero-mobile-mark::before{content:'';position:absolute;width:92px;height:92px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.16),rgba(139,92,246,.05) 55%,transparent 72%);filter:blur(10px)}
+ .lb-hero-mobile-mark::after{content:'';position:absolute;width:82px;height:82px;border-radius:50%;border:1px solid rgba(245,158,11,.16)}
+ .lb-hero-mobile-mark img{position:relative;z-index:1;width:54px;height:54px;display:block;filter:drop-shadow(0 8px 18px rgba(245,158,11,.18))}
+ .lb-hero h1{font-size:clamp(29px,8.4vw,44px);margin-bottom:18px}
  .lb-hero .lead{font-size:16px}
+ .lb-kicker{margin-bottom:14px;letter-spacing:.28em}
  .lb-sec{padding:52px 0}
  .lb-sec h2{font-size:clamp(24px,7vw,34px);margin-bottom:20px}
  .lb-sec p{font-size:15.5px;line-height:1.75;margin-bottom:16px}
@@ -588,6 +593,14 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
  .lb-final h2{font-size:clamp(28px,8vw,40px)}
  .lb-final p{font-size:16px;margin-bottom:30px}
 }
+
+@media(max-width:390px){
+ .lb-hero-title-row{grid-template-columns:minmax(0,1fr) 76px;gap:10px}
+ .lb-hero-mobile-mark{width:76px;height:76px;margin-top:5px}
+ .lb-hero-mobile-mark::before{width:76px;height:76px}
+ .lb-hero-mobile-mark::after{width:68px;height:68px}
+ .lb-hero-mobile-mark img{width:46px;height:46px}
+}
 </style>
 </head>
 <body class="about-page">
@@ -603,7 +616,12 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 <div class="lb-hero-grid">
 <div class="lb-hero-copy">
 <div class="lb-kicker">INTIRA LABS</div>
+<div class="lb-hero-title-row">
 <h1>Technology should help us navigate what matters.</h1>
+<div class="lb-hero-mobile-mark" aria-hidden="true">
+<img src="https://intira.io/logo.png" alt="">
+</div>
+</div>
 <p class="lead">INTIRA Labs builds intelligent, human-centered products and experiences designed to help people navigate complexity, make better decisions, and turn intention into action.</p>
 </div>
 <div class="lb-hero-vis" aria-hidden="true">
