@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6QQX5BERSR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6QQX5BERSR');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#07060E">
@@ -581,7 +590,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 }
 </style>
 </head>
-<body>
+<body class="about-page">
 <header>
 <nav><a href="https://intira.io/" class="logo">INTIRA</a><div class="nav-links"><a href="https://intira.io/#features">Features</a><a href="https://intira.io/#pricing">Pricing</a><a href="https://intira.io/about.html">About</a><a href="https://intira.io/#contact?type=general">Contact</a><a href="https://intira.io/#download" class="nav-cta">Download</a></div><button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></nav>
 <div class="mobile-menu" id="mobileMenu"><a href="https://intira.io/#features">Features</a><a href="https://intira.io/#pricing">Pricing</a><a href="https://intira.io/about.html">About</a><a href="https://intira.io/#contact?type=general">Contact</a><a href="https://intira.io/#download" class="mm-cta">Download</a></div>
@@ -775,5 +784,54 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
   });
 })();
 </script>
+
+<script>
+(function() {
+  function track(eventName, params) {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', eventName, params || {});
+  }
+
+  document.addEventListener('click', function(event) {
+    var el = event.target.closest('a,button');
+    if (!el) return;
+
+    var href = el.getAttribute('href') || '';
+    var text = (el.textContent || '').trim().replace(/\s+/g, ' ').toLowerCase();
+
+    if (href.indexOf('#download') !== -1 || text === 'download' || text.indexOf('download intira') !== -1) {
+      track('download_intent', {
+        cta_location: el.closest('header') ? 'header' : (el.closest('.hero') ? 'hero' : 'page')
+      });
+      return;
+    }
+
+    if (href === '#pricing' || href.indexOf('/#pricing') !== -1 || text === 'pricing') {
+      track('pricing_interest');
+      return;
+    }
+
+    if (href.indexOf('about.html') !== -1 && !document.body.classList.contains('about-page')) {
+      track('about_interest');
+      return;
+    }
+
+    if (href.indexOf('type=speaking') !== -1) {
+      track('speaking_interest');
+      return;
+    }
+
+    if (href.indexOf('type=partnership') !== -1) {
+      track('partnership_interest');
+      return;
+    }
+
+    if (href.indexOf('type=general') !== -1 || text === 'contact') {
+      track('contact_interest');
+    }
+  });
+})();
+</script>
+
 </body>
 </html>

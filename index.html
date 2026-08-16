@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6QQX5BERSR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6QQX5BERSR');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#07060E">
@@ -986,6 +995,9 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
     .then(function(r){status=r.status;return r.json().catch(function(){return {};});})
     .then(function(data){
       if(data&&data.success){
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'generate_lead', { inquiry_type: type });
+        }
         msg.textContent='Message sent! We\'ll get back to you soon.';msg.className='form-msg success';
         document.getElementById('cf-name').value='';document.getElementById('cf-email').value='';document.getElementById('cf-type').selectedIndex=0;document.getElementById('cf-message').value='';
       } else {
@@ -1011,5 +1023,54 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
   });
 })();
 </script>
+
+<script>
+(function() {
+  function track(eventName, params) {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', eventName, params || {});
+  }
+
+  document.addEventListener('click', function(event) {
+    var el = event.target.closest('a,button');
+    if (!el) return;
+
+    var href = el.getAttribute('href') || '';
+    var text = (el.textContent || '').trim().replace(/\s+/g, ' ').toLowerCase();
+
+    if (href.indexOf('#download') !== -1 || text === 'download' || text.indexOf('download intira') !== -1) {
+      track('download_intent', {
+        cta_location: el.closest('header') ? 'header' : (el.closest('.hero') ? 'hero' : 'page')
+      });
+      return;
+    }
+
+    if (href === '#pricing' || href.indexOf('/#pricing') !== -1 || text === 'pricing') {
+      track('pricing_interest');
+      return;
+    }
+
+    if (href.indexOf('about.html') !== -1 && !document.body.classList.contains('about-page')) {
+      track('about_interest');
+      return;
+    }
+
+    if (href.indexOf('type=speaking') !== -1) {
+      track('speaking_interest');
+      return;
+    }
+
+    if (href.indexOf('type=partnership') !== -1) {
+      track('partnership_interest');
+      return;
+    }
+
+    if (href.indexOf('type=general') !== -1 || text === 'contact') {
+      track('contact_interest');
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
