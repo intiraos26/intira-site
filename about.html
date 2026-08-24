@@ -426,6 +426,59 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px;fl
 .inq-panel p:last-child{margin-bottom:0}
 .inq-panel p strong{color:var(--text);font-weight:700}
 .inq-panel-hint{color:var(--sub2)!important;font-size:12.5px!important}
+
+/* ===== company facts ===== */
+.co{padding:112px 0;border-top:1px solid var(--border)}
+.co-head{max-width:640px;margin-bottom:52px}
+.co-head h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(27px,3.3vw,42px);line-height:1.14;letter-spacing:-.028em;margin-bottom:22px}
+.co-head p{font-size:17px;color:var(--sub);line-height:1.85;margin:0}
+.co-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0;border-top:1px solid var(--border)}
+.co-fact{padding:30px 26px 30px 0;border-right:1px solid var(--border)}
+.co-fact:last-child{border-right:none}
+.co-fact:not(:first-child){padding-left:26px}
+.co-fact dt{font-size:10px;font-weight:800;letter-spacing:2px;color:var(--sub);margin-bottom:12px}
+.co-fact dd{margin:0;font-family:'Syne',sans-serif;font-weight:800;font-size:19px;color:var(--text);line-height:1.25;letter-spacing:-.2px}
+.co-fact dd span{display:block;font-family:'DM Sans',sans-serif;font-weight:400;font-size:13px;color:var(--sub);letter-spacing:0;margin-top:5px}
+
+/* ===== clarity: competing inputs -> one decision ===== */
+.clarity-grid{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:center}
+.clarity-copy h2{max-width:17ch}
+.clarity-vis{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px}
+.cv-cloud{position:relative;width:100%;display:flex;flex-wrap:wrap;gap:7px;justify-content:center}
+.cv-chip{font-size:11px;font-weight:600;color:var(--sub);background:rgba(139,92,246,.09);border:1px solid rgba(139,92,246,.22);border-radius:100px;padding:6px 12px;white-space:nowrap;line-height:1.2}
+.cv-chip.c1{transform:rotate(-2.5deg)}.cv-chip.c2{transform:rotate(1.5deg);opacity:.78}
+.cv-chip.c3{transform:rotate(-1deg);opacity:.62}.cv-chip.c4{transform:rotate(2deg);opacity:.85}
+.cv-chip.c5{transform:rotate(-1.5deg);opacity:.7}.cv-chip.c6{transform:rotate(1deg);opacity:.55}
+.cv-chip.c7{transform:rotate(-2deg);opacity:.48}.cv-chip.c8{transform:rotate(1.8deg);opacity:.6}
+.cv-chip.c9{transform:rotate(-1.2deg);opacity:.42}
+.cv-funnel{display:flex;flex-direction:column;align-items:center;gap:4px;margin:6px 0 2px}
+.cv-funnel span{display:block;height:1px;background:linear-gradient(90deg,transparent,rgba(245,158,11,.55),transparent)}
+.cv-funnel span:nth-child(1){width:150px}
+.cv-funnel span:nth-child(2){width:88px}
+.cv-funnel span:nth-child(3){width:34px}
+.cv-card{width:100%;background:var(--surface);border:1px solid rgba(245,158,11,.34);border-left:3px solid var(--amber);border-radius:14px;padding:14px 16px;box-shadow:0 14px 40px rgba(0,0,0,.5),0 0 32px rgba(245,158,11,.10)}
+.cv-card-top{display:flex;align-items:center;gap:10px}
+.cv-dot{width:15px;height:15px;border-radius:50%;border:2px solid var(--amber);flex-shrink:0}
+.cv-card-title{font-size:14px;font-weight:700;color:var(--text)}
+.cv-card-chips{display:flex;gap:6px;margin-top:9px;padding-left:25px}
+.cv-tag{font-size:8.5px;font-weight:800;letter-spacing:.5px;padding:3px 7px;border-radius:5px}
+.cv-tag.sig{background:rgba(245,158,11,.16);color:var(--amber)}
+.cv-tag.crit{background:rgba(255,77,109,.16);color:var(--rose)}
+.cv-cap{font-size:9px;font-weight:800;letter-spacing:1.6px;text-align:center;width:100%;line-height:1.5}
+.cv-l-noise{color:var(--violet);opacity:.75}
+.cv-l-signal{color:var(--amber)}
+
+@media(max-width:900px){
+ .co{padding:76px 0}
+ .co-head{margin-bottom:34px}
+ .co-facts{grid-template-columns:1fr}
+ .co-fact{border-right:none;border-bottom:1px solid var(--border);padding:20px 0}
+ .co-fact:not(:first-child){padding-left:0}
+ .co-fact:last-child{border-bottom:none}
+ .co-fact dd{font-size:18px}
+ .clarity-grid{grid-template-columns:1fr;gap:44px}
+ .clarity-vis{max-width:320px}
+}
 </style>
 <style>
 /* ===== INTIRA Labs company page — editorial layer ===== */
@@ -545,6 +598,11 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px;fl
 
 /* a11y */
 a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px}
+@media(max-width:900px){
+ footer .links a{padding:12px 0;display:inline-block}
+ .lb-link{padding-top:9px;padding-bottom:11px}
+ .speak .lb-link{display:inline-flex}
+}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 
 @media(max-width:900px){
@@ -633,12 +691,36 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 </section>
 
 <!-- 2. WHY WE EXIST -->
-<section class="lb-sec">
+<section class="lb-sec clarity">
 <div class="lb-wrap">
+<div class="clarity-grid">
+<div class="clarity-copy">
 <h2>More information doesn't automatically create more clarity.</h2>
 <p>There is more information than ever, alongside more tools and more ways to act. Yet the hardest part remains the same: understanding what matters and deciding what deserves our attention.</p>
 <p>INTIRA Labs exists to help close that gap.</p>
 <p class="lb-close">Technology should help people <em>think more clearly</em> — not simply do more.</p>
+</div>
+<div class="clarity-vis" aria-hidden="true">
+<div class="cv-cap cv-l-noise">EVERYTHING COMPETING FOR ATTENTION</div>
+<div class="cv-cloud">
+<span class="cv-chip c1">Reply to Sarah</span>
+<span class="cv-chip c2">Renew registration</span>
+<span class="cv-chip c3">Q3 update</span>
+<span class="cv-chip c4">Book flights</span>
+<span class="cv-chip c5">Tax documents</span>
+<span class="cv-chip c6">Prescription</span>
+<span class="cv-chip c7">Summer garden</span>
+<span class="cv-chip c8">Gift for Dad</span>
+<span class="cv-chip c9">Cabin weekend</span>
+</div>
+<div class="cv-funnel"><span></span><span></span><span></span></div>
+<div class="cv-card">
+<div class="cv-card-top"><span class="cv-dot"></span><span class="cv-card-title">Finish tax documents</span></div>
+<div class="cv-card-chips"><span class="cv-tag sig">SIGNAL</span><span class="cv-tag crit">CRITICAL</span></div>
+</div>
+<div class="cv-cap cv-l-signal">ONE CLEAR NEXT MOVE</div>
+</div>
+</div>
 </div>
 </section>
 
@@ -745,6 +827,23 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 <p>INTIRA Labs explores that philosophy through products, frameworks, storytelling, and experiences designed to help people navigate complexity with greater intention. INTIRA is the first expression of that idea — not the boundary of it.</p>
 </div>
 </div>
+</div>
+</section>
+
+<!-- 6b. THE COMPANY -->
+<section class="co" aria-labelledby="co-heading">
+<div class="lb-wrap">
+<div class="co-head">
+<div class="lb-kicker">THE COMPANY</div>
+<h2 id="co-heading">Independent by design.</h2>
+<p>INTIRA Labs LLC is a founder-owned software company. No investors setting the roadmap, no growth targets that would push the product toward engagement for its own sake. The measure that matters is whether people spend less time organizing and more time executing.</p>
+</div>
+<dl class="co-facts">
+<div class="co-fact"><dt>FOUNDED</dt><dd>2026</dd></div>
+<div class="co-fact"><dt>STRUCTURE</dt><dd>Independent LLC<span>Pennsylvania, USA</span></dd></div>
+<div class="co-fact"><dt>FIRST PRODUCT</dt><dd>INTIRA<span>for iOS</span></dd></div>
+<div class="co-fact"><dt>YOUR DATA</dt><dd>Stays yours<span>No INTIRA servers</span></dd></div>
+</dl>
 </div>
 </section>
 
