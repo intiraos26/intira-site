@@ -426,59 +426,6 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px;fl
 .inq-panel p:last-child{margin-bottom:0}
 .inq-panel p strong{color:var(--text);font-weight:700}
 .inq-panel-hint{color:var(--sub2)!important;font-size:12.5px!important}
-
-/* ===== company facts ===== */
-.co{padding:112px 0;border-top:1px solid var(--border)}
-.co-head{max-width:640px;margin-bottom:52px}
-.co-head h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(27px,3.3vw,42px);line-height:1.14;letter-spacing:-.028em;margin-bottom:22px}
-.co-head p{font-size:17px;color:var(--sub);line-height:1.85;margin:0}
-.co-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0;border-top:1px solid var(--border)}
-.co-fact{padding:30px 26px 30px 0;border-right:1px solid var(--border)}
-.co-fact:last-child{border-right:none}
-.co-fact:not(:first-child){padding-left:26px}
-.co-fact dt{font-size:10px;font-weight:800;letter-spacing:2px;color:var(--sub);margin-bottom:12px}
-.co-fact dd{margin:0;font-family:'Syne',sans-serif;font-weight:800;font-size:19px;color:var(--text);line-height:1.25;letter-spacing:-.2px}
-.co-fact dd span{display:block;font-family:'DM Sans',sans-serif;font-weight:400;font-size:13px;color:var(--sub);letter-spacing:0;margin-top:5px}
-
-/* ===== clarity: competing inputs -> one decision ===== */
-.clarity-grid{display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:center}
-.clarity-copy h2{max-width:17ch}
-.clarity-vis{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px}
-.cv-cloud{position:relative;width:100%;display:flex;flex-wrap:wrap;gap:7px;justify-content:center}
-.cv-chip{font-size:11px;font-weight:600;color:var(--sub);background:rgba(139,92,246,.09);border:1px solid rgba(139,92,246,.22);border-radius:100px;padding:6px 12px;white-space:nowrap;line-height:1.2}
-.cv-chip.c1{transform:rotate(-2.5deg)}.cv-chip.c2{transform:rotate(1.5deg);opacity:.78}
-.cv-chip.c3{transform:rotate(-1deg);opacity:.62}.cv-chip.c4{transform:rotate(2deg);opacity:.85}
-.cv-chip.c5{transform:rotate(-1.5deg);opacity:.7}.cv-chip.c6{transform:rotate(1deg);opacity:.55}
-.cv-chip.c7{transform:rotate(-2deg);opacity:.48}.cv-chip.c8{transform:rotate(1.8deg);opacity:.6}
-.cv-chip.c9{transform:rotate(-1.2deg);opacity:.42}
-.cv-funnel{display:flex;flex-direction:column;align-items:center;gap:4px;margin:6px 0 2px}
-.cv-funnel span{display:block;height:1px;background:linear-gradient(90deg,transparent,rgba(245,158,11,.55),transparent)}
-.cv-funnel span:nth-child(1){width:150px}
-.cv-funnel span:nth-child(2){width:88px}
-.cv-funnel span:nth-child(3){width:34px}
-.cv-card{width:100%;background:var(--surface);border:1px solid rgba(245,158,11,.34);border-left:3px solid var(--amber);border-radius:14px;padding:14px 16px;box-shadow:0 14px 40px rgba(0,0,0,.5),0 0 32px rgba(245,158,11,.10)}
-.cv-card-top{display:flex;align-items:center;gap:10px}
-.cv-dot{width:15px;height:15px;border-radius:50%;border:2px solid var(--amber);flex-shrink:0}
-.cv-card-title{font-size:14px;font-weight:700;color:var(--text)}
-.cv-card-chips{display:flex;gap:6px;margin-top:9px;padding-left:25px}
-.cv-tag{font-size:8.5px;font-weight:800;letter-spacing:.5px;padding:3px 7px;border-radius:5px}
-.cv-tag.sig{background:rgba(245,158,11,.16);color:var(--amber)}
-.cv-tag.crit{background:rgba(255,77,109,.16);color:var(--rose)}
-.cv-cap{font-size:9px;font-weight:800;letter-spacing:1.6px;text-align:center;width:100%;line-height:1.5}
-.cv-l-noise{color:var(--violet);opacity:.75}
-.cv-l-signal{color:var(--amber)}
-
-@media(max-width:900px){
- .co{padding:76px 0}
- .co-head{margin-bottom:34px}
- .co-facts{grid-template-columns:1fr}
- .co-fact{border-right:none;border-bottom:1px solid var(--border);padding:20px 0}
- .co-fact:not(:first-child){padding-left:0}
- .co-fact:last-child{border-bottom:none}
- .co-fact dd{font-size:18px}
- .clarity-grid{grid-template-columns:1fr;gap:44px}
- .clarity-vis{max-width:320px}
-}
 </style>
 <style>
 /* ===== INTIRA Labs company page — editorial layer ===== */
@@ -541,6 +488,41 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px;fl
 
 /* mission + vision */
 
+
+/* ===== Why we exist: competing attention visual ===== */
+.why-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(340px,.88fr);gap:76px;align-items:center}
+.why-copy h2{max-width:15ch}
+.attention-vis{position:relative;min-height:390px;display:flex;align-items:center;justify-content:center}
+.attention-vis::before{content:'';position:absolute;width:340px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.09),rgba(245,158,11,.025) 56%,transparent 74%);filter:blur(34px);pointer-events:none}
+.attention-stack{position:relative;z-index:1;width:100%;max-width:390px}
+.attention-label{text-align:center;font-size:8px;font-weight:800;letter-spacing:2px;color:var(--violet);margin-bottom:18px}
+.attention-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 7px;max-width:350px;margin:0 auto 22px}
+.attention-chip{font-size:9px;font-weight:600;color:var(--sub);padding:7px 12px;border:1px solid rgba(139,92,246,.24);border-radius:100px;background:rgba(139,92,246,.055);white-space:nowrap}
+.attention-lines{position:relative;height:26px;margin:0 auto 4px;width:190px}
+.attention-lines::before,.attention-lines::after{content:'';position:absolute;left:50%;transform:translateX(-50%);height:1px;background:linear-gradient(90deg,transparent,var(--amber),transparent)}
+.attention-lines::before{top:4px;width:170px;opacity:.35}
+.attention-lines::after{top:13px;width:110px;opacity:.65}
+.attention-lines i{position:absolute;left:50%;top:21px;transform:translateX(-50%);display:block;width:52px;height:1px;background:var(--amber);opacity:.9}
+.attention-signal{position:relative;padding:17px 18px;border:1px solid rgba(245,158,11,.65);border-left:3px solid var(--amber);border-radius:14px;background:linear-gradient(135deg,rgba(245,158,11,.055),rgba(139,92,246,.045));box-shadow:0 18px 48px rgba(0,0,0,.28)}
+.attention-task{display:flex;align-items:flex-start;gap:11px}
+.attention-ring{width:16px;height:16px;border:2px solid var(--amber);border-radius:50%;flex-shrink:0;margin-top:2px}
+.attention-task-title{font-size:13px;font-weight:700;color:var(--text);line-height:1.35}
+.attention-task-tags{display:flex;gap:6px;margin-top:9px}
+.attention-task-tags span{font-size:7px;font-weight:800;letter-spacing:.7px;padding:4px 7px;border-radius:5px}
+.attention-task-tags .sig{background:rgba(245,158,11,.15);color:var(--amber)}
+.attention-task-tags .crit{background:rgba(255,77,109,.15);color:var(--rose)}
+.attention-next{text-align:center;font-size:8px;font-weight:800;letter-spacing:2px;color:var(--amber);margin-top:13px}
+@media(max-width:900px){
+ .why-grid{grid-template-columns:1fr;gap:40px}
+ .attention-vis{min-height:330px;justify-content:flex-start}
+ .attention-stack{max-width:420px}
+}
+@media(max-width:560px){
+ .attention-vis{min-height:300px}
+ .attention-chip{font-size:8px;padding:6px 9px}
+ .attention-chips{gap:7px 6px}
+}
+
 /* signal vs noise columns */
 .sn2{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:56px}
 .sn2 h3{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;margin-bottom:18px;letter-spacing:.5px}
@@ -563,6 +545,80 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px;fl
 .prod-mark{width:52px;height:52px;display:block;flex-shrink:0}
 .prod-word{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;letter-spacing:.16em;color:var(--text)}
 
+
+/* ===== About: INTIRA product collage ===== */
+.product-collage{padding:10px 0 118px}
+.collage-intro{text-align:center;max-width:700px;margin:0 auto 44px}
+.collage-intro .lb-kicker{margin-bottom:14px}
+.collage-intro h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(27px,3.4vw,40px);line-height:1.14;letter-spacing:-.03em;margin:0 auto;color:var(--text)}
+.collage-stage{position:relative;max-width:1020px;height:560px;margin:0 auto}
+.collage-stage::before{content:'';position:absolute;left:14%;top:12%;width:62%;height:66%;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.09),rgba(139,92,246,.035) 48%,transparent 72%);filter:blur(42px);pointer-events:none}
+.collage-card{position:absolute;background:linear-gradient(180deg,rgba(30,28,46,.98),rgba(16,14,28,.98));border:1px solid var(--border2);border-radius:24px;box-shadow:0 28px 70px rgba(0,0,0,.38);overflow:hidden}
+.collage-card::after{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 1px 0 rgba(255,255,255,.035);pointer-events:none}
+.collage-primary{left:2%;top:64px;width:58%;min-height:430px;z-index:2;transform:rotate(-1.25deg)}
+.collage-sprint{right:2%;top:0;width:34%;min-height:272px;z-index:3;transform:rotate(1.8deg)}
+.collage-snow{right:5%;bottom:4px;width:37%;min-height:250px;z-index:4;transform:rotate(-1deg)}
+.collage-topbar{display:flex;align-items:center;gap:10px;padding:18px 20px 14px;border-bottom:1px solid var(--border);background:rgba(255,255,255,.015)}
+.collage-logo{width:30px;height:30px;display:block;flex-shrink:0}
+.collage-word{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;letter-spacing:.14em;color:var(--text)}
+.collage-screen-label{margin-left:auto;font-size:8px;font-weight:800;letter-spacing:1.5px;color:var(--sub2)}
+.collage-body{padding:18px 20px 20px}
+.collage-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.collage-stat{border-radius:12px;padding:10px 8px;background:rgba(255,255,255,.025);text-align:center;border:1px solid var(--border)}
+.collage-stat b{display:block;font-family:'Syne',sans-serif;font-size:18px;line-height:1;color:var(--text)}
+.collage-stat span{display:block;font-size:7px;letter-spacing:1.1px;font-weight:800;color:var(--sub2);margin-top:5px}
+.collage-stat.signal b{color:var(--amber)}
+.collage-stat.done b{color:var(--mint)}
+.collage-primary .sec-div{padding-left:0;padding-right:0}
+.collage-primary .task{margin-left:0;margin-right:0;padding:11px 12px}
+.collage-primary .task-title{font-size:12px}
+.collage-primary .chip{font-size:7px}
+.collage-primary .score-pill{font-size:8px;padding:3px 7px}
+.collage-footer{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--border);font-size:9px;font-weight:700;color:var(--sub2)}
+.collage-footer strong{color:var(--amber);font-weight:800}
+.collage-sprint .collage-body{padding:22px 22px 20px;text-align:center}
+.collage-lock{display:inline-flex;align-items:center;gap:6px;font-size:8px;font-weight:800;letter-spacing:1.35px;color:var(--amber);padding:6px 10px;border-radius:100px;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.18)}
+.collage-lock svg{width:9px;height:9px;stroke:var(--amber);fill:none;stroke-width:2}
+.collage-time{font-family:'Syne',sans-serif;font-weight:800;font-size:34px;letter-spacing:-1.3px;color:var(--text);margin:18px 0 13px}
+.collage-progress{height:5px;border-radius:100px;background:rgba(255,255,255,.05);overflow:hidden;margin-bottom:18px}
+.collage-progress i{display:block;width:64%;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--amber),var(--mint))}
+.collage-sprint-task{text-align:left;padding:10px 11px;border-radius:12px;background:rgba(245,158,11,.045);border:1px solid rgba(245,158,11,.14);font-size:10px;font-weight:700;color:var(--text);line-height:1.35}
+.collage-sprint-task span{display:block;font-size:7px;color:var(--amber);letter-spacing:1.1px;margin-top:5px;font-weight:800}
+.collage-snow .collage-body{padding:16px 18px 18px;text-align:center}
+.collage-snow-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.collage-snow-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:12px;letter-spacing:1.2px;color:var(--amber)}
+.collage-snow-note{font-size:8px;color:var(--sub2);font-weight:700}
+.collage-snow-ring{position:relative;width:146px;height:146px;margin:2px auto 8px}
+.collage-snow-ring svg{width:146px;height:146px;display:block}
+.collage-snow-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.collage-snow-inner small{font-size:7px;font-weight:800;letter-spacing:1.5px;color:var(--amber)}
+.collage-snow-inner strong{font-family:'Syne',sans-serif;font-size:22px;color:var(--text);line-height:1.15;margin-top:3px}
+.collage-snow-inner span{font-size:7px;color:var(--sub2);font-weight:600;margin-top:3px}
+.collage-next{display:flex;justify-content:space-between;align-items:center;padding:10px 11px;border-radius:12px;background:rgba(245,158,11,.045);border:1px solid rgba(245,158,11,.14);text-align:left}
+.collage-next div:first-child small{display:block;font-size:6px;letter-spacing:1.1px;color:var(--amber);font-weight:800;margin-bottom:2px}
+.collage-next div:first-child b{font-size:10px;color:var(--text)}
+.collage-next strong{font-family:'Syne',sans-serif;font-size:14px;color:var(--text)}
+.collage-caption{text-align:center;font-size:13px;color:var(--sub2);font-weight:600;margin-top:28px}
+
+@media(max-width:900px){
+ .product-collage{padding:0 0 78px}
+ .collage-intro{margin-bottom:30px;padding:0 24px}
+ .collage-stage{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:0 24px}
+ .collage-stage::before{left:8%;top:8%;width:84%;height:76%}
+ .collage-card{position:relative;inset:auto!important;width:auto!important;min-height:0!important;transform:none!important}
+ .collage-primary{grid-column:1/-1}
+ .collage-sprint,.collage-snow{min-height:248px!important}
+ .collage-caption{padding:0 24px;margin-top:22px}
+}
+@media(max-width:560px){
+ .collage-stage{grid-template-columns:1fr;padding:0 20px}
+ .collage-primary{grid-column:auto}
+ .collage-sprint,.collage-snow{min-height:0!important}
+ .collage-primary .task:nth-of-type(3){display:none}
+ .collage-time{font-size:31px}
+ .collage-intro h2{font-size:27px}
+}
+
 /* founder */
 .fs{display:grid;grid-template-columns:380px 1fr;gap:64px;align-items:start;padding:112px 0}
 .fs-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 50%;display:block;border-radius:4px;border:1px solid var(--border2)}
@@ -573,6 +629,33 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px;fl
 .fs-body p{font-size:17px;color:var(--sub);line-height:1.85;margin-bottom:20px;max-width:620px}
 .fs-body p strong{color:var(--text);font-weight:600}
 .fs-q{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(19px,2.1vw,26px);line-height:1.4;letter-spacing:-.4px;color:var(--text)!important;padding-left:22px;border-left:2px solid var(--amber);margin:30px 0!important}
+
+
+/* ===== The Company ===== */
+.company-sec{padding:112px 0 110px;border-top:1px solid var(--border)}
+.company-copy{max-width:720px}
+.company-copy h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(32px,4.3vw,56px);line-height:1.08;letter-spacing:-.035em;max-width:11ch;margin-bottom:26px}
+.company-copy p{font-size:17px;color:var(--sub);line-height:1.85;max-width:680px}
+.company-facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:54px;border-top:1px solid var(--border)}
+.company-fact{min-height:154px;padding:30px 26px 28px;border-right:1px solid var(--border)}
+.company-fact:first-child{padding-left:0}
+.company-fact:last-child{border-right:none}
+.company-fact-label{font-size:9px;font-weight:800;letter-spacing:2px;color:var(--sub);margin-bottom:16px}
+.company-fact strong{display:block;font-family:'Syne',sans-serif;font-weight:800;font-size:21px;line-height:1.08;color:var(--text);letter-spacing:-.02em}
+.company-fact small{display:block;font-size:12px;color:var(--sub);margin-top:7px;line-height:1.4}
+@media(max-width:800px){
+ .company-sec{padding:82px 0}
+ .company-facts{grid-template-columns:1fr 1fr}
+ .company-fact{border-bottom:1px solid var(--border)}
+ .company-fact:nth-child(2){border-right:none}
+ .company-fact:nth-child(3){padding-left:0}
+ .company-fact:nth-child(3),.company-fact:nth-child(4){border-bottom:none}
+}
+@media(max-width:520px){
+ .company-facts{grid-template-columns:1fr}
+ .company-fact,.company-fact:first-child,.company-fact:nth-child(3){padding:24px 0;border-right:none;border-bottom:1px solid var(--border)}
+ .company-fact:last-child{border-bottom:none}
+}
 
 /* speaking */
 .speak{padding:0 0 112px}
@@ -598,11 +681,6 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px;fl
 
 /* a11y */
 a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px}
-@media(max-width:900px){
- footer .links a{padding:12px 0;display:inline-block}
- .lb-link{padding-top:9px;padding-bottom:11px}
- .speak .lb-link{display:inline-flex}
-}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 
 @media(max-width:900px){
@@ -691,34 +769,42 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 </section>
 
 <!-- 2. WHY WE EXIST -->
-<section class="lb-sec clarity">
+<section class="lb-sec">
 <div class="lb-wrap">
-<div class="clarity-grid">
-<div class="clarity-copy">
+<div class="why-grid">
+<div class="why-copy">
 <h2>More information doesn't automatically create more clarity.</h2>
 <p>There is more information than ever, alongside more tools and more ways to act. Yet the hardest part remains the same: understanding what matters and deciding what deserves our attention.</p>
 <p>INTIRA Labs exists to help close that gap.</p>
 <p class="lb-close">Technology should help people <em>think more clearly</em> — not simply do more.</p>
 </div>
-<div class="clarity-vis" aria-hidden="true">
-<div class="cv-cap cv-l-noise">EVERYTHING COMPETING FOR ATTENTION</div>
-<div class="cv-cloud">
-<span class="cv-chip c1">Reply to Sarah</span>
-<span class="cv-chip c2">Renew registration</span>
-<span class="cv-chip c3">Q3 update</span>
-<span class="cv-chip c4">Book flights</span>
-<span class="cv-chip c5">Tax documents</span>
-<span class="cv-chip c6">Prescription</span>
-<span class="cv-chip c7">Summer garden</span>
-<span class="cv-chip c8">Gift for Dad</span>
-<span class="cv-chip c9">Cabin weekend</span>
+
+<div class="attention-vis" aria-hidden="true">
+<div class="attention-stack">
+<div class="attention-label">EVERYTHING COMPETING FOR ATTENTION</div>
+<div class="attention-chips">
+<span class="attention-chip">Reply to Sarah</span>
+<span class="attention-chip">Renew registration</span>
+<span class="attention-chip">Q3 update</span>
+<span class="attention-chip">Book flights</span>
+<span class="attention-chip">Tax documents</span>
+<span class="attention-chip">Prescription</span>
+<span class="attention-chip">Summer garden</span>
+<span class="attention-chip">Gift for Dad</span>
+<span class="attention-chip">Cabin weekend</span>
 </div>
-<div class="cv-funnel"><span></span><span></span><span></span></div>
-<div class="cv-card">
-<div class="cv-card-top"><span class="cv-dot"></span><span class="cv-card-title">Finish tax documents</span></div>
-<div class="cv-card-chips"><span class="cv-tag sig">SIGNAL</span><span class="cv-tag crit">CRITICAL</span></div>
+<div class="attention-lines"><i></i></div>
+<div class="attention-signal">
+<div class="attention-task">
+<span class="attention-ring"></span>
+<div>
+<div class="attention-task-title">Finish tax documents</div>
+<div class="attention-task-tags"><span class="sig">SIGNAL</span><span class="crit">CRITICAL</span></div>
 </div>
-<div class="cv-cap cv-l-signal">ONE CLEAR NEXT MOVE</div>
+</div>
+</div>
+<div class="attention-next">ONE CLEAR NEXT MOVE</div>
+</div>
 </div>
 </div>
 </div>
@@ -809,7 +895,111 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 </div>
 </section>
 
-<!-- 6. FOUNDER -->
+
+<!-- 6. PRODUCT COLLAGE -->
+<section class="product-collage" aria-labelledby="collage-heading">
+<div class="lb-wrap">
+<div class="collage-intro">
+<div class="lb-kicker">INTIRA IN PRACTICE</div>
+<h2 id="collage-heading">One philosophy. Different ways to move what matters forward.</h2>
+</div>
+
+<div class="collage-stage" aria-hidden="true">
+
+<div class="collage-card collage-primary">
+<div class="collage-topbar">
+<img class="collage-logo" src="https://intira.io/logo.png" alt="" loading="lazy">
+<span class="collage-word">INTIRA</span>
+<span class="collage-screen-label">BRAIN DUMP</span>
+</div>
+<div class="collage-body">
+<div class="collage-stats">
+<div class="collage-stat"><b>22</b><span>PENDING</span></div>
+<div class="collage-stat signal"><b>3</b><span>SPRINT</span></div>
+<div class="collage-stat done"><b>6</b><span>DONE</span></div>
+</div>
+
+<div class="sec-div"><span class="sec-line amber"></span><span class="sec-text amber">SIGNAL</span><span class="sec-line amber"></span></div>
+<div class="task signal">
+<div class="task-check"></div>
+<div class="task-main">
+<div class="task-top"><div class="task-title">Finish tax documents</div><span class="score-pill">SCORE 94</span></div>
+<div class="task-chips"><span class="chip signal">SIGNAL</span><span class="chip critical">CRITICAL</span></div>
+</div>
+</div>
+<div class="task signal">
+<div class="task-check"></div>
+<div class="task-main">
+<div class="task-top"><div class="task-title">Pick up prescription</div><span class="score-pill">SCORE 81</span></div>
+<div class="task-chips"><span class="chip signal">SIGNAL</span><span class="chip high">HIGH</span></div>
+</div>
+</div>
+
+<div class="sec-div"><span class="sec-line violet"></span><span class="sec-text violet">NOISE</span><span class="sec-line violet"></span></div>
+<div class="task noise">
+<div class="task-check"></div>
+<div class="task-main">
+<div class="task-top"><div class="task-title" style="opacity:.72">Plan summer garden</div></div>
+<div class="task-chips"><span class="chip noise">NOISE</span><span class="chip low">LOW</span></div>
+</div>
+</div>
+
+<div class="collage-footer"><span>Signal Engine sorting the list</span><strong>WHAT MATTERS →</strong></div>
+</div>
+</div>
+
+<div class="collage-card collage-sprint">
+<div class="collage-topbar">
+<span class="collage-word" style="font-size:13px;letter-spacing:.08em">SPRINT</span>
+<span class="collage-screen-label">FOCUS</span>
+</div>
+<div class="collage-body">
+<div class="collage-lock">
+<svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+FOCUS LOCKED
+</div>
+<div class="collage-time">3:59:57</div>
+<div class="collage-progress"><i></i></div>
+<div class="collage-sprint-task">Finish tax documents<span>SIGNAL · CRITICAL</span></div>
+</div>
+</div>
+
+<div class="collage-card collage-snow">
+<div class="collage-topbar">
+<span class="collage-word" style="font-size:13px;letter-spacing:.08em;color:var(--amber)">SNOWBALL</span>
+<span class="collage-screen-label">PROGRESS</span>
+</div>
+<div class="collage-body">
+<div class="collage-snow-head">
+<span class="collage-snow-brand">DEBT SNOWBALL</span>
+<span class="collage-snow-note">ONE BALANCE AT A TIME</span>
+</div>
+<div class="collage-snow-ring">
+<svg viewBox="0 0 160 160">
+<circle cx="80" cy="80" r="64" fill="none" stroke="rgba(139,92,246,.16)" stroke-width="10"/>
+<circle cx="80" cy="80" r="64" fill="none" stroke="url(#aboutSnowGrad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="402" stroke-dashoffset="260" transform="rotate(-90 80 80)"/>
+<defs><linearGradient id="aboutSnowGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#F97316"/></linearGradient></defs>
+</svg>
+<div class="collage-snow-inner">
+<small>PAID OFF</small>
+<strong>$17,590</strong>
+<span>of $49,500</span>
+</div>
+</div>
+<div class="collage-next">
+<div><small>NEXT</small><b>Store Card</b></div>
+<strong>$420</strong>
+</div>
+</div>
+</div>
+
+</div>
+
+<p class="collage-caption">The INTIRA system in motion — from deciding what matters to acting on it and seeing progress.</p>
+</div>
+</section>
+
+<!-- 7. FOUNDER -->
 <section id="eve-hyppolite" aria-labelledby="founder-heading">
 <div class="lb-wrap">
 <div class="fs">
@@ -830,24 +1020,41 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 </div>
 </section>
 
-<!-- 6b. THE COMPANY -->
-<section class="co" aria-labelledby="co-heading">
+
+<!-- 8. THE COMPANY -->
+<section class="company-sec" aria-labelledby="company-heading">
 <div class="lb-wrap">
-<div class="co-head">
+<div class="company-copy">
 <div class="lb-kicker">THE COMPANY</div>
-<h2 id="co-heading">Independent by design.</h2>
+<h2 id="company-heading">Independent by design.</h2>
 <p>INTIRA Labs LLC is a founder-owned software company. No investors setting the roadmap, no growth targets that would push the product toward engagement for its own sake. The measure that matters is whether people spend less time organizing and more time executing.</p>
 </div>
-<dl class="co-facts">
-<div class="co-fact"><dt>FOUNDED</dt><dd>2026</dd></div>
-<div class="co-fact"><dt>STRUCTURE</dt><dd>Independent LLC<span>Pennsylvania, USA</span></dd></div>
-<div class="co-fact"><dt>FIRST PRODUCT</dt><dd>INTIRA<span>for iOS</span></dd></div>
-<div class="co-fact"><dt>YOUR DATA</dt><dd>Stays yours<span>No INTIRA servers</span></dd></div>
-</dl>
+
+<div class="company-facts">
+<div class="company-fact">
+<div class="company-fact-label">FOUNDED</div>
+<strong>2026</strong>
+</div>
+<div class="company-fact">
+<div class="company-fact-label">STRUCTURE</div>
+<strong>Independent<br>LLC</strong>
+<small>Pennsylvania, USA</small>
+</div>
+<div class="company-fact">
+<div class="company-fact-label">FIRST PRODUCT</div>
+<strong>INTIRA</strong>
+<small>for iOS</small>
+</div>
+<div class="company-fact">
+<div class="company-fact-label">YOUR DATA</div>
+<strong>Stays yours</strong>
+<small>No INTIRA servers</small>
+</div>
+</div>
 </div>
 </section>
 
-<!-- 7. SPEAKING + PARTNERSHIPS -->
+<!-- 9. SPEAKING + PARTNERSHIPS -->
 <section class="speak" aria-labelledby="speak-heading">
 <div class="lb-wrap">
 <div class="speak-inner">
@@ -871,7 +1078,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
 </div>
 </section>
 
-<!-- 8. FINAL CTA -->
+<!-- 10. FINAL CTA -->
 <section class="lb-final">
 <div class="lb-wrap">
 <h2>Move with <span class="amber">intention.</span></h2>
