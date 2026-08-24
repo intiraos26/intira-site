@@ -356,7 +356,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 40px;display:fl
 .fg-card-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
 .fg-card-icon svg{width:24px;height:24px;fill:none;stroke-width:1.9}
 .fg-card-icon svg.filled{fill:var(--amber);stroke:none}
-.fg-card h4{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:8px}
+.fg-card h3{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;margin-bottom:8px}
 .fg-card p{font-size:12px;color:var(--sub);line-height:1.6}
 .comparison{padding:80px 24px;max-width:700px;margin:0 auto}
 .comparison h2{font-family:'Syne',sans-serif;font-weight:800;font-size:32px;text-align:center;margin-bottom:12px}
@@ -413,13 +413,14 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 .mobile-menu a{color:var(--sub);text-decoration:none;font-size:16px;font-weight:600;padding:14px 4px;border-bottom:1px solid var(--border)}
 .mobile-menu a:last-child{border-bottom:none}
 .mobile-menu a.mm-cta{margin-top:12px;background:var(--amber);color:#07060E;text-align:center;border-radius:10px;padding:14px;font-weight:800;border:none}
+@media(max-width:900px){footer .links a{padding:12px 0;display:inline-block}}
 @media(max-width:768px){nav{padding:16px 20px}.nav-links{display:none}.nav-toggle{display:flex}.hero{padding:120px 20px 40px}.hero h1{letter-spacing:-0.03em}.hero-sub-main{font-size:16px}.philosophy h2{font-size:28px}.namewhy h2{font-size:24px}.sn-row{flex-direction:column;align-items:center}.hero-feat{flex-direction:column;gap:24px;padding:32px 24px;text-align:center}.fg-row{grid-template-columns:repeat(2,1fr)}.plans{flex-direction:column;align-items:center}.plan{width:100%;max-width:340px}.bottom-cta h2{font-size:28px}.comp-table th,.comp-table td{padding:10px 8px;font-size:12px}.carousel-arrow{display:none}.app-screen{width:290px}.contact-form{padding:28px 20px}}
 
 /* four-modes cards: product visuals, left-aligned copy (must follow base .fg-card) */
 .fg-card{overflow:hidden;padding:0;text-align:left}
 .fg-vis{height:126px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0));border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;padding:12px;position:relative;overflow:hidden}
 .fg-body{padding:17px 18px 20px}
-.fg-card h4{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;margin-bottom:7px;text-align:left}
+.fg-card h3{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;margin-bottom:7px;text-align:left}
 .fg-card p{font-size:12px;color:var(--sub);line-height:1.6;text-align:left}
 .mini-timer{font-size:20px;letter-spacing:-.5px}
 .mini-preset span{font-size:11px}
@@ -520,6 +521,10 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 .signal-list-field button:hover{filter:brightness(1.04)}
 .signal-list-note{font-size:12px;color:var(--sub2);margin-top:10px}
 .signal-list-status{font-size:13px;color:var(--sub);margin-top:10px;min-height:18px}
+.signal-list-status.success{color:var(--mint)}
+.signal-list-note a{color:var(--sub);text-decoration:underline;text-underline-offset:2px}
+.signal-list-note a:hover{color:var(--text)}
+
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:768px){
  .signal-list{padding:72px 20px 76px}
@@ -762,7 +767,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <div class="mini-timer">3:59:57</div>
 <div class="mini-bar"></div>
 </div>
-<div class="fg-body"><h4>Sprint Mode</h4><p>Pick your top Signal tasks, set a window — 4, 8, or 18 hours — and lock in. 3 sprints a week free, unlimited with Pro.</p></div>
+<div class="fg-body"><h3>Sprint Mode</h3><p>Pick your top Signal tasks, set a window — 4, 8, or 18 hours — and lock in. 3 sprints a week free, unlimited with Pro.</p></div>
 </div>
 <div class="fg-card">
 <div class="fg-vis">
@@ -773,7 +778,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <div class="mini-blk" style="background:#10B981;color:#06281d;top:66%;right:4%;width:42%;">gift ideas for Dad</div>
 </div>
 </div>
-<div class="fg-body"><h4>Blocks Canvas</h4><p>A free-form space for thoughts that aren't tasks yet. Convert any block into a task in one tap.</p></div>
+<div class="fg-body"><h3>Blocks Canvas</h3><p>A free-form space for thoughts that aren't tasks yet. Convert any block into a task in one tap.</p></div>
 </div>
 <div class="fg-card">
 <div class="fg-vis">
@@ -783,7 +788,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <div class="mini-preset"><b>DEEP</b><span>60m</span></div>
 </div>
 </div>
-<div class="fg-body"><h4>Focus Mode</h4><p>A per-task timer. The 25-minute Pomodoro is free; Pro adds Blitz (15m), Deep (60m), multi-round and analytics.</p></div>
+<div class="fg-body"><h3>Focus Mode</h3><p>A per-task timer. The 25-minute Pomodoro is free; Pro adds Blitz (15m), Deep (60m), multi-round and analytics.</p></div>
 </div>
 <div class="fg-card">
 <div class="fg-vis">
@@ -792,7 +797,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <i style="height:34%"></i><i style="height:62%"></i><i style="height:96%"></i><i style="height:54%"></i><i style="height:80%"></i><i style="height:38%"></i><i style="height:68%"></i><i style="height:26%"></i>
 </div>
 </div>
-<div class="fg-body"><h4>Voice Capture</h4><p>Speak a task naturally and INTIRA pulls out the title, due date, tags, and priority. 10 lifetime captures, unlimited with Pro.</p></div>
+<div class="fg-body"><h3>Voice Capture</h3><p>Speak a task naturally and INTIRA pulls out the title, due date, tags, and priority. 10 lifetime captures, unlimited with Pro.</p></div>
 </div>
 </div></section>
 
@@ -826,7 +831,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 <section style="max-width:900px;margin:0 auto;padding:8px 24px 8px;">
 <div style="display:flex;align-items:flex-start;gap:20px;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:28px;">
 <div style="flex-shrink:0;width:40px;height:40px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round"><path d="M18 10a4 4 0 0 0-7.6-1.3A3.5 3.5 0 1 0 7 15h10.5a3.5 3.5 0 0 0 .5-7z"/></svg></div>
-<div><h4 style="margin:0 0 8px;font-size:18px;color:var(--text);">iCloud Backup &amp; Restore</h4>
+<div><h3 style="margin:0 0 8px;font-size:18px;color:var(--text);font-family:'DM Sans',sans-serif;font-weight:700;letter-spacing:0;">iCloud Backup &amp; Restore</h3>
 <p style="margin:0;color:var(--sub);font-size:15px;line-height:1.7;">Your tasks, debts, blocks, and progress are backed up to your private iCloud — so nothing is lost when you reinstall or set up a new device. Backup and restore are free, stored privately in <strong style="color:var(--text);font-weight:600;">your own</strong> account, never on our servers. Pro adds sync across multiple devices. Not signed into iCloud? INTIRA works fully offline on your device.</p></div></div></section>
 
 <section class="founder-note" aria-labelledby="why-intira-heading">
@@ -947,15 +952,58 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
       <p>Product updates, new releases, and ideas from INTIRA Labs — occasionally, when there’s something worth sharing.</p>
     </div>
 
-    <form class="signal-list-form" id="signalListForm" novalidate>
-      <label class="sr-only" for="signal-email">Email address</label>
+    <form
+      class="signal-list-form"
+      method="POST"
+      id="zcampaignOptinForm"
+      action="https://zgnp-zngp.maillist-manage.com/weboptin.zc"
+      target="_zcSignup"
+      siq_id="autopick_eibd6rb7ri"
+      onsubmit="trackZohoSignup(); zcScptlessSubmit(this)"
+      novalidate
+    >
+      <label class="sr-only" for="EMBED_FORM_EMAIL_LABEL">Email address</label>
       <div class="signal-list-field">
-        <input type="email" id="signal-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="signal-list-note">
-        <button type="submit">Join the list</button>
+        <input
+          type="email"
+          placeholder="you@example.com"
+          changeitem="SIGNUP_FORM_FIELD"
+          name="CONTACT_EMAIL"
+          id="EMBED_FORM_EMAIL_LABEL"
+          autocomplete="email"
+          required
+          aria-describedby="signal-list-note"
+        >
+        <button type="submit" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin">Join the list</button>
       </div>
-      <p class="signal-list-note" id="signal-list-note">No noise. Unsubscribe anytime.</p>
+
+      <p class="signal-list-note" id="signal-list-note">
+        No noise. Unsubscribe anytime. By joining, you agree to receive occasional email from INTIRA Labs.
+        See our <a href="https://intira.io/privacy.html">Privacy Policy</a>.
+      </p>
       <p class="signal-list-status" id="signalListStatus" role="status" aria-live="polite"></p>
+
+      <input type="hidden" id="fieldBorder" value="">
+      <input type="hidden" id="submitType" name="submitType" value="optinCustomView">
+      <input type="hidden" id="emailReportId" name="emailReportId" value="">
+      <input type="hidden" id="formType" name="formType" value="QuickForm">
+      <input type="hidden" name="zx" id="cmpZuid" value="1374b2ef0">
+      <input type="hidden" name="zcvers" value="3.0">
+      <input type="hidden" name="oldListIds" id="allCheckedListIds" value="">
+      <input type="hidden" id="mode" name="mode" value="OptinCreateView">
+      <input type="hidden" id="zcld" name="zcld" value="1178e5f65b51b305c">
+      <input type="hidden" id="zctd" name="zctd" value="1178e5f65b51b2f71">
+      <input type="hidden" id="document_domain" value="">
+      <input type="hidden" id="zc_Url" value="zgnp-zngp.maillist-manage.com">
+      <input type="hidden" id="new_optin_response_in" value="0">
+      <input type="hidden" id="duplicate_optin_response_in" value="0">
+      <input type="hidden" name="zc_trackCode" id="zc_trackCode" value="ZCFORMVIEW">
+      <input type="hidden" id="zc_formIx" name="zc_formIx" value="3zcce756acba3f440f202e70745a051432d9ed6090df26fef09c8ae9e0f79f0c79">
+      <input type="hidden" id="viewFrom" value="URL_ACTION">
+      <input type="hidden" id="scriptless" name="scriptless" value="yes">
+      <input type="hidden" id="zc_spmSubmit" name="zc_spmSubmit" value="ZCSPMSUBMIT">
     </form>
+    <iframe name="_zcSignup" id="_zcSignup" title="Zoho Campaigns signup response" style="display:none" aria-hidden="true"></iframe>
   </div>
 </section>
 
@@ -1117,22 +1165,67 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 
 
 <script>
-(function(){
-  var form = document.getElementById('signalListForm');
+var intiraZohoSignupSubmitted = false;
+
+function trackZohoSignup() {
+  var form = document.getElementById('zcampaignOptinForm');
   var status = document.getElementById('signalListStatus');
-  if (!form || !status) return;
 
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
+  if (!form) return true;
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return false;
+  }
+
+  intiraZohoSignupSubmitted = true;
+
+  if (status) {
+    status.className = 'signal-list-status';
+    status.textContent = 'Joining…';
+  }
+
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'email_signup', {
+      placement: 'homepage_embedded',
+      provider: 'zoho_campaigns'
+    });
+  }
+
+  return true;
+}
+
+function zcScptlessSubmit(parentNode) {
+  if (!parentNode.checkValidity()) {
+    parentNode.reportValidity();
+    return false;
+  }
+
+  if (parentNode.querySelector('#zc_spmSubmit')) {
+    parentNode.querySelector('#zc_spmSubmit').remove();
+  }
+
+  parentNode.submit();
+  return true;
+}
+
+(function() {
+  var responseFrame = document.getElementById('_zcSignup');
+  var status = document.getElementById('signalListStatus');
+  var email = document.getElementById('EMBED_FORM_EMAIL_LABEL');
+
+  if (!responseFrame) return;
+
+  responseFrame.addEventListener('load', function() {
+    if (!intiraZohoSignupSubmitted) return;
+
+    if (status) {
+      status.className = 'signal-list-status success';
+      status.textContent = 'Thanks — you’re on the list.';
     }
 
-    status.textContent = 'Email list signup will be enabled before launch.';
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'email_signup_intent', { placement: 'homepage_embedded' });
-    }
+    if (email) email.value = '';
+    intiraZohoSignupSubmitted = false;
   });
 })();
 </script>
