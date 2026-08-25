@@ -520,8 +520,10 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
 .signal-list-field button{padding:15px 18px;border:0;border-radius:12px;background:var(--amber);color:#07060E;font:inherit;font-weight:800;white-space:nowrap;cursor:pointer}
 .signal-list-field button:hover{filter:brightness(1.04)}
 .signal-list-note{font-size:12px;color:var(--sub2);margin-top:10px}
+#_zcSignup{position:absolute;left:-9999px;top:0;width:0;height:0;border:0;opacity:0;pointer-events:none}
 .signal-list-status{font-size:13px;color:var(--sub);margin-top:10px;min-height:18px}
 .signal-list-status.success{color:var(--mint)}
+.signal-list-status.error{color:var(--rose)}
 .signal-list-note a{color:var(--sub);text-decoration:underline;text-underline-offset:2px}
 .signal-list-note a:hover{color:var(--text)}
 
@@ -1003,7 +1005,7 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px}fo
       <input type="hidden" id="scriptless" name="scriptless" value="yes">
       <input type="hidden" id="zc_spmSubmit" name="zc_spmSubmit" value="ZCSPMSUBMIT">
     </form>
-    <iframe name="_zcSignup" id="_zcSignup" title="Zoho Campaigns signup response" style="display:none" aria-hidden="true"></iframe>
+    <iframe name="_zcSignup" id="_zcSignup" title="Zoho Campaigns signup response" tabindex="-1" aria-hidden="true"></iframe>
   </div>
 </section>
 
@@ -1185,6 +1187,10 @@ function trackZohoSignup() {
     status.textContent = 'Joining…';
   }
 
+  if (typeof window.intiraStartSignupTimer === 'function') {
+    window.intiraStartSignupTimer();
+  }
+
   if (typeof window.gtag === 'function') {
     window.gtag('event', 'email_signup', {
       placement: 'homepage_embedded',
@@ -1216,15 +1222,41 @@ function zcScptlessSubmit(parentNode) {
 
   if (!responseFrame) return;
 
+  // If Zoho never responds, don't leave the form stuck on "Joining…".
+  window.intiraSignupTimer = null;
+
+  window.intiraStartSignupTimer = function() {
+    window.clearTimeout(window.intiraSignupTimer);
+    window.intiraSignupTimer = window.setTimeout(function() {
+      if (!intiraZohoSignupSubmitted) return;
+      if (status) {
+        status.className = 'signal-list-status error';
+        status.textContent = 'Something went wrong. Try again, or email support@intira.io.';
+      }
+      intiraZohoSignupSubmitted = false;
+    }, 10000);
+  };
+
   responseFrame.addEventListener('load', function() {
     if (!intiraZohoSignupSubmitted) return;
+    window.clearTimeout(window.intiraSignupTimer);
 
     if (status) {
       status.className = 'signal-list-status success';
-      status.textContent = 'Thanks — you’re on the list.';
+      status.textContent = 'Thanks \u2014 you\u2019re on the list. Check your inbox to confirm.';
     }
 
     if (email) email.value = '';
+    intiraZohoSignupSubmitted = false;
+  });
+
+  responseFrame.addEventListener('error', function() {
+    if (!intiraZohoSignupSubmitted) return;
+    window.clearTimeout(window.intiraSignupTimer);
+    if (status) {
+      status.className = 'signal-list-status error';
+      status.textContent = 'Something went wrong. Try again, or email support@intira.io.';
+    }
     intiraZohoSignupSubmitted = false;
   });
 })();

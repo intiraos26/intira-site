@@ -662,9 +662,20 @@ footer p{font-size:12px;color:var(--sub2)}footer .links{display:flex;gap:20px;fl
 .speak-inner{border-top:1px solid var(--border);padding-top:64px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
 .speak h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(27px,3.3vw,42px);line-height:1.14;letter-spacing:-.028em;margin-bottom:20px}
 .speak p{font-size:15px;color:var(--sub);line-height:1.8;margin-bottom:22px}
-.topics{list-style:none;margin:0;padding:0;columns:1}
-.topics li{font-size:15px;color:var(--sub);padding:10px 0;border-top:1px solid var(--border);line-height:1.5}
-.topics li:first-child{border-top:none}
+/* founder pull-out facts */
+.fs-facts{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:34px 0 0;padding-top:26px;border-top:1px solid var(--border)}
+.fs-facts>div{padding:14px 20px 14px 0}
+.fs-facts dt{font-size:9.5px;font-weight:800;letter-spacing:1.9px;color:var(--sub);margin-bottom:7px}
+.fs-facts dd{margin:0;font-size:14.5px;font-weight:600;color:var(--text);line-height:1.45}
+
+/* signature topics */
+.topics-head{font-size:10px;font-weight:800;letter-spacing:2.2px;color:var(--amber);margin-bottom:18px}
+.topics{list-style:none;margin:0;padding:0;counter-reset:none}
+.topics li{display:grid;grid-template-columns:34px 1fr;gap:14px;align-items:start;padding:16px 0;border-top:1px solid var(--border)}
+.topics li:first-child{border-top:none;padding-top:0}
+.t-n{font-family:'Syne',sans-serif;font-weight:800;font-size:12px;color:var(--amber);padding-top:3px;letter-spacing:.5px}
+.t-b b{display:block;font-size:15.5px;font-weight:700;color:var(--text);line-height:1.35;margin-bottom:5px}
+.t-b em{display:block;font-style:normal;font-size:13.5px;color:var(--sub);line-height:1.6}
 .lb-link{display:inline-flex;align-items:center;gap:9px;font-size:15.5px;font-weight:800;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(245,158,11,.35);padding-bottom:4px;transition:gap .2s,border-color .2s}
 .lb-link:hover,.lb-link:focus-visible{gap:14px;border-color:var(--amber)}
 .lb-link.violet{color:var(--violet);border-bottom-color:rgba(139,92,246,.4)}
@@ -724,6 +735,9 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,te
  .fs{grid-template-columns:1fr;gap:36px;padding:76px 0}
  .fs-photo-wrap{max-width:320px}
  .speak-inner{grid-template-columns:1fr;gap:34px;padding-top:48px}
+ .fs-facts{grid-template-columns:1fr;gap:0}
+ .fs-facts>div{padding:13px 0}
+ .topics li{grid-template-columns:28px 1fr;gap:11px;padding:14px 0}
  .speak{padding-bottom:76px}
  .lb-final{padding:60px 0 72px}
  .lb-final h2{font-size:clamp(28px,8vw,40px)}
@@ -1015,6 +1029,12 @@ FOCUS LOCKED
 <p class="fs-q">What if technology helped us think more clearly instead of simply giving us more to manage?</p>
 <p>That question became the foundation for INTIRA Labs.</p>
 <p>INTIRA Labs explores that philosophy through products, frameworks, storytelling, and experiences designed to help people navigate complexity with greater intention. INTIRA is the first expression of that idea — not the boundary of it.</p>
+<dl class="fs-facts">
+<div><dt>ROLE</dt><dd>Founder, INTIRA Labs</dd></div>
+<div><dt>BACKGROUND</dt><dd>Product leadership, storytelling, design</dd></div>
+<div><dt>SPEAKS ON</dt><dd>Technology, leadership, intentional growth</dd></div>
+<div><dt>BASED IN</dt><dd>Pennsylvania, USA</dd></div>
+</dl>
 </div>
 </div>
 </div>
@@ -1066,13 +1086,14 @@ FOCUS LOCKED
 <a class="lb-link violet" href="https://intira.io/#contact?type=partnership">Explore a Partnership →</a>
 </div>
 <div>
-<ul class="topics">
-<li>Storytelling as a Leadership Tool</li>
-<li>Signal vs. Noise</li>
-<li>Navigating Complexity &amp; Change</li>
-<li>Technology and Human Judgment</li>
-<li>Building Products People Understand</li>
-</ul>
+<div class="topics-head">SIGNATURE TOPICS</div>
+<ol class="topics">
+<li><span class="t-n">01</span><span class="t-b"><b>Storytelling as a Leadership Tool</b><em>Why the story you tell decides what your team can execute.</em></span></li>
+<li><span class="t-n">02</span><span class="t-b"><b>Signal vs. Noise</b><em>Separating what matters from what merely demands attention.</em></span></li>
+<li><span class="t-n">03</span><span class="t-b"><b>Navigating Complexity &amp; Change</b><em>Making deliberate decisions when the ground keeps moving.</em></span></li>
+<li><span class="t-n">04</span><span class="t-b"><b>Technology and Human Judgment</b><em>What software should decide — and what it never should.</em></span></li>
+<li><span class="t-n">05</span><span class="t-b"><b>Building Products People Understand</b><em>Designing systems people can follow, and therefore trust.</em></span></li>
+</ol>
 </div>
 </div>
 </div>
